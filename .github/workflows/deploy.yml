@@ -10,11 +10,12 @@ permissions:
 
 concurrency:
   group: github-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
     permissions:
       contents: read
       pages: read
@@ -32,10 +33,12 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm lint
-      - name: Install test browser
-        run: pnpm exec playwright install --with-deps chromium
+      - name: Verify installed browser
+        run: google-chrome --version
       - name: Test languages, filters and form
         run: pnpm test:e2e
+        env:
+          PLAYWRIGHT_CHANNEL: chrome
       - name: Build
         run: pnpm build
         env:
@@ -48,7 +51,8 @@ jobs:
           path: dist
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
     needs: build
     permissions:
       pages: write

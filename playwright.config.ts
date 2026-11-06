@@ -9,7 +9,7 @@ export default defineConfig({
   reporter: 'list',
   use: {
     baseURL: 'http://127.0.0.1:5174',
-    channel: process.platform === 'win32' ? 'msedge' : undefined,
+    channel: process.env.PLAYWRIGHT_CHANNEL ?? (process.platform === 'win32' ? 'msedge' : undefined),
     reducedMotion: 'reduce',
     trace: 'retain-on-failure',
   },
