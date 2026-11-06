@@ -25,7 +25,7 @@ export function Judges() {
       </div>
       <p className="mb-8 text-sm text-muted tabular-nums" role="status" aria-live="polite">{t('ui.results', { count: visibleJudges.length })}</p>
       {visibleJudges.length === 0 && <p className="rounded-2xl bg-panel p-8">{t('ui.empty')}</p>}
-      <ul ref={scope} className="grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">{visibleJudges.map((judge) => <JudgeCard key={judge.id} judge={judge} />)}</ul>
+      <ul ref={scope} className="grid auto-rows-fr items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">{visibleJudges.map((judge) => <JudgeCard key={judge.id} judge={judge} />)}</ul>
     </Section>
   )
 }

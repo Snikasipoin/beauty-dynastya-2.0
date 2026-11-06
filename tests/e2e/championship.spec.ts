@@ -39,6 +39,24 @@ for (const [language, locale] of Object.entries(locales)) {
         }).map((element) => ({ tag: element.tagName, className: element.className })).slice(0, 8)
       })
       expect(overflow).toEqual([])
+      const geometry = await page.evaluate(() => {
+        const cards = [...document.querySelectorAll<HTMLElement>('[data-judge-id]')]
+        const photos = cards.map((card) => card.querySelector<HTMLElement>('[data-person-poster]')!)
+        const spread = (elements: HTMLElement[], dimension: 'width' | 'height') => {
+          const values = elements.map((element) => element.getBoundingClientRect()[dimension])
+          return Math.max(...values) - Math.min(...values)
+        }
+        const speakerDetails = document.querySelector<HTMLDetailsElement>('#speakers details')
+        if (speakerDetails) speakerDetails.open = true
+        const speakerGaps = [...document.querySelectorAll<HTMLElement>('#speakers [data-card]')].map((card) => {
+          const outer = card.getBoundingClientRect()
+          const photo = card.querySelector<HTMLElement>('[data-person-poster]')!.getBoundingClientRect()
+          return Math.max(Math.abs(photo.left - outer.left), Math.abs(photo.top - outer.top), innerWidth >= 1024 ? Math.abs(photo.bottom - outer.bottom) : Math.abs(photo.width - outer.width))
+        })
+        return { cardHeights: spread(cards, 'height'), photoHeights: spread(photos, 'height'), photoWidths: spread(photos, 'width'), speakerGap: Math.max(...speakerGaps) }
+      })
+      // Сравниваем фактическую геометрию, включая разные ряды и переводы.
+      for (const difference of Object.values(geometry)) expect(difference).toBeLessThan(1)
       expect(errors).toEqual([])
     })
   }
