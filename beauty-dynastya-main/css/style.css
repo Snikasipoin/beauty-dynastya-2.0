@@ -1,0 +1,1229 @@
+/* ==========================================================
+   Beauty Dynastya — styles
+   Mobile-first: base styles for phones, then @media for bigger screens
+   ========================================================== */
+
+/* ---------- 1. Variables ---------- */
+:root {
+  --black: #000;
+  --panel: #161616;
+  --line: #2a2a2a;
+  --red: #e10915;
+  --red-deep: #7d0309;
+  --gold: #d6b25e;
+  --white: #fff;
+  --grey: #a3a3a3;
+  --text-soft: #d4d4d4;
+
+  --font-display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --font-body: "Manrope", "Segoe UI", Arial, sans-serif;
+  --display-weight: 400; /* Anton has only one weight */
+
+  --container: 1200px;
+  --gap: clamp(16px, 3vw, 32px);
+  --section-pad: clamp(64px, 10vw, 120px);
+  --header-h: 68px;
+}
+
+/* Russian page: Anton has no Cyrillic letters, so Oswald (bold) is used instead */
+html[lang="ru"] {
+  --font-display: "Oswald", "Impact", "Arial Narrow", sans-serif;
+  --display-weight: 700;
+}
+
+/* ---------- 2. Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h); /* anchors don't hide under the sticky header */
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--white);
+  background: var(--black);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* the hidden attribute must win over classes like .btn { display: inline-block } */
+[hidden] {
+  display: none !important;
+}
+
+/* ---------- 3. Common ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+.section {
+  padding: var(--section-pad) 0;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: clamp(32px, 5vw, 56px);
+  /* long German words ("Teilnehmerinnen") get hyphenated on narrow phones */
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-weight: 700;
+  background: var(--red);
+  border: 2px solid var(--red);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: transparent;
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--white);
+}
+
+.btn--ghost:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn--light {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+}
+
+.btn--light:hover {
+  color: var(--white);
+}
+
+.btn--small {
+  padding: 8px 18px;
+}
+
+/* Instagram link — used by judges, speakers and participants */
+.insta {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--grey);
+  font-size: 0.85rem;
+  word-break: break-all; /* long handles don't break the card on phones */
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.insta:hover {
+  color: var(--white);
+  border-color: var(--red);
+}
+
+/* ---------- 4. Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  white-space: nowrap; /* name stays on one line next to the language switcher */
+  color: var(--gold);
+}
+
+/* Phones: 5 languages + burger don't fit next to the full name, so only the logo stays */
+/* Small logo in header and footer */
+.logo {
+  height: 45px;
+  max-height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header__brand span {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .header__brand span {
+    display: inline;
+  }
+}
+
+/* Language switcher */
+.lang {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;   /* phone: pushed right, next to the burger */
+  margin-right: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.lang a {
+  display: block;
+  padding: 6px 8px;
+  color: var(--grey);
+  transition: color 0.2s;
+}
+
+.lang a:hover {
+  color: var(--white);
+}
+
+.lang a[aria-current="page"] {
+  color: var(--white);
+  box-shadow: inset 0 -2px 0 var(--red); /* red underline for the current language */
+}
+
+/* Burger: one span + two pseudo-elements = three lines */
+.burger {
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+  position: absolute;
+  left: 10px;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.burger span { top: 21px; }
+.burger span::before { content: ""; left: 0; top: -7px; }
+.burger span::after  { content: ""; left: 0; top: 7px; }
+
+.burger[aria-expanded="true"] span { background: transparent; }
+.burger[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+.burger[aria-expanded="true"] span::after  { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile menu: hidden under the header, opens with .nav--open */
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  border-bottom: 1px solid var(--line);
+  display: none;
+}
+
+.nav--open {
+  display: block;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px var(--gap) 32px;
+  font-weight: 500;
+}
+
+.nav__list a:not(.btn):hover {
+  color: var(--gold);
+}
+
+/* ---------- 5. Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* keeps z-index: -1 slashes inside the hero */
+  padding: 48px 0 72px;
+}
+
+/* Red diagonal "slash" like on the Instagram posters */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero::before {
+  background: linear-gradient(160deg, var(--red) 0%, var(--red-deep) 70%);
+  /* phone: slash only behind the logo, so it doesn't cross the text */
+  clip-path: polygon(100% 48%, 100% 100%, 0 100%, 0 88%);
+  animation: slash-in 0.9s ease-out both;
+}
+
+.hero::after {
+  background: var(--white);
+  clip-path: polygon(100% 45%, 100% 46.5%, 0 86.5%, 0 85%);
+  opacity: 0.85;
+  animation: slash-in 0.9s 0.1s ease-out both;
+}
+
+@keyframes slash-in {
+  from { transform: translateX(30%); opacity: 0; }
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero__kicker {
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(3.5rem, 15vw, 9.5rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.hero__dates {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  margin-top: 24px;
+}
+
+.hero__noms {
+  color: var(--grey);
+  margin-top: 4px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* Phone: the logo sits in normal flow under the text (no absolute positioning),
+   so it can never cover the title or buttons */
+.hero__logo {
+  align-self: center;
+  width: min(80vw, 340px);
+}
+
+.hero__logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.6));
+}
+
+/* ---------- 6. About ---------- */
+.about__text {
+  max-width: 60ch;
+  font-size: 1.125rem;
+  color: var(--grey);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  margin-top: 48px;
+  background: var(--line); /* 1px gap shows as thin dividers */
+  border: 1px solid var(--line);
+}
+
+.facts__item {
+  display: flex;
+  flex-direction: column-reverse; /* number on top, label below */
+  padding: 24px;
+  background: var(--black);
+}
+
+.facts dt {
+  color: var(--grey);
+}
+
+.facts dd {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  line-height: 1.1;
+}
+
+/* ---------- 7. Nominations ---------- */
+.nominations {
+  background: var(--panel);
+}
+
+.noms__item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+
+.noms__item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.noms__item h3 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(2.5rem, 9vw, 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white);
+  transition: color 0.2s;
+}
+
+.noms__item:hover h3 {
+  color: var(--red);
+  -webkit-text-stroke-color: var(--red);
+}
+
+.noms__item p {
+  color: var(--grey);
+  margin-top: 6px;
+}
+
+/* ---------- 7b. How it works ---------- */
+/* Steps go in order, so it is an <ol>; numbers come from a CSS counter */
+.process__lead {
+  max-width: 60ch;
+  color: var(--grey);
+  font-size: 1.125rem;
+  margin: -16px 0 40px;
+}
+
+.process__list {
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  gap: 1px;
+  background: var(--line); /* 1px gap shows as thin dividers, like .facts */
+  border: 1px solid var(--line);
+}
+
+.process__step {
+  counter-increment: step;
+  padding: 28px 24px;
+  background: var(--black);
+}
+
+.process__step::before {
+  content: counter(step, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+
+.process__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.process__text {
+  color: var(--grey);
+  margin-top: 8px;
+}
+
+/* ---------- 8. Judges ---------- */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.filter__btn {
+  padding: 8px 20px;
+  border: 1px solid var(--line);
+  font-weight: 500;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.filter__btn:hover {
+  border-color: var(--white);
+}
+
+.filter__btn[aria-pressed="true"] {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.judges__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 16px;
+}
+
+/* Photo block (used by judges, speakers and participants) */
+.photo {
+  position: relative;
+  aspect-ratio: 4 / 5; /* same shape as Instagram posts */
+  overflow: hidden;
+  background: linear-gradient(160deg, #262626, #0d0d0d);
+}
+
+/* red corner slash, drawn above the photo */
+.photo::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  width: 45%;
+  height: 30%;
+  background: var(--red);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.photo img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Instagram poster: shown whole, without our corner slash */
+.photo--poster {
+  background: var(--black);
+}
+
+.photo--poster img {
+  object-fit: contain; /* never cut off the text on the poster */
+}
+
+.photo--poster::after {
+  display: none;
+}
+
+.photo__initials {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: #3a3a3a;
+}
+
+.judge__name {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-top: 14px;
+}
+
+.judge__role {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.judge__country {
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
+.judge__bio {
+  color: var(--grey);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* VIP judge — gold instead of red */
+.judge--vip .photo {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+.judge--vip .photo::after { background: var(--gold); }
+.judge--vip .judge__role  { color: var(--gold); }
+
+/* ---------- 9. Speakers ---------- */
+.speakers {
+  background: var(--panel);
+}
+
+.speakers__grid {
+  display: grid;
+  gap: 56px;
+}
+
+/* phone: photo on top, text below */
+.speaker {
+  display: grid;
+  gap: 20px;
+}
+
+.speaker .photo {
+  aspect-ratio: 4 / 5;
+  max-width: 420px;
+}
+
+.speaker .photo::after {
+  background: var(--gold);
+}
+
+/* black & white like on the posters, colour on hover */
+.speaker .photo img {
+  filter: grayscale(1);
+  transition: filter 0.4s;
+}
+
+.speaker:hover .photo img {
+  filter: none;
+}
+
+/* posters already have their own colours */
+.speaker .photo--poster img {
+  filter: none;
+}
+
+.speaker__label {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.speaker__name {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.speaker__country {
+  color: var(--grey);
+}
+
+.speaker__bio {
+  max-width: 60ch;
+  margin-top: 16px;
+  color: var(--text-soft);
+}
+
+.speaker__facts {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.speaker__facts dt {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.speaker__facts dd {
+  color: var(--text-soft);
+}
+
+/* "Judging & speaking experience" — opens on click, no JS */
+.more {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+
+.more summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.more summary:hover {
+  color: var(--gold);
+}
+
+.speaker__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-top: 16px;
+}
+
+/* ---------- 10. Participants ---------- */
+.participants__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 16px;
+}
+
+.participant__name {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-top: 14px;
+}
+
+.participant__country {
+  color: var(--grey);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.participant__bio {
+  color: var(--grey);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* ---------- 10b. Partners ---------- */
+.partner {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+.partner__img {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ---------- 11. Register ---------- */
+.register {
+  background: linear-gradient(160deg, var(--red) 0%, var(--red-deep) 100%);
+}
+
+.register__inner {
+  max-width: 760px;
+}
+
+.register__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.register__text {
+  max-width: 55ch;
+  font-size: 1.125rem;
+  margin: 20px 0 32px;
+}
+
+/* Telegram + Instagram buttons; wrap under each other on narrow phones */
+.register__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.register__note {
+  max-width: 55ch;
+  margin-bottom: 32px;
+  opacity: 0.85;
+}
+
+/* ---------- 12. Footer ---------- */
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__link:hover {
+  color: var(--gold);
+}
+
+.footer__copy {
+  color: var(--grey);
+  font-size: 0.875rem;
+}
+
+/* ---------- 13. Application modal ---------- */
+/* <dialog> gives Esc-to-close, focus trapping and a ::backdrop for free */
+.modal {
+  --modal-bg: #141414;
+  --accent: #e50914;
+  --accent-gold: #d4af37;
+
+  width: min(100% - 32px, 520px);
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--modal-bg);
+  color: var(--white);
+}
+
+.modal[open] {
+  animation: modal-in 0.25s ease-out;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(16px); }
+}
+
+/* page behind the modal does not scroll */
+body:has(.modal[open]) {
+  overflow: hidden;
+}
+
+/* fills the whole dialog, so a click that reaches <dialog> itself = click on the backdrop */
+.modal__inner {
+  position: relative;
+  padding: 40px 20px 28px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--grey);
+  transition: color 0.2s;
+}
+
+.modal__close:hover {
+  color: var(--white);
+}
+
+.modal__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  padding-right: 40px;
+}
+
+.modal__lead {
+  color: var(--grey);
+  margin: 12px 0 28px;
+}
+
+/* fields */
+.form-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  border: none;
+}
+
+.field > label,
+.field > legend {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+
+.field input[type="text"] {
+  width: 100%;
+  padding: 13px 14px;
+  font: inherit;
+  color: var(--white);
+  background: #0b0b0b;
+  border: 1px solid var(--line);
+  transition: border-color 0.2s;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+.field__error {
+  min-height: 1em;
+  color: #ff5a5f;
+  font-size: 0.8rem;
+}
+
+.field--error input {
+  border-color: var(--accent);
+}
+
+/* role: radio buttons styled as three equal tiles */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.choice {
+  position: relative;
+}
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice span {
+  display: block;
+  padding: 12px 6px;
+  text-align: center;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.choice:hover span {
+  border-color: var(--white);
+}
+
+.choice input:checked + span {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.choice input:focus-visible + span {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.field--error .choice span {
+  border-color: rgba(229, 9, 20, 0.6);
+}
+
+/* Telegram channel link — phone: text on top, handle below; from 600px one row */
+.tg {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  border: 1px solid var(--accent-gold);
+  transition: background-color 0.2s;
+}
+
+.tg:hover {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.tg__text {
+  font-size: 0.875rem;
+  color: var(--text-soft);
+}
+
+.tg__handle {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+/* hidden for people, visible for spam bots (honeypot) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.form__submit {
+  width: 100%;
+  margin-top: 24px;
+  cursor: pointer;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.form__submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.form__error {
+  margin-top: 12px;
+  color: #ff5a5f;
+}
+
+.form__error:empty {
+  display: none;
+}
+
+/* success screen */
+.success {
+  text-align: center;
+  padding: 16px 0 0;
+}
+
+.success__icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  border: 2px solid var(--accent-gold);
+  border-radius: 50%;
+  color: var(--accent-gold);
+  font-size: 2rem;
+}
+
+.success .modal__title {
+  padding-right: 0;
+}
+
+.success__text {
+  color: var(--text-soft);
+  max-width: 40ch;
+  margin: 12px auto 0;
+}
+
+/* main action = go to Telegram, close is secondary */
+.success__actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.success__actions .form__submit {
+  margin-top: 0;
+}
+
+/* ==========================================================
+   Tablets — from 600px
+   ========================================================== */
+@media (min-width: 600px) {
+  .facts {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .judges__grid,
+  .participants__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal__inner {
+    padding: 48px 40px 36px;
+  }
+
+  .tg {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .noms__item {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .noms__item p {
+    text-align: right;
+  }
+}
+
+/* ==========================================================
+   Desktop — from 960px
+   ========================================================== */
+@media (min-width: 960px) {
+  .hero {
+    padding: 96px 0 120px;
+  }
+
+  /* desktop: big diagonal slash on the right half */
+  .hero::before {
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 45% 100%);
+  }
+
+  .hero::after {
+    clip-path: polygon(67% 0, 68.5% 0, 43.5% 100%, 42% 100%);
+  }
+
+  .hero__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero__logo {
+    width: 420px;
+    flex-shrink: 0;
+  }
+
+  .judges__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 24px;
+  }
+
+  .participants__grid {
+    gap: 40px 24px;
+  }
+
+  .process__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* partner: logo left, text right — same proportions as speakers */
+  .partner {
+    grid-template-columns: minmax(280px, 2fr) 3fr;
+    gap: 48px;
+  }
+
+  .partner__img {
+    max-width: none;
+  }
+
+  /* speakers: photo left, text right */
+  .speaker {
+    grid-template-columns: minmax(280px, 2fr) 3fr;
+    align-items: start;
+    gap: 48px;
+  }
+
+  .speaker .photo {
+    max-width: none;
+  }
+
+  .footer__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================================
+   Wide desktop — from 1200px
+   The menu has 7 links + button + language switcher,
+   so it fits in one row only from 1200px; below that the burger is used
+   ========================================================== */
+@media (min-width: 1200px) {
+  /* burger hidden, menu in one row */
+  .burger {
+    display: none;
+  }
+
+  /* order: logo, menu, language switcher */
+  .nav {
+    order: 2;
+    margin-left: auto;
+    position: static;
+    display: block;
+    background: none;
+    border: none;
+  }
+
+  .lang {
+    order: 3;
+    margin: 0 0 0 16px;
+  }
+
+  /* 7 links in RU/DE/FR are long, so tighter gaps keep the row inside 1200px */
+  .nav__list {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    font-size: 0.9375rem;
+  }
+}
+
+/* Users who turned off animations in the system */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

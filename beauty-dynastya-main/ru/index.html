@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beauty Dynastya — международный онлайн-чемпионат для бьюти-мастеров</title>
+  <meta name="description" content="Международный онлайн-чемпионат для бьюти-мастеров: маникюр, ресницы, PMU, SMP, брови, волосы. 01.09 — 01.02.">
+  <link rel="icon" href="../images/favicon.png" type="image/png">
+
+  <!-- Oswald instead of Anton: it has Cyrillic letters -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css?v=3">
+  <script src="../js/main.js?v=3" defer></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="header__brand">
+        <img class="logo" src="../images/logo.png" alt="" width="65" height="45">
+        <span>Beauty Dynastya</span>
+      </a>
+
+      <ul class="lang" aria-label="Язык">
+        <li><a href="../index.html" hreflang="en" lang="en">EN</a></li>
+        <li><a href="index.html" hreflang="ru" aria-current="page">RU</a></li>
+        <li><a href="../it/index.html" hreflang="it" lang="it">IT</a></li>
+        <li><a href="../de/index.html" hreflang="de" lang="de">DE</a></li>
+        <li><a href="../fr/index.html" hreflang="fr" lang="fr">FR</a></li>
+      </ul>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"
+              data-label-open="Открыть меню" data-label-close="Закрыть меню">
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Главное меню">
+        <ul class="nav__list">
+          <li><a href="#about">О чемпионате</a></li>
+          <li><a href="#nominations">Номинации</a></li>
+          <li><a href="#judges">Судьи</a></li>
+          <li><a href="#speakers">Спикеры</a></li>
+          <li><a href="#participants">Участники</a></li>
+          <li><a href="#partners">Партнёры</a></li>
+          <li><a href="#register" class="btn btn--small" data-open-apply>Участвовать</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__kicker">Международный онлайн-чемпионат для бьюти-мастеров</p>
+          <h1 class="hero__title">Beauty<br>Dynastya</h1>
+          <p class="hero__dates"><time>01.09</time> — <time>01.02</time></p>
+          <p class="hero__noms">Маникюр, ресницы, PMU, SMP, брови, волосы</p>
+          <div class="hero__actions">
+            <a href="#register" class="btn" data-open-apply>Участвовать</a>
+            <a href="#judges" class="btn btn--ghost">Судьи чемпионата</a>
+          </div>
+        </div>
+
+        <div class="hero__logo">
+          <img src="../images/logo.png" alt="Логотип Beauty Dynastya" width="900" height="623">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+      <div class="container about__inner">
+        <h2 class="section__title">О чемпионате</h2>
+        <p class="about__text">
+          Beauty Dynastya — международный онлайн-конкурс для бьюти-мастеров.
+          Вы участвуете из своей студии, из любой точки мира, а ваши работы
+          оценивает международное жюри профессионалов.
+        </p>
+
+        <dl class="facts">
+          <div class="facts__item"><dt>Номинаций</dt><dd>6</dd></div>
+          <div class="facts__item"><dt>Судей</dt><dd>37</dd></div>
+          <div class="facts__item"><dt>Стран</dt><dd>16</dd></div>
+          <div class="facts__item"><dt>Формат</dt><dd>Онлайн</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== NOMINATIONS ===== -->
+    <section class="section nominations" id="nominations">
+      <div class="container">
+        <h2 class="section__title">Номинации</h2>
+        <ul class="noms">
+          <li class="noms__item"><h3>Маникюр</h3><p>Маникюр, наращивание и дизайн ногтей</p></li>
+          <li class="noms__item"><h3>Ресницы</h3><p>Наращивание и ламинирование ресниц</p></li>
+          <li class="noms__item"><h3>PMU</h3><p>Перманентный макияж: брови, губы, межресничка</p></li>
+          <li class="noms__item"><h3>SMP</h3><p>Микропигментация кожи головы</p></li>
+          <li class="noms__item"><h3>Брови</h3><p>Коррекция, окрашивание и ламинирование бровей</p></li>
+          <li class="noms__item"><h3>Волосы</h3><p>Стрижки, окрашивание и укладки</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section process" id="how">
+      <div class="container">
+        <h2 class="section__title">Как проходит чемпионат</h2>
+        <p class="process__lead">От регистрации до результатов, шаг за шагом.</p>
+        <ol class="process__list">
+          <li class="process__step">
+            <h3 class="process__title">Регистрация</h3>
+            <p class="process__text">Выберите категорию и номинацию, заполните заявку и подтвердите участие.</p>
+          </li>
+          <li class="process__step">
+            <h3 class="process__title">Подготовка</h3>
+            <p class="process__text">Выполните конкурсную работу по правилам выбранной номинации.</p>
+          </li>
+          <li class="process__step">
+            <h3 class="process__title">Отправка</h3>
+            <p class="process__text">Загрузите фото или видео, проверьте качество и требования и отправьте вовремя.</p>
+          </li>
+          <li class="process__step">
+            <h3 class="process__title">Оценка жюри</h3>
+            <p class="process__text">Международные судьи оценивают каждую работу по утверждённым критериям: техника, качество, эстетика.</p>
+          </li>
+          <li class="process__step">
+            <h3 class="process__title">Результаты</h3>
+            <p class="process__text">Баллы и места публикуются в официальном объявлении.</p>
+          </li>
+          <li class="process__step">
+            <h3 class="process__title">Награждение</h3>
+            <p class="process__text">Победители получают дипломы и награды, которые усилят их портфолио.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== JUDGES ===== -->
+    <section class="section judges" id="judges">
+      <div class="container">
+        <h2 class="section__title">Судьи</h2>
+
+        <div class="filter" role="group" aria-label="Фильтр судей по номинации">
+          <button class="filter__btn" type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button class="filter__btn" type="button" data-filter="lash" aria-pressed="false">Ресницы</button>
+          <button class="filter__btn" type="button" data-filter="pmu" aria-pressed="false">PMU</button>
+          <button class="filter__btn" type="button" data-filter="brows" aria-pressed="false">Брови</button>
+          <button class="filter__btn" type="button" data-filter="lamination" aria-pressed="false">Ламинирование</button>
+          <button class="filter__btn" type="button" data-filter="nails" aria-pressed="false">Маникюр</button>
+          <button class="filter__btn" type="button" data-filter="hair" aria-pressed="false">Волосы</button>
+        </div>
+
+        <ul class="judges__grid">
+          <!-- LASH -->
+          <li class="judge judge--vip" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/tatjana-sakale-erenberga.jpg" alt="Tatjana Šakale-Erenberga" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">TŠ</span>
+            </div>
+            <h3 class="judge__name">Tatjana Šakale-Erenberga</h3>
+            <p class="judge__role">Эксклюзивный VIP-судья по ресницам</p>
+            <p class="judge__country">Латвия</p>
+            <p class="judge__bio">При поддержке Beauty Panda</p>
+            <a class="insta" href="https://www.instagram.com/deevelinaslashes/" target="_blank" rel="noopener">@deevelinaslashes</a>
+          </li>
+          <li class="judge judge--vip" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/alexandra-andreea.jpg" alt="Alexandra Andreea" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">AA</span>
+            </div>
+            <h3 class="judge__name">Alexandra Andreea</h3>
+            <p class="judge__role">Эксклюзивный VIP-судья по ресницам</p>
+            <p class="judge__country">Великобритания</p>
+            <p class="judge__bio">Лэшмейкер, 5 лет работы в Великобритании, основательница ZeroGravity Concept и NikolaLash Academy. Судья Lash Global Dubai и Mondial Beauty Championship. При поддержке Beauty Panda.</p>
+            <a class="insta" href="https://www.instagram.com/lashempire_by_nikola/" target="_blank" rel="noopener">@lashempire_by_nikola</a>
+          </li>
+          <li class="judge judge--vip" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/marzena-laskowska.jpg" alt="Marzena Laskowska" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">ML</span>
+            </div>
+            <h3 class="judge__name">Marzena Laskowska</h3>
+            <p class="judge__role">Эксклюзивный VIP-судья по ресницам</p>
+            <p class="judge__country">Польша</p>
+            <p class="judge__bio">Лэшмейкер, младший судья и независимый бьюти-тренер. 4 награды на очных чемпионатах по ресницам: 3 серебра, 1 бронза. При поддержке Beauty Panda.</p>
+            <a class="insta" href="https://www.instagram.com/lashes.by.laskowska.marzena/" target="_blank" rel="noopener">@lashes.by.laskowska.marzena</a>
+          </li>
+          <li class="judge judge--vip" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/gaia-proietti.jpg" alt="Gaia Proietti" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">GP</span>
+            </div>
+            <h3 class="judge__name">Gaia Proietti</h3>
+            <p class="judge__role">Эксклюзивный VIP-судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Лэшмейкер с 2024 года, обучалась в Concept Lashes и SA Academy Lash. Трижды на пьедестале в наращивании и ламинировании. При поддержке Beauty Panda.</p>
+            <a class="insta" href="https://www.instagram.com/lashesby_gaia/" target="_blank" rel="noopener">@lashesby_gaia</a>
+          </li>
+          <li class="judge judge--vip" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/kateryna-nemchenko.jpg" alt="Nemchenko Kateryna" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">NK</span>
+            </div>
+            <h3 class="judge__name">Nemchenko Kateryna</h3>
+            <p class="judge__role">Эксклюзивный VIP-судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">В наращивании ресниц с 2020 года. Основательница BEAUTYPANDA, тренер по наращиванию, ламинированию ресниц и бровей и PMU. Многократный призёр, лауреат IBA Beauty Awards.</p>
+            <a class="insta" href="https://www.instagram.com/ek.nemchenko/" target="_blank" rel="noopener">@ek.nemchenko</a>
+          </li>
+          <li class="judge judge--vip" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/caren-betancourt.jpg" alt="Caren Betancourt" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">CB</span>
+            </div>
+            <h3 class="judge__name">Caren Betancourt</h3>
+            <p class="judge__role">Эксклюзивный VIP-судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Основательница Concepts of Beauty, тренер по ламинированию ресниц и бровей, специализация — корейские техники. 1-е места на Divine Lash Champions, Beauty Revolution Austria и LamiDay Rome. Судья Lashèra и Venice Beauty Congress.</p>
+            <a class="insta" href="https://www.instagram.com/cb_concepts_of_beauty/" target="_blank" rel="noopener">@cb_concepts_of_beauty</a>
+          </li>
+          <li class="judge judge--vip" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/letizia-barone.jpg" alt="Letizia Barone" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">LB</span>
+            </div>
+            <h3 class="judge__name">Letizia Barone</h3>
+            <p class="judge__role">Эксклюзивный VIP-судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Лэшмейкер с 2018 года, преподаватель Sopracciglieria Italiana. Призёр международных конкурсов по наращиванию, ламинированию и хне. International Beauty Awards 2026: Top Lami Trainer и Rising Star in the Lash Industry; в том же году открыла свою академию.</p>
+            <a class="insta" href="https://www.instagram.com/_elle_hub/" target="_blank" rel="noopener">@_elle_hub</a>
+          </li>
+          <li class="judge judge--vip" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/tsveti-ivanova.jpg" alt="Tsveti Ivanova" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">TI</span>
+            </div>
+            <h3 class="judge__name">Tsveti Ivanova</h3>
+            <p class="judge__role">Эксклюзивный VIP-судья по ресницам</p>
+            <p class="judge__country">Болгария / Испания</p>
+            <p class="judge__bio">Сертифицированный лэшмейкер, основательница Cffety Lashes. Классика, гибрид, объём, wispy, аниме и индивидуальный дизайн.</p>
+            <a class="insta" href="https://www.instagram.com/cffetylashes/" target="_blank" rel="noopener">@cffetylashes</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/debora-fumagalli.jpg" alt="Debora Fumagalli" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">DF</span>
+            </div>
+            <h3 class="judge__name">Debora Fumagalli</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <a class="insta" href="https://www.instagram.com/deborafumagalli_pmu/" target="_blank" rel="noopener">@deborafumagalli_pmu</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/marta-botnari.jpg" alt="Marta Botnari" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">MB</span>
+            </div>
+            <h3 class="judge__name">Marta Botnari</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Франция</p>
+            <a class="insta" href="https://www.instagram.com/marta_mirlashes/" target="_blank" rel="noopener">@marta_mirlashes</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/giulia-mascolo.jpg" alt="Giulia Mascolo" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">GM</span>
+            </div>
+            <h3 class="judge__name">Giulia Mascolo</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Лэшмейкер и тренер с 2020 года. Ламинирование ресниц и бровей, Korean Lash Lift. Призёр конкурсов.</p>
+            <a class="insta" href="https://www.instagram.com/giuliamascolo.lashtrainer.pmu/" target="_blank" rel="noopener">@giuliamascolo.lashtrainer.pmu</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/daniela-ndreu.jpg" alt="Daniela Ndreu" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">DN</span>
+            </div>
+            <h3 class="judge__name">Daniela Ndreu</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Мастер-преподаватель ведущей итальянской академии наращивания ресниц, международный судья, чемпионка нескольких конкурсов.</p>
+            <a class="insta" href="https://www.instagram.com/instadany___/" target="_blank" rel="noopener">@instadany___</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/maria-cleopatra-geosanu.jpg" alt="Maria Cleopatra Geosanu" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">MG</span>
+            </div>
+            <h3 class="judge__name">Maria Cleopatra Geosanu</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <a class="insta" href="https://www.instagram.com/maria_cleo_lashmaker/" target="_blank" rel="noopener">@maria_cleo_lashmaker</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/edyta-kubiczek.jpg" alt="Edyta Kubiczek" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">EK</span>
+            </div>
+            <h3 class="judge__name">Edyta Kubiczek</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Польша</p>
+            <a class="insta" href="https://www.instagram.com/edytakubiczek.lashes/" target="_blank" rel="noopener">@edytakubiczek.lashes</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/diana-caprar.jpg" alt="Diana Caprar" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">DC</span>
+            </div>
+            <h3 class="judge__name">Diana Caprar</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Румыния</p>
+            <p class="judge__bio">Более 6 лет в профессии, более 2 лет тренер, обучила свыше 300 учениц.</p>
+            <a class="insta" href="https://www.instagram.com/dianalianacaprar/" target="_blank" rel="noopener">@dianalianacaprar</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/annalisa-milano.jpg" alt="Annalisa Milano" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">AM</span>
+            </div>
+            <h3 class="judge__name">Annalisa Milano</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Ламинирование и наращивание ресниц. 1-е место среди юниоров на WBC Beauty Champ и LamiDay Rome, 2-е место на European Lash Championship.</p>
+            <a class="insta" href="https://www.instagram.com/annalash_g/" target="_blank" rel="noopener">@annalash_g</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/yulia-shepel.jpg" alt="Yulia Shepel" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">YS</span>
+            </div>
+            <h3 class="judge__name">Yulia Shepel</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Международный судья по ресницам, лэшмейкер и преподаватель, призёр конкурсов.</p>
+            <a class="insta" href="https://www.instagram.com/imperial_yuliashepel/" target="_blank" rel="noopener">@imperial_yuliashepel</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/silvia-sicuro.jpg" alt="Silvia Sicuro" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">SS</span>
+            </div>
+            <h3 class="judge__name">Silvia Sicuro</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Лэшмейкер и тренер, 11 лет в профессии. Дважды на пьедестале конкурсов по ресницам.</p>
+            <a class="insta" href="https://www.instagram.com/silvia_sicurolash/" target="_blank" rel="noopener">@silvia_sicurolash</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/asta-lukosiuniene.jpg" alt="Asta Lukosiuniene" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">AL</span>
+            </div>
+            <h3 class="judge__name">Asta Lukosiuniene</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Великобритания / Литва</p>
+            <a class="insta" href="https://www.instagram.com/astalashista/" target="_blank" rel="noopener">@astalashista</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/ionela-odagiu.jpg" alt="Ionela Odagiu" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">IO</span>
+            </div>
+            <h3 class="judge__name">Ionela Odagiu</h3>
+            <p class="judge__role">Судья по ресницам</p>
+            <p class="judge__country">Италия</p>
+            <a class="insta" href="https://www.instagram.com/iony.0808/" target="_blank" rel="noopener">@iony.0808</a>
+          </li>
+          <li class="judge" data-category="lash">
+            <div class="photo photo--poster">
+              <img src="../images/posters/alina-brikuna.jpg" alt="Alina Brikuna" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">AB</span>
+            </div>
+            <h3 class="judge__name">Alina Brikuna</h3>
+            <p class="judge__role">Ассистент судьи по ресницам</p>
+            <p class="judge__country">Латвия</p>
+            <p class="judge__bio">Мастер по наращиванию ресниц, стаж 4 года. Lash Diva Championship 2026 (Рига): 1-е место — объём 2D–3D, 2-е — классика. Wink of Beauty: два 3-х места.</p>
+            <a class="insta" href="https://www.instagram.com/lashesinriga1/" target="_blank" rel="noopener">@lashesinriga1</a>
+          </li>
+
+          <!-- LAMINATION -->
+          <li class="judge" data-category="lamination">
+            <div class="photo photo--poster">
+              <img src="../images/posters/francesca-faenza.jpg" alt="Francesca Faenza" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">FF</span>
+            </div>
+            <h3 class="judge__name">Francesca Faenza</h3>
+            <p class="judge__role">Судья по ламинированию</p>
+            <p class="judge__country">Италия</p>
+            <a class="insta" href="https://www.instagram.com/francescafaenza_/" target="_blank" rel="noopener">@francescafaenza_</a>
+          </li>
+
+          <!-- PMU -->
+          <li class="judge" data-category="pmu">
+            <div class="photo photo--poster">
+              <img src="../images/posters/jananeh-hajighasem.jpg" alt="Jananeh Hajighasem" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">JH</span>
+            </div>
+            <h3 class="judge__name">Jananeh Hajighasem</h3>
+            <p class="judge__role">Судья по PMU</p>
+            <p class="judge__country">Франция</p>
+            <a class="insta" href="https://www.instagram.com/naydacademy/" target="_blank" rel="noopener">@naydacademy</a>
+          </li>
+          <li class="judge" data-category="pmu">
+            <div class="photo photo--poster">
+              <img src="../images/posters/oriya-fellous.jpg" alt="Oriya Fellous" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">OF</span>
+            </div>
+            <h3 class="judge__name">Oriya Fellous</h3>
+            <p class="judge__role">Судья по PMU</p>
+            <p class="judge__country">Израиль</p>
+            <a class="insta" href="https://www.instagram.com/oriya_professional/" target="_blank" rel="noopener">@oriya_professional</a>
+          </li>
+          <li class="judge" data-category="pmu">
+            <div class="photo photo--poster">
+              <img src="../images/posters/shiran-shalom.jpg" alt="Shiran Shalom" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">SS</span>
+            </div>
+            <h3 class="judge__name">Shiran Shalom</h3>
+            <p class="judge__role">Судья по PMU</p>
+            <p class="judge__country">Израиль</p>
+            <p class="judge__bio">Мастер перманентного макияжа, специализация — техника омбре. Училась в Израиле, Украине и Бельгии, обучает перманенту губ.</p>
+            <a class="insta" href="https://www.instagram.com/shiran.shalom_eyelashe/" target="_blank" rel="noopener">@shiran.shalom_eyelashe</a>
+          </li>
+          <li class="judge" data-category="pmu">
+            <div class="photo photo--poster">
+              <img src="../images/posters/katy-pinchasov.jpg" alt="Katy Pinchasov" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">KP</span>
+            </div>
+            <h3 class="judge__name">Katy Pinchasov</h3>
+            <p class="judge__role">Судья по PMU</p>
+            <p class="judge__country">Израиль</p>
+            <p class="judge__bio">Владелица частной клиники в Сдероте. Брови, губы, глаза; удаление перманента и тату, микронидлинг.</p>
+            <a class="insta" href="https://www.instagram.com/katypinhasov/" target="_blank" rel="noopener">@katypinhasov</a>
+          </li>
+          <li class="judge" data-category="pmu">
+            <div class="photo photo--poster">
+              <img src="../images/posters/zofiya-yadayi.jpg" alt="Zofiya Yadayi" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">ZY</span>
+            </div>
+            <h3 class="judge__name">Zofiya Yadayi</h3>
+            <p class="judge__role">Судья по PMU</p>
+            <p class="judge__country">Израиль</p>
+            <p class="judge__bio">Брови, губы, глаза и тату, ведёт курсы повышения квалификации. Многократные 1-е места за подводку, губы и перекрытие бровей (2025–2026).</p>
+            <a class="insta" href="https://www.instagram.com/zofiya_yadayi/" target="_blank" rel="noopener">@zofiya_yadayi</a>
+          </li>
+          <li class="judge" data-category="pmu">
+            <div class="photo photo--poster">
+              <img src="../images/posters/celine-vermeille.jpg" alt="Celine Vermeille" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">CV</span>
+            </div>
+            <h3 class="judge__name">Celine Vermeille</h3>
+            <p class="judge__role">Судья по PMU</p>
+            <p class="judge__country">Швейцария</p>
+            <p class="judge__bio">Тату- и PMU-мастер, основательница Dahlia Studio. Волосковые брови, fine-line, перекрытие шрамов, 3D-реконструкция ареолы. 1-е места в 3D Areola Reconstruction и Fine Line Tattoo.</p>
+            <a class="insta" href="https://www.instagram.com/dahlia.studio.tattoo/" target="_blank" rel="noopener">@dahlia.studio.tattoo</a>
+          </li>
+          <li class="judge" data-category="pmu">
+            <div class="photo photo--poster">
+              <img src="../images/posters/marzena-guenther.jpg" alt="Marzena Guenther" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">MG</span>
+            </div>
+            <h3 class="judge__name">Marzena Guenther</h3>
+            <p class="judge__role">Судья по PMU</p>
+            <p class="judge__country">Польша</p>
+            <p class="judge__bio">В бьюти-сфере с 2004 года, в PMU с 2017-го, сертифицированный Linergist. Гран-при и два титула чемпионки Польши на PMU Gold Championship 2026. Судья Amber Eyes, PMU Indonesia и Worlds Poland 2026.</p>
+            <a class="insta" href="https://www.instagram.com/marzena_guenther_pmu/" target="_blank" rel="noopener">@marzena_guenther_pmu</a>
+          </li>
+
+          <!-- BROWS -->
+          <li class="judge" data-category="brows">
+            <div class="photo photo--poster">
+              <img src="../images/posters/regina-rocska.jpg" alt="Rocska Regina" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">RR</span>
+            </div>
+            <h3 class="judge__name">Rocska Regina</h3>
+            <p class="judge__role">Судья по бровям</p>
+            <p class="judge__country">Румыния</p>
+            <a class="insta" href="https://www.instagram.com/reginarocska/" target="_blank" rel="noopener">@reginarocska</a>
+          </li>
+          <li class="judge" data-category="brows">
+            <div class="photo photo--poster">
+              <img src="../images/posters/olena-korniichuk.jpg" alt="Olena Korniichuk" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">OK</span>
+            </div>
+            <h3 class="judge__name">Olena Korniichuk</h3>
+            <p class="judge__role">Судья по бровям</p>
+            <p class="judge__country">Дания</p>
+            <a class="insta" href="https://www.instagram.com/olena.korniichuk.dk/" target="_blank" rel="noopener">@olena.korniichuk.dk</a>
+          </li>
+
+          <!-- NAILS -->
+          <li class="judge judge--vip" data-category="nails">
+            <div class="photo photo--poster">
+              <img src="../images/posters/jenny-tronci-hebbel.jpg" alt="Jenny Tronci-Hebbel" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">JT</span>
+            </div>
+            <h3 class="judge__name">Jenny Tronci-Hebbel</h3>
+            <p class="judge__role">VIP-судья по маникюру</p>
+            <p class="judge__country">Германия</p>
+            <a class="insta" href="https://www.instagram.com/le_one_milia/" target="_blank" rel="noopener">@le_one_milia</a>
+          </li>
+          <li class="judge judge--vip" data-category="nails">
+            <div class="photo photo--poster">
+              <img src="../images/posters/dayana-benitez.jpg" alt="Dayana Benitez" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">DB</span>
+            </div>
+            <h3 class="judge__name">Dayana Benitez</h3>
+            <p class="judge__role">VIP-судья по маникюру</p>
+            <p class="judge__country">Куба</p>
+            <a class="insta" href="https://www.instagram.com/dayinailscubana/" target="_blank" rel="noopener">@dayinailscubana</a>
+          </li>
+          <li class="judge judge--vip" data-category="nails">
+            <div class="photo photo--poster">
+              <img src="../images/posters/angelica-betancourt.jpg" alt="Angelica Betancourt" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">AB</span>
+            </div>
+            <h3 class="judge__name">Angelica Betancourt</h3>
+            <p class="judge__role">VIP-судья по маникюру</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Основательница Angelica Nails Academy, более 10 лет в nail-индустрии, обучила свыше 100 мастеров. Реконструкция и архитектура ногтя: гель, акрил, акригель, аэрография, дизайн.</p>
+            <a class="insta" href="https://www.instagram.com/angelicanails_academy/" target="_blank" rel="noopener">@angelicanails_academy</a>
+          </li>
+          <li class="judge judge--vip" data-category="nails">
+            <div class="photo photo--poster">
+              <img src="../images/posters/angela-betancourt.jpg" alt="Angela Betancourt" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">AB</span>
+            </div>
+            <h3 class="judge__name">Angela Betancourt</h3>
+            <p class="judge__role">VIP-судья по маникюру</p>
+            <p class="judge__country">Италия</p>
+            <p class="judge__bio">Nail-тренер и преподаватель, более 10 лет опыта, сооснователь Angelica Nails Academy, тренер по личному бренду и контент-креатор.</p>
+            <a class="insta" href="https://www.instagram.com/angela_nailtrainer_/" target="_blank" rel="noopener">@angela_nailtrainer_</a>
+          </li>
+          <li class="judge" data-category="nails">
+            <div class="photo photo--poster">
+              <img src="../images/posters/anna-barnakova.jpg" alt="Anna Barňáková" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">AB</span>
+            </div>
+            <h3 class="judge__name">Anna Barňáková</h3>
+            <p class="judge__role">Судья по маникюру</p>
+            <p class="judge__country">Словакия</p>
+            <p class="judge__bio">Международный nail-тренер, владелица маникюрного салона в Михаловце. Обладательница титула Top 10 Nail Artist и награды Top Nail Trainer.</p>
+            <a class="insta" href="https://www.instagram.com/anna_amazingnails/" target="_blank" rel="noopener">@anna_amazingnails</a>
+          </li>
+
+          <!-- HAIR -->
+          <li class="judge" data-category="hair">
+            <div class="photo photo--poster">
+              <img src="../images/posters/julia-beauty.jpg" alt="Julia Beauty" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">JB</span>
+            </div>
+            <h3 class="judge__name">Julia Beauty</h3>
+            <p class="judge__role">Судья по волосам</p>
+            <p class="judge__country">США</p>
+            <p class="judge__bio">Чемпионка мира 2025 (тонкие волосы, Hair Extensions Guru Championship), лауреат IBA Beauty Awards XIII, международный судья IBIA 5-го уровня. Основательница Julia Beauty Academy, автор метода The 3D Layers Capsules Method™.</p>
+            <a class="insta" href="https://www.instagram.com/juliabeauty_sd/" target="_blank" rel="noopener">@juliabeauty_sd</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== SPEAKERS ===== -->
+    <section class="section speakers" id="speakers">
+      <div class="container">
+        <h2 class="section__title">Спикеры</h2>
+
+        <ul class="speakers__grid">
+
+          <li class="speaker">
+            <div class="photo photo--poster">
+              <img src="../images/posters/silvia-amadei.jpg" alt="Silvia Amadei" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">SA</span>
+            </div>
+
+            <div class="speaker__info">
+              <p class="speaker__label">VIP-спикер</p>
+              <h3 class="speaker__name">Silvia Amadei</h3>
+              <p class="speaker__country">Италия</p>
+
+              <p class="speaker__bio">
+                Мастер-тренер с 2024 года, основательница SA Academy Lash &amp; Brows
+                (декабрь 2025). Обучает профессиональным техникам работы с ресницами
+                и бровями, автор эффекта FOXYLAMI — корейской техники ламинирования.
+              </p>
+
+              <dl class="speaker__facts">
+                <div>
+                  <dt>Бренд-партнёр</dt>
+                  <dd>AURAMONACO, PURPLE Flame Cosmetics</dd>
+                </div>
+                <div>
+                  <dt>Награды</dt>
+                  <dd>German Beauty Champions — 3-е место; ProChampions UK — финалистка</dd>
+                </div>
+              </dl>
+
+              <details class="more">
+                <summary>Опыт судейства и выступлений</summary>
+                <dl class="speaker__facts">
+                  <div>
+                    <dt>Судья</dt>
+                    <dd>Beauty Champions 2025, Glamur Arena 2025 и 2026, WBC Beauty Championship 2025,
+                        WBC Champions 2026, Roma World Beauty 2026, The Art Circus 2026, Beauty Dynastya 2026</dd>
+                  </div>
+                  <div>
+                    <dt>Спикер</dt>
+                    <dd>Lamiday 2026, The Art Circus 2026, Roma World Beauty 2026,
+                        Babira Conference 2026 (демо-спикер)</dd>
+                  </div>
+                </dl>
+              </details>
+
+              <p class="speaker__links">
+                <a class="insta" href="https://www.instagram.com/silvia.amadei_masterlash/" target="_blank" rel="noopener">@silvia.amadei_masterlash</a>
+                <a class="insta" href="https://www.instagram.com/sa.academylash/" target="_blank" rel="noopener">@sa.academylash</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="speaker">
+            <div class="photo photo--poster">
+              <img src="../images/posters/sol-shola-beker.jpg" alt="Sol Shola Beker" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">SB</span>
+            </div>
+
+            <div class="speaker__info">
+              <p class="speaker__label">Спикер</p>
+              <h3 class="speaker__name">Sol Shola Beker</h3>
+              <p class="speaker__country">Израиль</p>
+
+              <p class="speaker__bio">
+                Эксперт по удалению татуировок и перманентного макияжа, одна из ведущих
+                специалистов в этой области в Израиле. Работает со сложными случаями,
+                применяет продвинутые техники и восстанавливает кожу в процессе удаления.
+              </p>
+
+              <dl class="speaker__facts">
+                <div>
+                  <dt>Основательница</dt>
+                  <dd>CleanSkin Remover — профессиональный бренд для удаления</dd>
+                </div>
+                <div>
+                  <dt>Обучение</dt>
+                  <dd>Обучает и курирует специалистов по удалению</dd>
+                </div>
+              </dl>
+
+              <p class="speaker__links">
+                <a class="insta" href="https://www.instagram.com/shuli_tattooremoval/" target="_blank" rel="noopener">@shuli_tattooremoval</a>
+              </p>
+            </div>
+          </li>
+
+
+          <li class="speaker">
+            <div class="photo photo--poster">
+              <img src="../images/posters/isabella-paunescu.jpg" alt="Isabella Paunescu" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">IP</span>
+            </div>
+
+            <div class="speaker__info">
+              <p class="speaker__label">Спикер</p>
+              <h3 class="speaker__name">Isabella Paunescu</h3>
+              <p class="speaker__country">Румыния / Великобритания</p>
+
+              <p class="speaker__bio">
+                Основательница Regal Lashes и Regal Event UK — первого в Великобритании ивента по наращиванию ресниц, организованного румынкой. Более 9 лет в индустрии, создательница международного сообщества The REGAL Family.
+              </p>
+
+              <dl class="speaker__facts">
+                <div>
+                  <dt>Обучение</dt>
+                  <dd>Более 1000 учениц, многие из них стали тренерами, спикерами и судьями</dd>
+                </div>
+                <div>
+                  <dt>Опыт</dt>
+                  <dd>Спикер и судья на ресничных мероприятиях по всему миру</dd>
+                </div>
+              </dl>
+
+              <p class="speaker__links">
+                <a class="insta" href="https://www.instagram.com/regal_lashes_/" target="_blank" rel="noopener">@regal_lashes_</a>
+              </p>
+            </div>
+          </li>
+
+
+          <li class="speaker">
+            <div class="photo photo--poster">
+              <img src="../images/posters/nadezhda-pichugina.jpg" alt="Nadezhda Pichugina" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">NP</span>
+            </div>
+
+            <div class="speaker__info">
+              <p class="speaker__label">Спикер</p>
+              <h3 class="speaker__name">Nadezhda Pichugina</h3>
+              <p class="speaker__country">Финляндия / Россия</p>
+
+              <p class="speaker__bio">
+                Международный топ-тренер и спикер по наращиванию ресниц, более 9 лет в профессии. Судья международных чемпионатов, амбассадор Imperial Lashes &amp; Brows.
+              </p>
+
+              <dl class="speaker__facts">
+                <div>
+                  <dt>Основательница</dt>
+                  <dd>Школа-студия наращивания ресниц YAR QUEEN (Ярославль, 2018–2022)</dd>
+                </div>
+                <div>
+                  <dt>Организатор</dt>
+                  <dd>Международная конференция WONDERLASH (2025) и онлайн-марафоны (2023–2024)</dd>
+                </div>
+                <div>
+                  <dt>Авторская техника</dt>
+                  <dd>Эффект «перманентной стрелки» на изгибе I-curl</dd>
+                </div>
+              </dl>
+
+              <p class="speaker__links">
+                <a class="insta" href="https://www.instagram.com/pichugina_lashes/" target="_blank" rel="noopener">@pichugina_lashes</a>
+              </p>
+            </div>
+          </li>
+
+
+          <li class="speaker">
+            <div class="photo photo--poster">
+              <img src="../images/posters/ekaterina-dvoeriadkina.jpg" alt="Ekaterina Dvoeriadkina" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">ED</span>
+            </div>
+
+            <div class="speaker__info">
+              <p class="speaker__label">Спикер</p>
+              <h3 class="speaker__name">Ekaterina Dvoeriadkina</h3>
+              <p class="speaker__country">Беларусь</p>
+
+              <p class="speaker__bio">
+                Международный аналитик, практикующий мастер и тренер по перманентному макияжу. Спикер международных конгрессов и основной сцены финала WULOP.
+              </p>
+
+              <dl class="speaker__facts">
+                <div>
+                  <dt>Судейство</dt>
+                  <dd>Главный судья финалов и полуфиналов WULOP в разных странах, судья региональных чемпионатов</dd>
+                </div>
+                <div>
+                  <dt>Партнёрство</dt>
+                  <dd>Тестировщик оборудования и пигментов, Kwadron PMU Artist, Evenflo PMU Artist, член команды E.M.A.</dd>
+                </div>
+                <div>
+                  <dt>Обучение</dt>
+                  <dd>Автор обучающих пособий и лекций по перманентному макияжу</dd>
+                </div>
+              </dl>
+
+              <p class="speaker__links">
+                <a class="insta" href="https://www.instagram.com/ekaterina_dvoeriadkina/" target="_blank" rel="noopener">@ekaterina_dvoeriadkina</a>
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PARTICIPANTS ===== -->
+    <section class="section participants" id="participants">
+      <div class="container">
+        <h2 class="section__title">Участники</h2>
+
+        <ul class="participants__grid">
+          <li class="participant">
+            <div class="photo photo--poster">
+              <img src="../images/posters/michal-gershon.jpg" alt="Michal Gershon" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">MG</span>
+            </div>
+            <h3 class="participant__name">Michal Gershon</h3>
+            <p class="participant__country">Израиль</p>
+            <a class="insta" href="https://www.instagram.com/michalifrah_eyebrows/" target="_blank" rel="noopener">@michalifrah_eyebrows</a>
+          </li>
+
+          <li class="participant">
+            <div class="photo photo--poster">
+              <img src="../images/posters/koral-biton.jpg" alt="Koral Biton" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">KB</span>
+            </div>
+            <h3 class="participant__name">Koral Biton</h3>
+            <p class="participant__country">Израиль</p>
+            <p class="participant__bio">7 лет в бьюти-индустрии. PMU, микроблейдинг, растушёвка губ, ламинирование ресниц. Преподаёт.</p>
+            <a class="insta" href="https://www.instagram.com/koral__cosmetics1/" target="_blank" rel="noopener">@koral__cosmetics1</a>
+          </li>
+
+          <li class="participant">
+            <div class="photo photo--poster">
+              <img src="../images/posters/angela-collica.jpg" alt="Angela Collica" loading="lazy">
+              <span class="photo__initials" aria-hidden="true">AC</span>
+            </div>
+            <h3 class="participant__name">Angela Collica</h3>
+            <p class="participant__country">Италия</p>
+            <a class="insta" href="https://www.instagram.com/angela_collica92/" target="_blank" rel="noopener">@angela_collica92</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PARTNERS ===== -->
+    <section class="section partners" id="partners">
+      <div class="container">
+        <h2 class="section__title">Партнёры</h2>
+
+        <article class="partner">
+          <img class="partner__img" src="../images/posters/beauty-panda.jpg" alt="Beauty Panda — official sponsor" loading="lazy">
+          <div class="partner__info">
+            <p class="speaker__label">Официальный спонсор</p>
+            <h3 class="speaker__name">Beauty Panda</h3>
+            <p class="speaker__bio">Beauty Panda — итальянский бренд профессиональных материалов для наращивания ресниц. Флагманский продукт — ресницы и готовые пучки LaserFix™ с лазерными микронасечками по всей окружности основания: они лучше держатся и не прокручиваются при постановке.</p>
+            <a class="insta" href="https://www.instagram.com/beautypanda.it/" target="_blank" rel="noopener">@beautypanda.it</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== REGISTER ===== -->
+    <!-- TODO: replace text with real rules, prices and deadlines -->
+    <section class="section register" id="register">
+      <div class="container register__inner">
+        <h2 class="register__title">Участвуйте</h2>
+        <p class="register__text">
+          Регистрация и все подробности — в нашей Telegram-группе. Вступайте, укажите номинацию, и мы пришлём правила и расскажем, как отправить работу.
+        </p>
+        <p class="register__note">Победители получают кубок, сертификат и официальную VIP-карту.</p>
+        <div class="register__actions">
+          <a href="https://t.me/Beautydynastya" class="btn btn--light" target="_blank" rel="noopener">Перейти в Telegram</a>
+          <a href="https://ig.me/m/beauty_dynastya" class="btn btn--ghost" target="_blank" rel="noopener">Написать в Instagram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="header__brand">
+        <img class="logo" src="../images/logo.png" alt="" width="65" height="45">
+        <span>Beauty Dynastya</span>
+      </a>
+      <a href="https://www.instagram.com/beauty_dynastya/" class="footer__link" target="_blank" rel="noopener">
+        @beauty_dynastya
+      </a>
+      <p class="footer__copy">© <span id="year">2026</span> Beauty Dynastya</p>
+    </div>
+  </footer>
+
+
+
+
+  <!-- ===== APPLICATION MODAL ===== -->
+  <dialog class="modal" id="apply" aria-labelledby="apply-title">
+    <div class="modal__inner">
+      <button class="modal__close" type="button" data-close aria-label="Закрыть">&times;</button>
+
+      <form class="apply-form" novalidate>
+        <h2 class="modal__title" id="apply-title">Стать частью чемпионата</h2>
+        <p class="modal__lead">Оставьте данные, и мы свяжемся с вами.</p>
+
+        <input type="hidden" name="language" value="ru">
+        <!-- honeypot: real people never see or tick it, bots do — Web3Forms then rejects the message -->
+        <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form-grid">
+          <div class="field" data-field>
+            <label for="ap-name">Имя и фамилия</label>
+            <input id="ap-name" name="full_name" type="text" placeholder="Анна Иванова" required autocomplete="name" aria-describedby="err-name">
+            <p class="field__error" id="err-name" aria-live="polite"></p>
+          </div>
+
+          <div class="field" data-field>
+            <label for="ap-country">Страна</label>
+            <input id="ap-country" name="country" type="text" placeholder="Казахстан" required autocomplete="country-name" aria-describedby="err-country">
+            <p class="field__error" id="err-country" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field" data-field>
+            <legend>Хочу участвовать как</legend>
+            <div class="choices">
+            <label class="choice"><input type="radio" name="role" value="Judge" required><span>Судья</span></label>
+            <label class="choice"><input type="radio" name="role" value="Participant" required><span>Участник</span></label>
+            <label class="choice"><input type="radio" name="role" value="Speaker" required><span>Спикер</span></label>
+            </div>
+            <p class="field__error" aria-live="polite"></p>
+          </fieldset>
+        </div>
+
+        <button class="btn form__submit" type="submit">Отправить заявку</button>
+        <p class="form__error" role="alert"></p>
+
+        <a class="tg" href="https://t.me/Beautydynastya" target="_blank" rel="noopener">
+          <span class="tg__text">Новости, правила и итоги в нашей Telegram-группе</span>
+          <span class="tg__handle">@Beautydynastya</span>
+        </a>
+      </form>
+
+      <div class="success" hidden>
+        <div class="success__icon" aria-hidden="true">&#10003;</div>
+        <h3 class="modal__title" tabindex="-1">Спасибо! Ваша заявка принята</h3>
+        <p class="success__text">Остался последний шаг: перейдите в нашу Telegram-группу. Там правила, сроки и дальнейшие инструкции.</p>
+        <div class="success__actions">
+          <a class="btn form__submit" href="https://t.me/Beautydynastya" target="_blank" rel="noopener">Перейти в Telegram</a>
+          <button class="btn btn--ghost" type="button" data-close>Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+</body>
+</html>

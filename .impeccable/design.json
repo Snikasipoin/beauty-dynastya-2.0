@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T10:09:24.440Z",
+  "title": "Design System: Beauty Dynastya",
+  "extensions": {
+    "colorMeta": {
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Основной фон",
+        "tonalRamp": [
+          "oklch(15% 0.0021 308.13)",
+          "oklch(25% 0.0032 308.13)",
+          "oklch(36% 0.0041 308.13)",
+          "oklch(47% 0.0045 308.13)",
+          "oklch(59% 0.0043 308.13)",
+          "oklch(71% 0.0036 308.13)",
+          "oklch(83% 0.0023 308.13)",
+          "oklch(95% 0.0007 308.13)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Панель",
+        "tonalRamp": [
+          "oklch(15% 0.0041 317.69)",
+          "oklch(25% 0.0064 317.69)",
+          "oklch(36% 0.0082 317.69)",
+          "oklch(47% 0.0091 317.69)",
+          "oklch(59% 0.0088 317.69)",
+          "oklch(71% 0.0072 317.69)",
+          "oklch(83% 0.0046 317.69)",
+          "oklch(95% 0.0014 317.69)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Карточка",
+        "tonalRamp": [
+          "oklch(15% 0.0051 319.46)",
+          "oklch(25% 0.0079 319.46)",
+          "oklch(36% 0.0101 319.46)",
+          "oklch(47% 0.0111 319.46)",
+          "oklch(59% 0.0107 319.46)",
+          "oklch(71% 0.0088 319.46)",
+          "oklch(83% 0.0057 319.46)",
+          "oklch(95% 0.0017 319.46)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Светлый",
+        "tonalRamp": [
+          "oklch(15% 0.0051 71.90)",
+          "oklch(25% 0.0080 71.90)",
+          "oklch(36% 0.0102 71.90)",
+          "oklch(47% 0.0112 71.90)",
+          "oklch(59% 0.0108 71.90)",
+          "oklch(71% 0.0089 71.90)",
+          "oklch(83% 0.0057 71.90)",
+          "oklch(95% 0.0018 71.90)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Приглушённый",
+        "tonalRamp": [
+          "oklch(15% 0.0075 335.12)",
+          "oklch(25% 0.0116 335.12)",
+          "oklch(36% 0.0149 335.12)",
+          "oklch(47% 0.0164 335.12)",
+          "oklch(59% 0.0158 335.12)",
+          "oklch(71% 0.0130 335.12)",
+          "oklch(83% 0.0084 335.12)",
+          "oklch(95% 0.0026 335.12)"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Золотой",
+        "tonalRamp": [
+          "oklch(15% 0.0448 83.47)",
+          "oklch(25% 0.0697 83.47)",
+          "oklch(36% 0.0892 83.47)",
+          "oklch(47% 0.0982 83.47)",
+          "oklch(59% 0.0947 83.47)",
+          "oklch(71% 0.0779 83.47)",
+          "oklch(83% 0.0502 83.47)",
+          "oklch(95% 0.0154 83.47)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Красный",
+        "tonalRamp": [
+          "oklch(15% 0.1005 23.47)",
+          "oklch(25% 0.1566 23.47)",
+          "oklch(36% 0.2004 23.47)",
+          "oklch(47% 0.2205 23.47)",
+          "oklch(59% 0.2127 23.47)",
+          "oklch(71% 0.1750 23.47)",
+          "oklch(83% 0.1127 23.47)",
+          "oklch(95% 0.0346 23.47)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Тёмный текст",
+        "tonalRamp": [
+          "oklch(15% 0.0058 326.06)",
+          "oklch(25% 0.0090 326.06)",
+          "oklch(36% 0.0115 326.06)",
+          "oklch(47% 0.0126 326.06)",
+          "oklch(59% 0.0122 326.06)",
+          "oklch(71% 0.0100 326.06)",
+          "oklch(83% 0.0065 326.06)",
+          "oklch(95% 0.0020 326.06)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Линия",
+        "tonalRamp": [
+          "oklch(15% 0.0076 322.01)",
+          "oklch(25% 0.0119 322.01)",
+          "oklch(36% 0.0152 322.01)",
+          "oklch(47% 0.0168 322.01)",
+          "oklch(59% 0.0162 322.01)",
+          "oklch(71% 0.0133 322.01)",
+          "oklch(83% 0.0086 322.01)",
+          "oklch(95% 0.0026 322.01)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Ошибка",
+        "tonalRamp": [
+          "oklch(15% 0.0439 18.54)",
+          "oklch(25% 0.0684 18.54)",
+          "oklch(36% 0.0875 18.54)",
+          "oklch(47% 0.0962 18.54)",
+          "oklch(59% 0.0928 18.54)",
+          "oklch(71% 0.0764 18.54)",
+          "oklch(83% 0.0492 18.54)",
+          "oklch(95% 0.0151 18.54)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Название чемпионата",
+        "purpose": "Первый экран."
+      },
+      "headline": {
+        "displayName": "Заголовок секции",
+        "purpose": "Повторяемые заголовки разделов."
+      },
+      "title": {
+        "displayName": "Заголовок элемента",
+        "purpose": "Номинации и этапы."
+      },
+      "person-title": {
+        "displayName": "Имя судьи",
+        "purpose": "Первый текстовый уровень карточки перед страной и ролью."
+      },
+      "body": {
+        "displayName": "Основной текст",
+        "purpose": "Обычный текст интерфейса."
+      },
+      "body-relaxed": {
+        "displayName": "Длинное описание",
+        "purpose": "Абзацы с увеличенным интерлиньяжем."
+      },
+      "caption": {
+        "displayName": "Биография и подпись",
+        "purpose": "Полные биографии судей и вторичные описания."
+      },
+      "label": {
+        "displayName": "Подпись поля",
+        "purpose": "Подписи формы и управления."
+      }
+    },
+    "shadows": [
+      {
+        "name": "judge-card-hover",
+        "value": "0 14px 36px -16px rgba(0,0,0,0.7)",
+        "purpose": "Только карточка судьи при наведении."
+      }
+    ],
+    "motion": [
+      {
+        "name": "card-reveal-duration",
+        "value": "0.65s",
+        "purpose": "Появление карточек GSAP."
+      },
+      {
+        "name": "card-reveal-ease",
+        "value": "power3.out",
+        "purpose": "Появление карточек GSAP."
+      },
+      {
+        "name": "card-reveal-offset",
+        "value": "28px",
+        "purpose": "Исходное вертикальное смещение карточки."
+      },
+      {
+        "name": "word-stagger",
+        "value": "0.06s",
+        "purpose": "Последовательное повышение прозрачности слов About."
+      },
+      {
+        "name": "judge-hover-duration",
+        "value": "300ms",
+        "purpose": "Переход тени карточки судьи."
+      },
+      {
+        "name": "poster-hover-duration",
+        "value": "700ms",
+        "purpose": "Увеличение постера при разрешённом движении."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "2xl",
+        "value": "1536px"
+      }
+    ],
+    "tonalRampProvenance": {
+      "source": "derived",
+      "normative": false,
+      "description": "Шкалы синтезированы в OKLCH исключительно для панели просмотра. Это не используемые проектом токены; нормативны только цвета frontmatter DESIGN.md."
+    }
+  },
+  "components": [
+    {
+      "name": "Основная кнопка",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Светлая кнопка основного действия с золотым наведением.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Участвовать <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
+      "css": ".ds-primary{display:inline-flex;min-height:48px;max-width:100%;align-items:center;justify-content:center;gap:12px;border-radius:10px;padding:14px 24px;font-family:'Manrope Variable','Segoe UI',sans-serif;font-size:14px;line-height:1.625;text-align:center;transition:color 150ms cubic-bezier(.4,0,.2,1),background-color 150ms cubic-bezier(.4,0,.2,1),border-color 150ms cubic-bezier(.4,0,.2,1);cursor:pointer;background:var(--color-cream,#fff9f2);color:var(--color-ink,#171217);font-weight:700;border:0}.ds-primary:hover{background:var(--color-gold,#e2be77)}.ds-primary:disabled{cursor:wait;opacity:.6}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-chip:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--color-gold,#e2be77);outline-offset:4px}"
+    },
+    {
+      "name": "Вторичная кнопка",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Прозрачное вторичное действие с рамкой.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">Судьи чемпионата</button>",
+      "css": ".ds-secondary{display:inline-flex;min-height:48px;max-width:100%;align-items:center;justify-content:center;gap:12px;border-radius:10px;padding:14px 24px;font-family:'Manrope Variable','Segoe UI',sans-serif;font-size:14px;line-height:1.625;text-align:center;transition:color 150ms cubic-bezier(.4,0,.2,1),background-color 150ms cubic-bezier(.4,0,.2,1),border-color 150ms cubic-bezier(.4,0,.2,1);cursor:pointer;background:transparent;color:var(--color-cream,#fff9f2);font-weight:600;border:1px solid var(--color-line,#3a333b)}.ds-secondary:hover{background:var(--color-panel,#181519);border-color:var(--color-muted,#c9bec6)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-chip:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--color-gold,#e2be77);outline-offset:4px}"
+    },
+    {
+      "name": "Текстовое поле",
+      "kind": "input",
+      "refersTo": "field-input",
+      "description": "Подпись, поле и локализованное сообщение ошибки.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Имя</label><input id=\"ds-name\" class=\"ds-field\" type=\"text\" autocomplete=\"name\" placeholder=\"Ваше имя\" aria-describedby=\"ds-name-error\"><p id=\"ds-name-error\" class=\"ds-error\"></p>",
+      "css": ".ds-label{display:block;margin-bottom:8px;font:600 14px/20px 'Manrope Variable','Segoe UI',sans-serif;color:var(--color-cream,#fff9f2)}.ds-field{min-height:48px;width:100%;padding:12px 16px;border:1px solid var(--color-line,#3a333b);border-radius:10px;background:var(--color-canvas,#0c0b0d);color:var(--color-cream,#fff9f2);font:400 16px/24px 'Manrope Variable','Segoe UI',sans-serif;caret-color:var(--color-gold,#e2be77)}.ds-field::placeholder{color:color-mix(in srgb,var(--color-muted,#c9bec6) 80%,transparent)}.ds-field[aria-invalid=true]{border-color:var(--color-error,#ffadae)}.ds-error{margin-top:8px;color:var(--color-error,#ffadae);font:400 14px/1.625 'Manrope Variable','Segoe UI',sans-serif}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-chip:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--color-gold,#e2be77);outline-offset:4px}"
+    },
+    {
+      "name": "Фильтр судей",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "Категория судей; выбранное состояние передаётся aria-pressed.",
+      "html": "<div class=\"ds-chips\" role=\"group\" aria-label=\"Категория\"><button class=\"ds-chip\" type=\"button\" aria-pressed=\"true\">Все</button><button class=\"ds-chip\" type=\"button\" aria-pressed=\"false\">PMU</button></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px}.ds-chip{min-height:44px;border:0;border-radius:9999px;padding:10px 20px;background:var(--color-panel,#181519);color:var(--color-muted,#c9bec6);font:600 14px/20px 'Manrope Variable','Segoe UI',sans-serif;cursor:pointer;transition:color 150ms,background-color 150ms}.ds-chip:hover{background:var(--color-card,#211d22);color:var(--color-cream,#fff9f2)}.ds-chip[aria-pressed=true]{background:var(--color-cream,#fff9f2);color:var(--color-ink,#171217)}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-chip:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--color-gold,#e2be77);outline-offset:4px}"
+    },
+    {
+      "name": "Навигация и языки",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Фактические состояния ссылок и выбора языка; без JavaScript меню в образце.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Разделы\"><a href=\"#judges\">Судьи</a><a href=\"#speakers\">Спикеры</a><div class=\"ds-languages\" role=\"group\" aria-label=\"Язык\"><button type=\"button\" aria-pressed=\"false\" lang=\"en\">EN</button><button type=\"button\" aria-pressed=\"true\" lang=\"ru\">RU</button></div></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;align-items:center;gap:12px;border-bottom:1px solid var(--color-line,#3a333b);background:color-mix(in srgb,var(--color-canvas,#0c0b0d) 90%,transparent);backdrop-filter:blur(24px);font:400 14px/20px 'Manrope Variable','Segoe UI',sans-serif}.ds-nav a{display:flex;min-height:44px;align-items:center;border-radius:8px;padding:0 8px;color:var(--color-muted,#c9bec6);text-decoration:none;transition:color 150ms}.ds-nav a:hover{color:var(--color-cream,#fff9f2)}.ds-languages{display:flex;gap:2px}.ds-languages button{min-height:44px;min-width:44px;border:0;border-radius:8px;padding:0 8px;background:transparent;color:var(--color-muted,#c9bec6);font:700 12px/16px 'Manrope Variable','Segoe UI',sans-serif;letter-spacing:.025em;cursor:pointer}.ds-languages button:hover{background:var(--color-panel,#181519);color:var(--color-cream,#fff9f2)}.ds-languages button[aria-pressed=true]{background:var(--color-cream,#fff9f2);color:var(--color-ink,#171217)}.ds-languages button:focus-visible{outline:2px solid var(--color-gold,#e2be77);outline-offset:4px}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-chip:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--color-gold,#e2be77);outline-offset:4px}"
+    },
+    {
+      "name": "Карточка судьи — текстовая часть",
+      "kind": "card",
+      "refersTo": "judge-card",
+      "description": "Текстовая часть фактического JudgeCard без подмены портрета. В продукте перед ней расположен оригинальный постер 4:5, вписанный целиком.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-body\"><h3>Имя судьи</h3><p class=\"ds-country\">Страна</p><p class=\"ds-role\">Роль</p><p class=\"ds-bio\">Полная биография из исходного сайта без ограничения количества строк.</p><div class=\"ds-social\"><a href=\"#judges\">Instagram <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M15 3h6v6M10 14 21 3\"/><path d=\"M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6\"/></svg></a></div></div></article>",
+      "css": ".ds-card{min-width:0;overflow:hidden;border-radius:16px;background:var(--color-panel,#181519);color:var(--color-cream,#fff9f2);font-family:'Manrope Variable','Segoe UI',sans-serif;transition:box-shadow 300ms}.ds-card:hover{box-shadow:0 14px 36px -16px rgba(0,0,0,.7)}.ds-card-body{display:flex;flex-direction:column;padding:20px}.ds-card h3{margin:0;font:700 20px/1.375 Satoshi,'Manrope Variable',sans-serif;overflow-wrap:break-word}.ds-country{margin:8px 0 0;color:var(--color-gold,#e2be77);font-size:14px;line-height:20px;font-weight:500}.ds-role,.ds-bio{margin:8px 0 0;color:var(--color-muted,#c9bec6);font-size:14px;line-height:1.625}.ds-bio{margin-top:16px}.ds-social{margin-top:auto;padding-top:16px}.ds-social a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--color-gold,#e2be77);font-size:14px;text-decoration:none}.ds-social a:hover{color:var(--color-cream,#fff9f2)}@media(min-width:640px){.ds-card-body{padding:24px}}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-chip:focus-visible,.ds-nav a:focus-visible,.ds-card a:focus-visible{outline:2px solid var(--color-gold,#e2be77);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Существующая чёрно-красная айдентика Beauty Dynastya",
+    "overview": "Система продолжает предоставленный сайт: оригинальный красно-чёрный логотип и реальные постеры остаются основными изображениями. Тёмные поверхности, светлый текст и золотые акценты связывают их с новым интерфейсом. Это фиксация реализованного переноса, а не новая концепция бренда.\n\nКрупная типографика задаёт иерархию; разделители и изменение тона поверхности организуют длинную страницу. Первый экран сохраняет Editorial Split: двухстрочное название слева, оригинальный знак справа; на узком экране знак следует за текстом. Это описание существующего первого экрана, а не обязательная композиция будущих страниц.",
+    "keyCharacteristics": [
+      "Оригинальные логотип и постеры без замены иллюстрациями.",
+      "Тёмные поверхности, светлые действия и золотые состояния фокуса.",
+      "Локальные шрифты Satoshi и Manrope Variable.",
+      "Адаптивные сетки и полное текстовое содержание карточек.",
+      "Движение учитывает предпочтение уменьшенной анимации."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** сохранять оригинальные логотип, постеры, реальные имена и тексты.",
+      "**Do** использовать существующие роли цветов и локальные шрифты из frontmatter.",
+      "**Do** показывать имя перед страной и ролью, сохранять полную биографию судьи.",
+      "**Do** вписывать постеры целиком и позволять карточкам расти по содержимому.",
+      "**Do** сохранять видимый золотой фокус, локализованные подписи и поддержку уменьшенного движения."
+    ],
+    "donts": [
+      "**Don't** заменять исходную айдентику новой визуальной концепцией при расширении сайта.",
+      "**Don't** обрезать постеры и скрывать биографии судей ради одинаковой высоты карточек.",
+      "**Don't** переносить стеклянную подложку шапки на каждую поверхность.",
+      "**Don't** делать доступность текста зависимой от запуска анимации."
+    ]
+  }
+}

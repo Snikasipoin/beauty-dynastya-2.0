@@ -1,0 +1,467 @@
+{
+  "meta": {
+    "title": "Beauty Dynastya — Campionato Internazionale Online per Professionisti della Bellezza",
+    "description": "Campionato internazionale online per professionisti della bellezza: Nails, Lash, PMU, SMP, Brows, Hair. 01.09 — 01.02."
+  },
+  "nav": {
+    "about": "Il Campionato",
+    "nominations": "Categorie",
+    "judges": "Giudici",
+    "speakers": "Speaker",
+    "participants": "Partecipanti",
+    "partners": "Partner",
+    "register": "Iscriviti"
+  },
+  "hero": {
+    "subtitle": "Campionato Internazionale Online per Professionisti della Bellezza",
+    "dates": "01.09 — 01.02",
+    "nominations": "Nails, Lash, PMU, SMP, Brows, Hair",
+    "register": "Iscriviti ora",
+    "judges": "Scopri i giudici"
+  },
+  "about": {
+    "title": "Il Campionato",
+    "text": "Beauty Dynastya è una competizione internazionale online per professionisti della bellezza. Partecipi dal tuo studio, ovunque tu sia nel mondo: il tuo lavoro viene valutato da una giuria internazionale di esperti del settore.",
+    "facts": {
+      "nominations": "Categorie",
+      "judges": "Giudici",
+      "countries": "Paesi",
+      "format": "Formato"
+    },
+    "online": "Online"
+  },
+  "nominations": {
+    "title": "Categorie",
+    "items": {
+      "nails": {
+        "title": "Nails",
+        "description": "Manicure, ricostruzione unghie e Nail Art"
+      },
+      "lash": {
+        "title": "Lash",
+        "description": "Extension ciglia e Lash Lift"
+      },
+      "pmu": {
+        "title": "PMU",
+        "description": "Trucco permanente: sopracciglia, labbra, infracigliare"
+      },
+      "smp": {
+        "title": "SMP",
+        "description": "Scalp MicroPigmentation"
+      },
+      "brows": {
+        "title": "Brows",
+        "description": "Design, colorazione e Brow Lamination delle sopracciglia"
+      },
+      "hair": {
+        "title": "Hair",
+        "description": "Tagli, colorazione e styling"
+      }
+    }
+  },
+  "process": {
+    "title": "Come funziona",
+    "lead": "Dall'iscrizione ai risultati, passo dopo passo.",
+    "steps": {
+      "registration": {
+        "title": "Iscrizione",
+        "description": "Scegli la categoria e la nomination, compila il modulo e conferma la tua partecipazione."
+      },
+      "preparation": {
+        "title": "Preparazione",
+        "description": "Realizza il tuo lavoro di gara seguendo il regolamento della tua categoria."
+      },
+      "submission": {
+        "title": "Invio",
+        "description": "Carica una foto o un video, verifica qualità e requisiti e invialo entro la scadenza."
+      },
+      "evaluation": {
+        "title": "Valutazione della giuria",
+        "description": "I giudici internazionali valutano ogni lavoro secondo criteri ufficiali: tecnica, qualità ed estetica."
+      },
+      "results": {
+        "title": "Risultati",
+        "description": "Punteggi e classifiche vengono pubblicati con un annuncio ufficiale."
+      },
+      "awards": {
+        "title": "Premiazione",
+        "description": "I vincitori ricevono diplomi e premi che valorizzano il loro portfolio professionale."
+      }
+    }
+  },
+  "judges": {
+    "title": "Giudici",
+    "filterLabel": "Filtra i giudici per categoria",
+    "categories": {
+      "all": "Tutti",
+      "lash": "Lash",
+      "pmu": "PMU",
+      "brows": "Brows",
+      "lamination": "Lamination",
+      "nails": "Nails",
+      "hair": "Hair"
+    },
+    "people": {
+      "tatjana-sakale-erenberga": {
+        "role": "Giudice VIP Esclusivo Lash",
+        "country": "Lettonia",
+        "bio": "Con il supporto di Beauty Panda"
+      },
+      "alexandra-andreea": {
+        "role": "Giudice VIP Esclusivo Lash",
+        "country": "Gran Bretagna",
+        "bio": "Lash artist with 5 years in the UK, founder of the ZeroGravity Concept and NikolaLash Academy. Judge at Lash Global Dubai and Mondial Beauty Championship. Presented by Beauty Panda."
+      },
+      "marzena-laskowska": {
+        "role": "Giudice VIP Esclusivo Lash",
+        "country": "Polonia",
+        "bio": "Lash artist, junior judge and independent beauty trainer. 4 trophies at live lash championships: 3 silver, 1 bronze. Presented by Beauty Panda."
+      },
+      "gaia-proietti": {
+        "role": "Giudice VIP Esclusivo Lash",
+        "country": "Italia",
+        "bio": "Lashmaker since 2024, trained at Concept Lashes and SA Academy Lash. Three podiums in extensions and lamination. Presented by Beauty Panda."
+      },
+      "kateryna-nemchenko": {
+        "role": "Giudice VIP Esclusivo Lash",
+        "country": "Italia",
+        "bio": "In lash extensions since 2020. Founder of BEAUTYPANDA, trainer in lash extensions, lash & brow lamination and PMU. Multi-award winner, IBA Beauty Awards laureate."
+      },
+      "caren-betancourt": {
+        "role": "Giudice VIP Esclusivo Lash",
+        "country": "Italia",
+        "bio": "Founder of Concepts of Beauty, trainer in lash & brow lamination with a focus on Korean techniques. 1st places at Divine Lash Champions, Beauty Revolution Austria and LamiDay Rome. Judge at Lashèra and Venice Beauty Congress."
+      },
+      "letizia-barone": {
+        "role": "Giudice VIP Esclusivo Lash",
+        "country": "Italia",
+        "bio": "Lashmaker since 2018, educator for Sopracciglieria Italiana. International podiums in extensions, lamination and henna. 2026 International Beauty Awards: Top Lami Trainer and Rising Star in the Lash Industry; opened her own academy the same year."
+      },
+      "tsveti-ivanova": {
+        "role": "Giudice VIP Esclusivo Lash",
+        "country": "Bulgaria / Spagna",
+        "bio": "Certified lash artist and founder of Cffety Lashes. Classic, hybrid, volume, wispy, anime and custom lash styling."
+      },
+      "debora-fumagalli": {
+        "role": "Giudice Lash",
+        "country": "Italia",
+        "bio": ""
+      },
+      "marta-botnari": {
+        "role": "Giudice Lash",
+        "country": "Francia",
+        "bio": ""
+      },
+      "giulia-mascolo": {
+        "role": "Giudice Lash",
+        "country": "Italia",
+        "bio": "Lash artist and trainer since 2020. Lash & brow lamination, Korean Lash Lift. Award-winning competitor."
+      },
+      "daniela-ndreu": {
+        "role": "Giudice Lash",
+        "country": "Italia",
+        "bio": "Master educator at a leading Italian lash extension academy, international judge and champion of several lash competitions."
+      },
+      "maria-cleopatra-geosanu": {
+        "role": "Giudice Lash",
+        "country": "Italia",
+        "bio": ""
+      },
+      "edyta-kubiczek": {
+        "role": "Giudice Lash",
+        "country": "Polonia",
+        "bio": ""
+      },
+      "diana-caprar": {
+        "role": "Giudice Lash",
+        "country": "Romania",
+        "bio": "6+ years in the field and a trainer for 2+ years with over 300 students."
+      },
+      "annalisa-milano": {
+        "role": "Giudice Lash",
+        "country": "Italia",
+        "bio": "Lash lifting and extensions. 1st place junior at WBC Beauty Champ and LamiDay Rome, 2nd place junior at the European Lash Championship."
+      },
+      "yulia-shepel": {
+        "role": "Giudice Lash",
+        "country": "Italia",
+        "bio": "International lash judge, award-winning lash artist and educator."
+      },
+      "silvia-sicuro": {
+        "role": "Giudice Lash",
+        "country": "Italia",
+        "bio": "Lash artist and trainer with 11 years of experience. Two podium placements in lash competitions."
+      },
+      "asta-lukosiuniene": {
+        "role": "Giudice Lash",
+        "country": "Gran Bretagna / Lituania",
+        "bio": ""
+      },
+      "ionela-odagiu": {
+        "role": "Giudice Lash",
+        "country": "Italia",
+        "bio": ""
+      },
+      "alina-brikuna": {
+        "role": "Assistente Giudice Lash",
+        "country": "Lettonia",
+        "bio": "Lash artist with 4 years of experience. Lash Diva Championship 2026 (Riga): 1st place volume 2D–3D, 2nd place classic. Wink of Beauty: two 3rd places."
+      },
+      "francesca-faenza": {
+        "role": "Giudice Lamination",
+        "country": "Italia",
+        "bio": ""
+      },
+      "jananeh-hajighasem": {
+        "role": "Giudice PMU",
+        "country": "Francia",
+        "bio": ""
+      },
+      "oriya-fellous": {
+        "role": "Giudice PMU",
+        "country": "Israele",
+        "bio": ""
+      },
+      "shiran-shalom": {
+        "role": "Giudice PMU",
+        "country": "Israele",
+        "bio": "PMU artist specialising in the ombré technique. Trained in Israel, Ukraine and Belgium; teaches lip PMU."
+      },
+      "katy-pinchasov": {
+        "role": "Giudice PMU",
+        "country": "Israele",
+        "bio": "Owner of a private clinic in Sderot. Brows, lips and eyes; PMU and tattoo removal, microneedling."
+      },
+      "zofiya-yadayi": {
+        "role": "Giudice PMU",
+        "country": "Israele",
+        "bio": "Brows, lips, eyes and tattoos; runs advanced courses. Multiple 1st places for eyeliner, lips and brow cover-up (2025–2026)."
+      },
+      "celine-vermeille": {
+        "role": "Giudice PMU",
+        "country": "Svizzera",
+        "bio": "Tattoo and PMU artist, founder of Dahlia Studio. Hairstroke brows, fine-line and scar tattooing, 3D areola reconstruction. 1st places in 3D Areola Reconstruction and Fine Line Tattoo."
+      },
+      "marzena-guenther": {
+        "role": "Giudice PMU",
+        "country": "Polonia",
+        "bio": "In beauty since 2004, PMU since 2017, certified Linergist. Grand Prix and two Polish Champion titles at PMU Gold Championship 2026. Judge at Amber Eyes, PMU Indonesia and Worlds Poland 2026."
+      },
+      "regina-rocska": {
+        "role": "Giudice Brows",
+        "country": "Romania",
+        "bio": ""
+      },
+      "olena-korniichuk": {
+        "role": "Giudice Brows",
+        "country": "Danimarca",
+        "bio": ""
+      },
+      "jenny-tronci-hebbel": {
+        "role": "Giudice VIP Nails",
+        "country": "Germania",
+        "bio": ""
+      },
+      "dayana-benitez": {
+        "role": "Giudice VIP Nails",
+        "country": "Cuba",
+        "bio": ""
+      },
+      "angelica-betancourt": {
+        "role": "Giudice VIP Nails",
+        "country": "Italia",
+        "bio": "Founder of Angelica Nails Academy, 10+ years in the nail industry, mentored 100+ nail artists. Nail reconstruction and architecture: gel, acrylic, acrygel, airbrush, nail art."
+      },
+      "angela-betancourt": {
+        "role": "Giudice VIP Nails",
+        "country": "Italia",
+        "bio": "Nail trainer & educator with 10+ years of experience, co-founder of Angelica Nails Academy, branding trainer and content creator."
+      },
+      "anna-barnakova": {
+        "role": "Giudice Nails",
+        "country": "Slovacchia",
+        "bio": "International nail trainer and owner of a nail salon in Michalovce. Winner of the Top 10 Nail Artist title and the Top Nail Trainer award."
+      },
+      "julia-beauty": {
+        "role": "Giudice Hair",
+        "country": "Stati Uniti",
+        "bio": "World Champion 2025 (thin hair, Hair Extensions Guru Championship), IBA Beauty Awards XIII laureate, IBIA Level 5 international judge. Founder of Julia Beauty Academy and author of The 3D Layers Capsules Method™."
+      }
+    }
+  },
+  "speakers": {
+    "title": "Speaker",
+    "people": {
+      "silvia-amadei": {
+        "label": "VIP Speaker",
+        "country": "Italia",
+        "bio": "Master trainer since 2024 and founder of SA Academy Lash & Brows (December 2025). Teaches professional lash & brow techniques and created the FOXYLAMI effect — a Korean lamination technique.",
+        "facts": {
+          "fact0": {
+            "label": "Brand Partner",
+            "value": "AURAMONACO, PURPLE Flame Cosmetics"
+          },
+          "fact1": {
+            "label": "Premi",
+            "value": "German Beauty Champions — 3rd place; ProChampions UK — finalist"
+          },
+          "fact2": {
+            "label": "Giudice",
+            "value": "Beauty Champions 2025, Glamur Arena 2025 & 2026, WBC Beauty Championship 2025, WBC Champions 2026, Roma World Beauty 2026, The Art Circus 2026, Beauty Dynastya 2026"
+          },
+          "fact3": {
+            "label": "Speaker",
+            "value": "Lamiday 2026, The Art Circus 2026, Roma World Beauty 2026, Babira Conference 2026 (demo speaker)"
+          }
+        }
+      },
+      "sol-shola-beker": {
+        "label": "Speaker",
+        "country": "Israele",
+        "bio": "Tattoo & PMU removal expert, one of the leading removal specialists in Israel. Works with advanced techniques, complex cases and skin rehabilitation during removal.",
+        "facts": {
+          "fact0": {
+            "label": "Fondatrice",
+            "value": "CleanSkin Remover — professional removal brand"
+          },
+          "fact1": {
+            "label": "Formazione",
+            "value": "Trains and mentors removal specialists"
+          }
+        }
+      },
+      "isabella-paunescu": {
+        "label": "Speaker",
+        "country": "Romania / Gran Bretagna",
+        "bio": "Founder of Regal Lashes and Regal Event UK — the first lash extension event in the UK organised by a Romanian woman. 9+ years in the lash industry and creator of the international community The REGAL Family.",
+        "facts": {
+          "fact0": {
+            "label": "Formazione",
+            "value": "1,000+ students, many now working as trainers, speakers and judges"
+          },
+          "fact1": {
+            "label": "Esperienza",
+            "value": "Speaker and judge at lash events worldwide"
+          }
+        }
+      },
+      "nadezhda-pichugina": {
+        "label": "Speaker",
+        "country": "Finlandia / Russia",
+        "bio": "International top trainer and speaker in eyelash extensions with 9+ years of experience. Judge at international championships and ambassador of Imperial Lashes & Brows.",
+        "facts": {
+          "fact0": {
+            "label": "Fondatrice",
+            "value": "YAR QUEEN lash extension school-studio (Yaroslavl, 2018–2022)"
+          },
+          "fact1": {
+            "label": "Organizzatrice",
+            "value": "International WONDERLASH Conference (2025) and online marathons (2023–2024)"
+          },
+          "fact2": {
+            "label": "Tecnica d'autore",
+            "value": "“Permanent eyeliner” effect using the I-curl"
+          }
+        }
+      },
+      "ekaterina-dvoeriadkina": {
+        "label": "Speaker",
+        "country": "Bielorussia",
+        "bio": "International analyst, practising PMU master and trainer. Speaker at international congresses and on the WULOP finale main stage.",
+        "facts": {
+          "fact0": {
+            "label": "Giuria",
+            "value": "Head judge of WULOP finals and semi-finals in different countries, judge of regional championships"
+          },
+          "fact1": {
+            "label": "Partnership",
+            "value": "Tester of PMU equipment and pigments, Kwadron PMU Artist, Evenflo PMU Artist, E.M.A. team member"
+          },
+          "fact2": {
+            "label": "Formazione",
+            "value": "Author of PMU tutorials and lectures"
+          }
+        }
+      }
+    }
+  },
+  "participants": {
+    "title": "Partecipanti",
+    "people": {
+      "michal-gershon": {
+        "country": "Israele"
+      },
+      "koral-biton": {
+        "country": "Israele"
+      },
+      "angela-collica": {
+        "country": "Italia"
+      }
+    }
+  },
+  "partners": {
+    "title": "Partner",
+    "people": {
+      "beauty-panda": {
+        "label": "Sponsor ufficiale",
+        "bio": "Beauty Panda è un brand italiano di prodotti professionali per l'extension ciglia. La linea di punta, LaserFix™, comprende ciglia e ventagli pre-made con micro-incisioni laser a 360° alla base: tenuta più lunga e nessuna rotazione durante l'applicazione."
+      }
+    }
+  },
+  "registration": {
+    "title": "Partecipa",
+    "text": "Iscrizioni e dettagli nel nostro gruppo Telegram. Unisciti e indica la tua categoria: ti invieremo il regolamento e le istruzioni per inviare il tuo lavoro.",
+    "note": "I vincitori ricevono un trofeo, un certificato di riconoscimento e la VIP card ufficiale.",
+    "telegram": "Unisciti su Telegram",
+    "instagram": "Scrivici su Instagram"
+  },
+  "form": {
+    "title": "Unisciti al campionato",
+    "lead": "Lascia i tuoi dati e ti contatteremo.",
+    "name": "Nome e cognome",
+    "country": "Paese",
+    "role": "Voglio partecipare come",
+    "roles": {
+      "judge": "Giudice",
+      "participant": "Partecipante",
+      "speaker": "Speaker"
+    },
+    "submit": "Invia richiesta",
+    "telegram": "Novità, regolamento e risultati nel nostro gruppo Telegram",
+    "success": "Grazie! La tua richiesta è stata ricevuta",
+    "successText": "Ultimo passo: unisciti al nostro gruppo Telegram. Lì trovi regolamento, scadenze e prossimi passi."
+  },
+  "ui": {
+    "skip": "Vai al contenuto",
+    "menu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "language": "Lingua del sito",
+    "biography": "Biografia",
+    "details": "Esperienza e riconoscimenti",
+    "results": "Giudici visualizzati: {{count}}",
+    "empty": "Non ci sono ancora giudici in questa categoria.",
+    "sending": "Invio…",
+    "required": "Compila questo campo.",
+    "roleRequired": "Scegli come partecipare.",
+    "error": "Invio non riuscito. Riprova o contattaci su Telegram.",
+    "unavailable": "Il modulo online è temporaneamente indisponibile. Invia la tua candidatura su Telegram.",
+    "successClose": "Torna al campionato",
+    "profile": "Profilo Instagram",
+    "formLink": "Invia la candidatura",
+    "namePlaceholder": "Nome e cognome",
+    "countryPlaceholder": "Il tuo paese",
+    "requiredNote": "Tutti i campi sono obbligatori.",
+    "backToTop": "Torna all’inizio",
+    "nomination": "Categoria",
+    "vip": "Giudice VIP",
+    "smp": "SMP",
+    "filterReset": "Mostra tutti i giudici",
+    "web3forms": "Modulo di candidatura",
+    "footerNote": "Un palcoscenico internazionale per i professionisti della bellezza.",
+    "telegramHint": "Regole, scadenze e dettagli di iscrizione sono disponibili presso gli organizzatori.",
+    "heroExplore": "Scopri il campionato",
+    "imageFallback": "Ritratto non disponibile",
+    "judgesHint": "I professionisti che valuteranno il tuo lavoro.",
+    "speakersHint": "Esperienza, competenza e una nuova prospettiva sul tuo mestiere."
+  }
+}

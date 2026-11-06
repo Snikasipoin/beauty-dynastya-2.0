@@ -1,0 +1,49 @@
+@import '@fontsource-variable/manrope';
+@import './fonts.css';
+@import 'tailwindcss' source('../');
+
+@theme {
+  --color-canvas: #0c0b0d;
+  --color-panel: #181519;
+  --color-card: #211d22;
+  --color-cream: #fff9f2;
+  --color-muted: #c9bec6;
+  --color-gold: #e2be77;
+  --color-accent: #ef3340;
+  --color-ink: #171217;
+  --color-line: #3a333b;
+  --color-error: #ffadae;
+  --font-sans: 'Manrope Variable', 'Segoe UI', sans-serif;
+  --font-display: 'Satoshi', 'Manrope Variable', sans-serif;
+}
+
+@layer base {
+  html { scroll-padding-top: 10rem; scrollbar-color: var(--color-line) var(--color-canvas); }
+  body { @apply m-0 min-w-80 bg-canvas font-sans text-cream antialiased; }
+  button, a, input, summary { -webkit-tap-highlight-color: transparent; }
+  button, summary { cursor: pointer; }
+  button:disabled { cursor: wait; }
+  :focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
+  ::selection { background: var(--color-gold); color: var(--color-ink); }
+  input { caret-color: var(--color-gold); }
+  p { text-wrap: pretty; }
+  h1, h2, h3 { overflow-wrap: anywhere; text-wrap: balance; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] summary svg { transform: rotate(180deg); }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+}
+
+@layer components {
+  .container-shell { @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 2xl:px-16; }
+  .section-space { padding-block: clamp(4.5rem, 8vw, 8rem); }
+  .section-title { @apply max-w-4xl font-display text-[clamp(2.25rem,4.5vw,4rem)] leading-[1.12] font-bold tracking-[-0.03em]; }
+  .btn-primary { @apply inline-flex min-h-12 max-w-full items-center justify-center gap-3 rounded-[10px] bg-cream px-6 py-3.5 text-center text-sm leading-relaxed font-bold text-ink transition-colors hover:bg-gold disabled:cursor-wait disabled:opacity-60; }
+  .btn-secondary { @apply inline-flex min-h-12 max-w-full items-center justify-center gap-3 rounded-[10px] border border-line bg-transparent px-6 py-3.5 text-center text-sm leading-relaxed font-semibold text-cream transition-colors hover:border-muted hover:bg-panel; }
+  .field-label { @apply mb-2 block text-sm font-semibold; }
+  .field-input { @apply min-h-12 w-full rounded-[10px] border border-line bg-canvas px-4 py-3 text-base text-cream placeholder:text-muted/80 aria-invalid:border-error; }
+  .field-error { @apply mt-2 text-sm leading-relaxed text-error; }
+  .skip-link { @apply fixed top-3 left-5 z-50 -translate-y-24 rounded-lg bg-gold px-5 py-3 font-bold text-ink focus:translate-y-0; }
+  .break-anywhere { overflow-wrap: anywhere; }
+  .hero-surface { background: radial-gradient(ellipse at 85% 45%, #39131b 0%, transparent 56%), var(--color-canvas); }
+  .registration-surface { background: linear-gradient(135deg, #29141c, var(--color-canvas) 70%); }
+}
