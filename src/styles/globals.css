@@ -14,7 +14,7 @@
   --color-line: #3a333b;
   --color-error: #ffadae;
   --font-sans: 'Manrope Variable', 'Segoe UI', sans-serif;
-  --font-display: 'Satoshi', 'Manrope Variable', sans-serif;
+  --font-display: 'Oswald', 'Impact', 'Arial Narrow', sans-serif;
 }
 
 @layer base {
@@ -27,7 +27,7 @@
   ::selection { background: var(--color-gold); color: var(--color-ink); }
   input { caret-color: var(--color-gold); }
   p { text-wrap: pretty; }
-  h1, h2, h3 { overflow-wrap: anywhere; text-wrap: balance; }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); overflow-wrap: anywhere; text-wrap: balance; }
   details > summary::-webkit-details-marker { display: none; }
   details[open] summary svg { transform: rotate(180deg); }
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }

@@ -8,7 +8,7 @@ export function Hero() {
     <section className="hero-surface relative isolate overflow-hidden" aria-labelledby="hero-title">
       <div className="container-shell grid min-h-[min(760px,90svh)] items-center gap-8 py-14 md:grid-cols-[1.1fr_1fr] md:py-20">
         <div className="relative z-10">
-          <h1 id="hero-title" className="max-w-6xl font-display text-[clamp(3.5rem,7vw,6rem)] leading-[0.98] font-black tracking-[-0.04em]">Beauty<br /><span className="text-gold">Dynastya</span></h1>
+          <h1 id="hero-title" className="max-w-6xl font-display text-[clamp(3.5rem,7vw,6rem)] leading-[0.98] font-bold tracking-[-0.04em]">Beauty<br /><span className="text-gold">Dynastya</span></h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">{t('hero.subtitle')}</p>
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted">{t('hero.nominations')}</p>
           <div className="mt-9 flex flex-wrap gap-3">

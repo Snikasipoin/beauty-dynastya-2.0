@@ -18,7 +18,7 @@ export function Speakers() {
           const prefix = `speakers.people.${speaker.id}`
           return (
             <li key={speaker.id} data-card className="group grid overflow-hidden rounded-2xl bg-canvas lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]">
-              <PersonPoster poster={speaker.poster} name={speaker.name} fit="cover" className="w-full self-stretch" />
+              <PersonPoster poster={speaker.poster} name={speaker.name} layout="speaker" className="self-stretch" />
               <div className="flex min-w-0 flex-col justify-center p-6 sm:p-10 lg:p-14">
                 <h3 className="font-display text-3xl leading-tight font-bold sm:text-4xl">{speaker.name}</h3>
                 <p className="mt-3 text-sm font-semibold text-gold">{t(`${prefix}.label`)} · {t(`${prefix}.country`)}</p>

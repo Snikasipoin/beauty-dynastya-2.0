@@ -14,24 +14,24 @@ colors:
   error: "#ffadae"
 typography:
   display:
-    fontFamily: "Satoshi, Manrope Variable, sans-serif"
+    fontFamily: "Oswald, Impact, Arial Narrow, sans-serif"
     fontSize: "clamp(3.5rem, 7vw, 6rem)"
-    fontWeight: 900
+    fontWeight: 700
     lineHeight: 0.98
     letterSpacing: "-0.04em"
   headline:
-    fontFamily: "Satoshi, Manrope Variable, sans-serif"
+    fontFamily: "Oswald, Impact, Arial Narrow, sans-serif"
     fontSize: "clamp(2.25rem, 4.5vw, 4rem)"
     fontWeight: 700
     lineHeight: 1.12
     letterSpacing: "-0.03em"
   title:
-    fontFamily: "Satoshi, Manrope Variable, sans-serif"
+    fontFamily: "Oswald, Impact, Arial Narrow, sans-serif"
     fontSize: "1.5rem"
     fontWeight: 700
     lineHeight: "2rem"
   person-title:
-    fontFamily: "Satoshi, Manrope Variable, sans-serif"
+    fontFamily: "Oswald, Impact, Arial Narrow, sans-serif"
     fontSize: "1.25rem"
     fontWeight: 700
     lineHeight: 1.375
@@ -123,7 +123,7 @@ components:
 
 - Оригинальные логотип и постеры без замены иллюстрациями.
 - Тёмные поверхности, светлые действия и золотые состояния фокуса.
-- Локальные шрифты Satoshi и Manrope Variable.
+- Локальные шрифты Oswald и Manrope Variable.
 - Адаптивные сетки и полное текстовое содержание карточек.
 - Движение учитывает предпочтение уменьшенной анимации.
 
@@ -151,9 +151,9 @@ components:
 
 ## Typography
 
-**Display Font:** локальный Satoshi, затем Manrope Variable и sans-serif. Поставляются начертания (700, 900) с `font-display: swap`.
+**Display Font:** локальный Oswald Variable с именем семейства `Oswald`, затем `Impact`, `Arial Narrow`, `sans-serif`. Подключены начертания 200–700 с `font-display: swap`, латиница и кириллица. Заголовки используют вес 700.
 
-**Body Font:** локальный пакет Manrope Variable, затем Segoe UI и sans-serif. Manrope также обеспечивает глифы, отсутствующие в Satoshi.
+**Body Font:** локальный пакет Manrope Variable, затем Segoe UI и sans-serif. Основной текст сохраняет прежнюю типографику.
 
 ### Hierarchy
 

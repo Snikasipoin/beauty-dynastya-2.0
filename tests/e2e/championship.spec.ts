@@ -31,6 +31,17 @@ for (const [language, locale] of Object.entries(locales)) {
       await expect(page.locator('#participants li')).toHaveCount(3)
       await expect(page.locator('#register')).toBeVisible()
       await page.evaluate(() => document.fonts.ready)
+      const typography = await page.evaluate(() => ({
+        headings: [...document.querySelectorAll('h1,h2,h3')].map((heading) => getComputedStyle(heading).fontFamily),
+        oswaldLoaded: [...document.fonts].some((font) => font.family === 'Oswald' && font.status === 'loaded'),
+        speakerImageClasses: [...document.querySelectorAll('#speakers [data-person-poster] img')].map((image) => image.className),
+      }))
+      expect(typography.oswaldLoaded).toBe(true)
+      for (const family of typography.headings) expect(family).toMatch(/^Oswald,/)
+      for (const classes of typography.speakerImageClasses) {
+        expect(classes.split(' ')).not.toContain('object-contain')
+        expect(classes.split(' ')).not.toContain('w-full')
+      }
       const overflow = await page.evaluate(() => {
         const viewport = document.documentElement.clientWidth
         return [...document.querySelectorAll('main *, header *, footer *')].filter((element) => {

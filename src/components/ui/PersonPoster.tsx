@@ -7,9 +7,10 @@ interface PersonPosterProps {
   name: string
   className?: string
   fit?: 'contain' | 'cover'
+  layout?: 'portrait' | 'speaker'
 }
 
-export function PersonPoster({ poster, name, className = '', fit = 'contain' }: PersonPosterProps) {
+export function PersonPoster({ poster, name, className = '', fit = 'contain', layout = 'portrait' }: PersonPosterProps) {
   const [failed, setFailed] = useState(false)
   const { t } = useTranslation()
   return (
@@ -21,7 +22,7 @@ export function PersonPoster({ poster, name, className = '', fit = 'contain' }: 
         </div>
       ) : (
         // Изображение не участвует в расчёте высоты: разные исходники не меняют формат блока.
-        <img src={posterUrl(poster)} alt={name} width="800" height="1000" loading="lazy" decoding="async" onError={() => setFailed(true)} className={`absolute inset-0 h-full w-full ${fit === 'cover' ? 'object-cover object-top' : 'object-contain'} transition-transform duration-700 motion-safe:group-hover:scale-[1.025]`} />
+        <img src={posterUrl(poster)} alt={name} width="800" height="1000" loading="lazy" decoding="async" onError={() => setFailed(true)} className={`${layout === 'speaker' ? 'absolute inset-y-0 left-0 h-full w-auto min-w-full object-cover object-left-top' : `absolute inset-0 h-full w-full ${fit === 'cover' ? 'object-cover object-top' : 'object-contain'}`} transition-transform duration-700 motion-safe:group-hover:scale-[1.025]`} />
       )}
     </div>
   )

@@ -86,4 +86,4 @@ pnpm exec playwright install --with-deps chromium
 
 `PRODUCT.md` описывает продукт и ограничения, `DESIGN.md` — визуальную систему. Локальные навыки gpt-taste и Impeccable используются при разработке и не входят в браузерный бандл или Git-репозиторий. Результат механического аудита Impeccable: замечаний в компонентах, хуках и стилях не найдено. Визуальный аудит дополняет браузерные проверки.
 
-Satoshi: Indian Type Foundry / [Fontshare](https://www.fontshare.com/fonts/satoshi). Manrope: [Fontsource](https://fontsource.org/fonts/manrope), OFL-1.1. Логотип и постеры перенесены из предоставленного исходного проекта.
+Oswald и Manrope: [Fontsource Oswald](https://fontsource.org/fonts/oswald), [Fontsource Manrope](https://fontsource.org/fonts/manrope), OFL-1.1. Заголовки используют `Oswald, Impact, Arial Narrow, sans-serif`. Логотип и постеры перенесены из предоставленного исходного проекта.
