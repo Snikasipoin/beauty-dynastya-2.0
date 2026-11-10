@@ -1,7 +1,7 @@
-export type JudgeCategory = 'lash' | 'pmu' | 'brows' | 'lamination' | 'nails' | 'hair'
+export type JudgeCategory = 'lash' | 'pmu' | 'brows' | 'lamination' | 'nails' | 'hair' | 'makeup'
 export type JudgeFilter = JudgeCategory | 'all'
 export type NominationId = 'nails' | 'lash' | 'pmu' | 'smp' | 'brows' | 'hair'
-export type CountryCode = 'BG' | 'ES' | 'CU' | 'DK' | 'FR' | 'DE' | 'GB' | 'LT' | 'IL' | 'IT' | 'LV' | 'PL' | 'RO' | 'SK' | 'CH' | 'US'
+export type CountryCode = 'BG' | 'BY' | 'CH' | 'CU' | 'CV' | 'DE' | 'DK' | 'ES' | 'FR' | 'GB' | 'GR' | 'IL' | 'IT' | 'LT' | 'LV' | 'NL' | 'PL' | 'RO' | 'SK' | 'UA' | 'US'
 
 export interface SocialLink {
   readonly href: string
@@ -19,6 +19,10 @@ export interface Judge extends Person {
   readonly category: JudgeCategory
   readonly tier: 'vip' | 'standard'
   readonly countryCodes: readonly CountryCode[]
+  readonly secondaryAssignment?: {
+    readonly category: JudgeCategory
+    readonly poster: string
+  }
 }
 
 export interface Speaker extends Person {

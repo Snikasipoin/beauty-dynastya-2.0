@@ -83,5 +83,50 @@ export const speakers = [
       "fact1",
       "fact2"
     ]
+  },
+  {
+    "id": "katarzyna-stefanowicz",
+    "name": "Katarzyna Stefanowicz",
+    "poster": "katarzyna-stefanowicz-speaker",
+    "links": [
+      {
+        "href": "https://www.instagram.com/kasica.studio.pmu/",
+        "label": "@kasica.studio.pmu"
+      }
+    ],
+    "factIds": [
+      "fact0",
+      "fact1"
+    ]
+  },
+  {
+    "id": "aleksandra-saska-markovic",
+    "name": "Aleksandra Saška Marković",
+    "poster": "aleksandra-saska-markovic",
+    "links": [
+      {
+        "href": "https://www.instagram.com/saska.perfect.lashes/",
+        "label": "@saska.perfect.lashes"
+      }
+    ],
+    "factIds": [
+      "fact0",
+      "fact1"
+    ]
+  },
+  {
+    "id": "ana-maria-dache",
+    "name": "Ana Maria Dache",
+    "poster": "ana-maria-dache",
+    "links": [
+      {
+        "href": "https://www.instagram.com/fabulashana/",
+        "label": "@fabulashana"
+      }
+    ],
+    "factIds": [
+      "fact0",
+      "fact1"
+    ]
   }
 ] as const satisfies readonly Speaker[]

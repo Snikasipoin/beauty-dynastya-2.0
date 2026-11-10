@@ -1,4 +1,9 @@
 import { expect, test } from '@playwright/test'
+import { existsSync } from 'node:fs'
+import { judges } from '../../src/data/judges'
+import { speakers } from '../../src/data/speakers'
+import { participants } from '../../src/data/participants'
+import { judgeFilters } from '../../src/data/championship'
 import en from '../../src/locales/en.json' with { type: 'json' }
 import ru from '../../src/locales/ru.json' with { type: 'json' }
 import it from '../../src/locales/it.json' with { type: 'json' }
@@ -17,6 +22,40 @@ test('all translations have the same complete key set', () => {
   for (const locale of Object.values(locales)) expect(keys(locale)).toEqual(keys(en))
 })
 
+test('every published person has a unique ID, a local poster and complete translations', () => {
+  const groups = { judges, speakers, participants }
+  const posters = [...Object.values(groups).flat().map((person) => person.poster), ...judges.flatMap(
+    (judge) => judge.secondaryAssignment ? [judge.secondaryAssignment.poster] : [],
+  )]
+  expect(new Set(posters).size).toBe(posters.length)
+  for (const [kind, people] of Object.entries(groups)) {
+    const ids = people.map((person) => person.id).sort()
+    expect(new Set(ids).size, `${kind}: duplicate ID`).toBe(ids.length)
+    for (const person of people) {
+      expect(existsSync(new URL(`../../src/assets/images/posters/${person.poster}.webp`, import.meta.url)), person.id).toBe(true)
+      for (const link of person.links) expect(link.href).toMatch(/^https:\/\/www\.instagram\.com\/[a-zA-Z0-9_.]+\/$/)
+    }
+    for (const locale of Object.values(locales)) {
+      expect(Object.keys(locale[kind as keyof typeof groups].people).sort()).toEqual(ids)
+    }
+  }
+  for (const judge of judges) {
+    if (!judge.secondaryAssignment) continue
+    expect(judge.secondaryAssignment.category).not.toBe(judge.category)
+    expect(existsSync(new URL(`../../src/assets/images/posters/${judge.secondaryAssignment.poster}.webp`, import.meta.url)), judge.id).toBe(true)
+    for (const locale of Object.values(locales)) {
+      const people: Record<string, { role: string; secondaryRole?: string }> = locale.judges.people
+      expect(people[judge.id].secondaryRole).toBeTruthy()
+    }
+  }
+  for (const speaker of speakers) {
+    for (const locale of Object.values(locales)) {
+      const people: Record<string, { facts: Record<string, { label: string; value: string }> }> = locale.speakers.people
+      expect(Object.keys(people[speaker.id].facts).sort()).toEqual([...speaker.factIds].sort())
+    }
+  }
+})
+
 for (const [language, locale] of Object.entries(locales)) {
   for (const width of widths) {
     test(`${language}: complete page without overflow at ${width}px`, async ({ page }) => {
@@ -26,9 +65,9 @@ for (const [language, locale] of Object.entries(locales)) {
       await page.goto(`/?lang=${language}`)
       await expect(page.locator('html')).toHaveAttribute('lang', language)
       await expect(page.locator('#about-title')).toHaveText(locale.about.title)
-      await expect(page.locator('[data-judge-id]')).toHaveCount(37)
-      await expect(page.locator('#speakers li[data-card]')).toHaveCount(5)
-      await expect(page.locator('#participants li')).toHaveCount(3)
+      await expect(page.locator('[data-judge-id]')).toHaveCount(judges.length)
+      await expect(page.locator('#speakers li[data-card]')).toHaveCount(speakers.length)
+      await expect(page.locator('#participants li')).toHaveCount(participants.length)
       await expect(page.locator('#register')).toBeVisible()
       await page.evaluate(() => document.fonts.ready)
       const typography = await page.evaluate(() => ({
@@ -75,18 +114,38 @@ for (const [language, locale] of Object.entries(locales)) {
 
 test('category filters preserve state across language changes and reloads', async ({ page }) => {
   await page.goto('/?lang=en')
-  for (const [category, count] of Object.entries({ lash: 21, pmu: 7, brows: 2, lamination: 1, nails: 5, hair: 1, all: 37 })) {
+  for (const category of judgeFilters) {
+    const expectedIds = judges.filter((judge) => (
+      category === 'all' || judge.category === category || judge.secondaryAssignment?.category === category
+    )).map((judge) => judge.id).sort()
     await page.locator(`[data-filter="${category}"]`).click()
-    await expect(page.locator('[data-judge-id]')).toHaveCount(count)
+    await expect(page.locator('[data-judge-id]')).toHaveCount(expectedIds.length)
+    expect(await page.locator('[data-judge-id]').evaluateAll((cards) => cards.map((card) => card.getAttribute('data-judge-id')).sort())).toEqual(expectedIds)
     await expect(page.locator(`[data-filter="${category}"]`)).toHaveAttribute('aria-pressed', 'true')
   }
   await page.locator('[data-filter="pmu"]').click()
   await page.getByRole('button', { name: 'RU', exact: true }).click()
   await expect(page.locator('#judges-title')).toHaveText(ru.judges.title)
-  await expect(page.locator('[data-judge-id]')).toHaveCount(7)
+  await expect(page.locator('[data-judge-id]')).toHaveCount(judges.filter((judge) => judge.category === 'pmu').length)
   await expect(page).toHaveURL(/lang=ru/)
   await page.reload()
   await expect(page.locator('html')).toHaveAttribute('lang', 'ru')
+})
+
+test('judges with two assignments show the matching role and poster in each category', async ({ page }) => {
+  await page.goto('/?lang=ru')
+  const jenny = page.locator('[data-judge-id="jenny-tronci-hebbel"]')
+  const quynh = page.locator('[data-judge-id="quynh-nguyen"]')
+  await expect(jenny).toHaveCount(1)
+  await expect(jenny).toContainText(ru.judges.people['jenny-tronci-hebbel'].secondaryRole)
+  await expect(quynh).toHaveCount(1)
+  await expect(quynh).toContainText(ru.judges.people['quynh-nguyen'].secondaryRole)
+  await page.locator('[data-filter="lash"]').click()
+  await expect(jenny.locator('img')).toHaveAttribute('src', /jenny-tronci-hebbel-lash\.webp/)
+  await expect(quynh.locator('img')).toHaveAttribute('src', /quynh-nguyen\.webp/)
+  await page.locator('[data-filter="nails"]').click()
+  await expect(jenny.locator('img')).toHaveAttribute('src', /jenny-tronci-hebbel\.webp/)
+  await expect(quynh.locator('img')).toHaveAttribute('src', /quynh-nguyen-nails\.webp/)
 })
 
 test('controlled form validates, translates errors and survives API failures', async ({ page }) => {

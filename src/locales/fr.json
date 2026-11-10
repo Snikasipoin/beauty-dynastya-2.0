@@ -99,7 +99,8 @@
       "brows": "Brows",
       "lamination": "Lamination",
       "nails": "Nails",
-      "hair": "Hair"
+      "hair": "Hair",
+      "makeup": "Maquillage"
     },
     "people": {
       "tatjana-sakale-erenberga": {
@@ -260,7 +261,8 @@
       "jenny-tronci-hebbel": {
         "role": "Juge VIP Nails",
         "country": "Allemagne",
-        "bio": ""
+        "bio": "",
+        "secondaryRole": "Juge Lash"
       },
       "dayana-benitez": {
         "role": "Juge VIP Nails",
@@ -286,6 +288,182 @@
         "role": "Juge Hair",
         "country": "États-Unis",
         "bio": "World Champion 2025 (thin hair, Hair Extensions Guru Championship), IBA Beauty Awards XIII laureate, IBIA Level 5 international judge. Founder of Julia Beauty Academy and author of The 3D Layers Capsules Method™."
+      },
+      "cristina-ilie": {
+        "role": "Juge VIP PMU",
+        "country": "Roumanie / France",
+        "bio": ""
+      },
+      "andreea-bisericaru": {
+        "role": "Juge VIP cils",
+        "country": "Roumanie",
+        "bio": "Formatrice en extensions de cils et juge internationale, active dans ce domaine depuis 2018."
+      },
+      "valeria-buzzerio": {
+        "role": "Juge Nails",
+        "country": "Italie",
+        "bio": ""
+      },
+      "iryna-babych": {
+        "role": "Juge Hair",
+        "country": "États-Unis",
+        "bio": ""
+      },
+      "gina-paans": {
+        "role": "Juge VIP en rehaussement de cils",
+        "country": "Pays-Bas",
+        "bio": "Professionnelle de la beauté depuis plus de 10 ans, elle est spécialisée dans le rehaussement de cils coréen. Elle a remporté quatre prix en Belgique et à Barcelone."
+      },
+      "kamila-pawelec": {
+        "role": "Juge VIP cils",
+        "country": "Pologne",
+        "bio": ""
+      },
+      "viana-letitia-bubuioc": {
+        "role": "Juge PMU",
+        "country": "Roumanie",
+        "bio": ""
+      },
+      "kinga-myrcha": {
+        "role": "Juge VIP Nails",
+        "country": "Pologne",
+        "bio": ""
+      },
+      "dayana-gomes": {
+        "role": "Juge Brows",
+        "country": "Italie / Cap-Vert",
+        "bio": ""
+      },
+      "elinor-beladev": {
+        "role": "Juge PMU",
+        "country": "Israël",
+        "bio": "Artiste et formatrice israélienne, elle travaille depuis près de dix ans dans le domaine des sourcils et du maquillage permanent. Elle pratique la restructuration naturelle des sourcils, le microblading, l’ombrage poudré et le détatouage laser."
+      },
+      "dominika-wilewska": {
+        "role": "Juge VIP Nails",
+        "country": "Pologne",
+        "bio": ""
+      },
+      "manuela-stefancu": {
+        "role": "Juge VIP cils",
+        "country": "Roumanie",
+        "bio": "Artiste et formatrice, elle a neuf ans d’expérience dans les extensions de cils. Elle réalise des démonstrations et développe des techniques personnalisées, dont des extensions de cils pour hommes."
+      },
+      "katarzyna-stefanowicz": {
+        "role": "Juge PMU",
+        "country": "Pologne / Biélorussie",
+        "bio": "Fondatrice de KASICA STUDIO PMU en Pologne et formatrice internationale en maquillage permanent. Médaillée d’argent en HairStrokes au WULOP Autriche 2022, juge au WULOP Azerbaïdjan 2024 et ambassadrice PEINTO. Elle a créé les techniques Velvet Eyeshadow et Combibrows."
+      },
+      "yolanda-flores-martinez": {
+        "role": "Juge VIP Nails",
+        "country": "Espagne",
+        "bio": ""
+      },
+      "angelika-zawieja": {
+        "role": "Juge VIP Nails",
+        "country": "Pologne",
+        "bio": ""
+      },
+      "laura-k": {
+        "role": "Juge Lash",
+        "country": "Allemagne",
+        "bio": ""
+      },
+      "uliana": {
+        "role": "Juge maquillage",
+        "country": "États-Unis / Ukraine",
+        "bio": ""
+      },
+      "silvia-amadei-lash": {
+        "role": "Juge VIP cils",
+        "country": "Italie",
+        "bio": "Master Trainer depuis 2024, fondatrice de SA Academy Lash & Brows et créatrice de FOXYLAMI, une technique coréenne de rehaussement de cils. Partenaire d’AURAMONACO et de PURPLE Flame Cosmetics. Elle a été juge à Roma World Beauty 2026 et dans d’autres championnats internationaux de cils."
+      },
+      "simona-nardella": {
+        "role": "Juge Lash",
+        "country": "Italie",
+        "bio": "Technicienne en extensions et en rehaussement de cils depuis 2024 et master à la Lash Love Academy. Lauréate de plusieurs prix en extensions et en rehaussement. Lash Queen à Italian Lash Legends 2026 et Vulcanic Live Competition 2026."
+      },
+      "jenny-melacca": {
+        "role": "Juge Lash",
+        "country": "Italie",
+        "bio": "Diplômée de la Lash Love Academy, elle est lauréate de plusieurs concours de cils. À Vulcanic Live 2026, elle a remporté la première place et le prix Best Work en One to One, Junior Brazilian Volume et Junior Soft Volume."
+      },
+      "cornelia-elena-iacob": {
+        "role": "Juge VIP maquillage",
+        "country": "Grande-Bretagne",
+        "bio": "Maquilleuse au Royaume-Uni, formatrice accréditée CPD et fondatrice d’ELN Glam Studio. Elle a obtenu la deuxième place aux Female Boss Awards 2026."
+      },
+      "quynh-nguyen": {
+        "role": "Juge Lash",
+        "country": "Suisse",
+        "bio": "",
+        "secondaryRole": "Juge Nails"
+      },
+      "karine-habriielian": {
+        "role": "Juge Nails",
+        "country": "États-Unis",
+        "bio": "Styliste ongulaire et formatrice à San Diego, elle a plus de 14 ans d’expérience. Lauréate du Grand Prix TEORA Beauty 2026 et classée dans le Top 10 des Nail Artists WBC 2026. Elle enseigne la manucure et la pédicure avancées, le modelage et les techniques au gel."
+      },
+      "ugne-cepaite": {
+        "role": "Juge Lash",
+        "country": "États-Unis",
+        "bio": "Artiste, formatrice et fondatrice de LBU LASHES. Originaire de Lituanie, elle travaille dans la région de Chicago et compte huit ans d’expérience. Elle a remporté l’European Online Championship en 2020 et a été juge au Monte Carlo BEAUTY Championship en 2025."
+      },
+      "alexandra-chis": {
+        "role": "Juge PMU",
+        "country": "Roumanie",
+        "bio": ""
+      },
+      "giulia-di-rocco": {
+        "role": "Juge junior Lash",
+        "country": "Italie",
+        "bio": ""
+      },
+      "melania-petrilli": {
+        "role": "Juge Lash",
+        "country": "Italie",
+        "bio": ""
+      },
+      "mariana-shevchuk": {
+        "role": "Juge Lash",
+        "country": "Italie / Ukraine",
+        "bio": ""
+      },
+      "jessica-salcinovic": {
+        "role": "Juge Lamination",
+        "country": "Allemagne",
+        "bio": ""
+      },
+      "yvonne-herrmann": {
+        "role": "Juge Hair",
+        "country": "Allemagne",
+        "bio": ""
+      },
+      "oksana-shevtsova": {
+        "role": "Juge Nails",
+        "country": "Ukraine",
+        "bio": ""
+      },
+      "katarzyna-kozielska-curlej": {
+        "role": "Juge Nails",
+        "country": "Pologne",
+        "bio": ""
+      },
+      "tetiana-serazhym": {
+        "role": "Juge Lamination",
+        "country": "Bulgarie / Ukraine",
+        "bio": ""
+      },
+      "cinthya-rodriguez": {
+        "role": "Juge Lash",
+        "country": "Espagne",
+        "bio": "Fondatrice et directrice de CR LashXpert Academy, elle exerce dans le secteur de la beauté depuis plus de 15 ans. Elle a créé Latin Lift et Método Fusión, formé plus de 200 professionnels et jugé plus de 30 championnats internationaux."
+      },
+      "doloreza-matka": {
+        "role": "Juge VIP PMU",
+        "country": "Grèce",
+        "bio": ""
       }
     }
   },
@@ -382,6 +560,51 @@
             "value": "Author of PMU tutorials and lectures"
           }
         }
+      },
+      "katarzyna-stefanowicz": {
+        "label": "Speaker",
+        "country": "Pologne / Biélorussie",
+        "bio": "Formatrice internationale en maquillage permanent et fondatrice de KASICA STUDIO PMU en Pologne. Elle enseigne le maquillage permanent et le retrait de pigments, et intervient lors d’événements professionnels internationaux.",
+        "facts": {
+          "fact0": {
+            "label": "Prix et jurys",
+            "value": "Argent en HairStrokes au WULOP Autriche 2022. Juge au WULOP Azerbaïdjan 2024."
+          },
+          "fact1": {
+            "label": "Techniques originales",
+            "value": "Créatrice de Velvet Eyeshadow et Combibrows et ambassadrice PEINTO."
+          }
+        }
+      },
+      "aleksandra-saska-markovic": {
+        "label": "Speaker",
+        "country": "Serbie",
+        "bio": "Formatrice en extensions de cils avec plus de sept ans d’expérience. Elle intervient lors de masterclasses et de conférences professionnelles internationales.",
+        "facts": {
+          "fact0": {
+            "label": "Marque",
+            "value": "Fondatrice et propriétaire de PERFECT ART LINE, une marque professionnelle d’extensions de cils."
+          },
+          "fact1": {
+            "label": "Formation",
+            "value": "Créatrice de la technique PERFECT COMBO, de programmes professionnels, d’ateliers et de cours en ligne."
+          }
+        }
+      },
+      "ana-maria-dache": {
+        "label": "Speaker VIP",
+        "country": "Allemagne / Roumanie",
+        "bio": "Artiste en extensions de cils, formatrice et entrepreneure, elle travaille dans la beauté depuis 2019. Elle a ouvert son premier salon en Allemagne en 2023.",
+        "facts": {
+          "fact0": {
+            "label": "Équipe",
+            "value": "Elle dirige une équipe de cinq spécialistes qu’elle a formés personnellement."
+          },
+          "fact1": {
+            "label": "Formation",
+            "value": "Elle détient plus de 15 certifications et a formé plus de 50 élèves."
+          }
+        }
       }
     }
   },
@@ -392,10 +615,62 @@
         "country": "Israël"
       },
       "koral-biton": {
-        "country": "Israël"
+        "country": "Israël",
+        "bio": "Formatrice avec sept ans d’expérience dans la beauté. Spécialisée en maquillage permanent, microblading, lip blush et rehaussement de cils, elle propose des cours et des formations avancées."
       },
       "angela-collica": {
         "country": "Italie"
+      },
+      "rosalia-fusco": {
+        "country": "Italie"
+      },
+      "giulia-cardinale": {
+        "country": "Italie"
+      },
+      "andreea-manole": {
+        "country": "Roumanie"
+      },
+      "djamarah-mierop": {
+        "country": "Pays-Bas"
+      },
+      "klaudia-hajdu": {
+        "country": "Hongrie"
+      },
+      "alexandra-oana-stoian": {
+        "country": "Roumanie"
+      },
+      "kim-schmitz": {
+        "country": "Pays-Bas"
+      },
+      "anamaria-cretoiu": {
+        "country": "Roumanie"
+      },
+      "iulia-navin": {
+        "country": "Italie"
+      },
+      "evelin-major-takacs": {
+        "country": "Hongrie"
+      },
+      "ekaterina-kutsner": {
+        "country": "États-Unis"
+      },
+      "maira-palma": {
+        "country": "Italie"
+      },
+      "alba-esquivel-jimenez": {
+        "country": "Costa Rica"
+      },
+      "goda-bakutiene": {
+        "country": "Grande-Bretagne"
+      },
+      "ana-maria-stoian": {
+        "country": "Allemagne"
+      },
+      "mata-mariann": {
+        "country": ""
+      },
+      "domjan-vivien": {
+        "country": "Hongrie"
       }
     }
   },

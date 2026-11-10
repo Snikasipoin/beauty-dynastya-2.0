@@ -1,6 +1,6 @@
 import type { Judge } from '../types/championship'
 
-export const judges = [
+export const judges: readonly Judge[] = [
   {
     "id": "tatjana-sakale-erenberga",
     "name": "Tatjana Šakale-Erenberga",
@@ -513,7 +513,11 @@ export const judges = [
     "countryCodes": [
       "DE"
     ],
-    "tier": "vip"
+    "tier": "vip",
+    "secondaryAssignment": {
+      "category": "lash",
+      "poster": "jenny-tronci-hebbel-lash"
+    }
   },
   {
     "id": "dayana-benitez",
@@ -594,5 +598,560 @@ export const judges = [
       "US"
     ],
     "tier": "standard"
+  },
+  {
+    "id": "cristina-ilie",
+    "name": "Cristina Ilie",
+    "poster": "cristina-ilie",
+    "links": [{ "href": "https://www.instagram.com/cristinailie_pmu/", "label": "@cristinailie_pmu" }],
+    "category": "pmu",
+    "countryCodes": ["RO", "FR"],
+    "tier": "vip"
+  },
+  {
+    "id": "andreea-bisericaru",
+    "name": "Andreea Bisericaru",
+    "poster": "andreea-bisericaru",
+    "links": [{ "href": "https://www.instagram.com/andreea_bisericaru/", "label": "@andreea_bisericaru" }],
+    "category": "lash",
+    "countryCodes": ["RO"],
+    "tier": "vip"
+  },
+  {
+    "id": "valeria-buzzerio",
+    "name": "Valeria Buzzerio",
+    "poster": "valeria-buzzerio",
+    "links": [
+      {
+        "href": "https://www.instagram.com/valelab_/",
+        "label": "@valelab_"
+      }
+    ],
+    "category": "nails",
+    "countryCodes": [
+      "IT"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "iryna-babych",
+    "name": "Iryna Babych",
+    "poster": "iryna-babych",
+    "links": [
+      {
+        "href": "https://www.instagram.com/hair_extensions_premium.nc/",
+        "label": "@hair_extensions_premium.nc"
+      }
+    ],
+    "category": "hair",
+    "countryCodes": [
+      "US"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "gina-paans",
+    "name": "Gina Paans",
+    "poster": "gina-paans",
+    "links": [
+      {
+        "href": "https://www.instagram.com/refinedbeauty.nl/",
+        "label": "@refinedbeauty.nl"
+      }
+    ],
+    "category": "lamination",
+    "countryCodes": [
+      "NL"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "kamila-pawelec",
+    "name": "Kamila Pawelec",
+    "poster": "kamila-pawelec",
+    "links": [
+      {
+        "href": "https://www.instagram.com/cami_beautyart/",
+        "label": "@cami_beautyart"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "PL"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "viana-letitia-bubuioc",
+    "name": "Viana Letitia Bubuioc",
+    "poster": "viana-letitia-bubuioc",
+    "links": [
+      {
+        "href": "https://www.instagram.com/viana_letitia_micropigmentare/",
+        "label": "@viana_letitia_micropigmentare"
+      }
+    ],
+    "category": "pmu",
+    "countryCodes": [
+      "RO"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "kinga-myrcha",
+    "name": "Kinga Myrcha",
+    "poster": "kinga-myrcha",
+    "links": [
+      {
+        "href": "https://www.instagram.com/kinga_stempluje/",
+        "label": "@kinga_stempluje"
+      }
+    ],
+    "category": "nails",
+    "countryCodes": [
+      "PL"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "dayana-gomes",
+    "name": "Dayana Gomes",
+    "poster": "dayana-gomes",
+    "links": [
+      {
+        "href": "https://www.instagram.com/dayanagomes_master/",
+        "label": "@dayanagomes_master"
+      }
+    ],
+    "category": "brows",
+    "countryCodes": [
+      "IT",
+      "CV"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "elinor-beladev",
+    "name": "Elinor Beladev",
+    "poster": "elinor-beladev",
+    "links": [
+      {
+        "href": "https://www.instagram.com/elinoryagenbeladev/",
+        "label": "@elinoryagenbeladev"
+      }
+    ],
+    "category": "pmu",
+    "countryCodes": [
+      "IL"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "dominika-wilewska",
+    "name": "Dominika Wilewska",
+    "poster": "dominika-wilewska",
+    "links": [
+      {
+        "href": "https://www.instagram.com/stemplomaniaczka.dominika/",
+        "label": "@stemplomaniaczka.dominika"
+      }
+    ],
+    "category": "nails",
+    "countryCodes": [
+      "PL"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "manuela-stefancu",
+    "name": "Manuela Ștefancu",
+    "poster": "manuela-stefancu",
+    "links": [
+      {
+        "href": "https://www.instagram.com/manu_lashtrainer/",
+        "label": "@manu_lashtrainer"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "RO"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "katarzyna-stefanowicz",
+    "name": "Katarzyna Stefanowicz",
+    "poster": "katarzyna-stefanowicz",
+    "links": [
+      {
+        "href": "https://www.instagram.com/kasica.studio.pmu/",
+        "label": "@kasica.studio.pmu"
+      }
+    ],
+    "category": "pmu",
+    "countryCodes": [
+      "PL",
+      "BY"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "yolanda-flores-martinez",
+    "name": "Yolanda Flores Martínez",
+    "poster": "yolanda-flores-martinez",
+    "links": [
+      {
+        "href": "https://www.instagram.com/yfnailsss/",
+        "label": "@yfnailsss"
+      }
+    ],
+    "category": "nails",
+    "countryCodes": [
+      "ES"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "angelika-zawieja",
+    "name": "Angelika Zawieja",
+    "poster": "angelika-zawieja",
+    "links": [
+      {
+        "href": "https://www.instagram.com/angelika_zawieja_szkolenia/",
+        "label": "@angelika_zawieja_szkolenia"
+      }
+    ],
+    "category": "nails",
+    "countryCodes": [
+      "PL"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "laura-k",
+    "name": "Laura K.",
+    "poster": "laura-k",
+    "links": [
+      {
+        "href": "https://www.instagram.com/aylej_cosmetics/",
+        "label": "@aylej_cosmetics"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "DE"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "uliana",
+    "name": "Uliana",
+    "poster": "uliana",
+    "links": [
+      {
+        "href": "https://www.instagram.com/uliana_makeup_pro/",
+        "label": "@uliana_makeup_pro"
+      }
+    ],
+    "category": "makeup",
+    "countryCodes": [
+      "US",
+      "UA"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "silvia-amadei-lash",
+    "name": "Silvia Amadei",
+    "poster": "silvia-amadei-lash",
+    "links": [
+      {
+        "href": "https://www.instagram.com/silvia.amadei_masterlash/",
+        "label": "@silvia.amadei_masterlash"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "IT"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "simona-nardella",
+    "name": "Simona Nardella",
+    "poster": "simona-nardella",
+    "links": [
+      {
+        "href": "https://www.instagram.com/simona_lasher/",
+        "label": "@simona_lasher"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "IT"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "jenny-melacca",
+    "name": "Jenny Melacca",
+    "poster": "jenny-melacca",
+    "links": [
+      {
+        "href": "https://www.instagram.com/jennylashmaker/",
+        "label": "@jennylashmaker"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "IT"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "cornelia-elena-iacob",
+    "name": "Cornelia Elena Iacob",
+    "poster": "cornelia-elena-iacob",
+    "links": [
+      {
+        "href": "https://www.instagram.com/elnglamstudio/",
+        "label": "@elnglamstudio"
+      }
+    ],
+    "category": "makeup",
+    "countryCodes": [
+      "GB"
+    ],
+    "tier": "vip"
+  },
+  {
+    "id": "quynh-nguyen",
+    "name": "Quynh Nguyen",
+    "poster": "quynh-nguyen",
+    "links": [
+      {
+        "href": "https://www.instagram.com/myga.nails_solothurn/",
+        "label": "@myga.nails_solothurn"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "CH"
+    ],
+    "tier": "standard",
+    "secondaryAssignment": {
+      "category": "nails",
+      "poster": "quynh-nguyen-nails"
+    }
+  },
+  {
+    "id": "karine-habriielian",
+    "name": "Karine Habriielian",
+    "poster": "karine-habriielian",
+    "links": [
+      {
+        "href": "https://www.instagram.com/superwoman_nails_sd/",
+        "label": "@superwoman_nails_sd"
+      }
+    ],
+    "category": "nails",
+    "countryCodes": [
+      "US"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "ugne-cepaite",
+    "name": "Ugnė Cepaite",
+    "poster": "ugne-cepaite",
+    "links": [
+      {
+        "href": "https://www.instagram.com/lbu_lashes/",
+        "label": "@lbu_lashes"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "US"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "alexandra-chis",
+    "name": "Alexandra Chis",
+    "poster": "alexandra-chis",
+    "links": [
+      {
+        "href": "https://www.instagram.com/alexandraelenachis/",
+        "label": "@alexandraelenachis"
+      }
+    ],
+    "category": "pmu",
+    "countryCodes": [
+      "RO"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "giulia-di-rocco",
+    "name": "Giulia di Rocco",
+    "poster": "giulia-di-rocco",
+    "links": [
+      {
+        "href": "https://www.instagram.com/giuli_lashtech/",
+        "label": "@giuli_lashtech"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "IT"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "melania-petrilli",
+    "name": "Melania Petrilli",
+    "poster": "melania-petrilli",
+    "links": [
+      {
+        "href": "https://www.instagram.com/melania.petrilli/",
+        "label": "@melania.petrilli"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "IT"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "mariana-shevchuk",
+    "name": "Mariana Shevchuk",
+    "poster": "mariana-shevchuk",
+    "links": [
+      {
+        "href": "https://www.instagram.com/mariana_shevchuk_artist/",
+        "label": "@mariana_shevchuk_artist"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "IT",
+      "UA"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "jessica-salcinovic",
+    "name": "Jessica Salcinovic",
+    "poster": "jessica-salcinovic",
+    "links": [
+      {
+        "href": "https://www.instagram.com/lumiere.by.js/",
+        "label": "@lumiere.by.js"
+      }
+    ],
+    "category": "lamination",
+    "countryCodes": [
+      "DE"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "yvonne-herrmann",
+    "name": "Yvonne Herrmann",
+    "poster": "yvonne-herrmann",
+    "links": [
+      {
+        "href": "https://www.instagram.com/stadtschoenheiten_ebern/",
+        "label": "@stadtschoenheiten_ebern"
+      }
+    ],
+    "category": "hair",
+    "countryCodes": [
+      "DE"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "oksana-shevtsova",
+    "name": "Oksana Shevtsova",
+    "poster": "oksana-shevtsova",
+    "links": [
+      {
+        "href": "https://www.instagram.com/unghie_faenza_oks/",
+        "label": "@unghie_faenza_oks"
+      }
+    ],
+    "category": "nails",
+    "countryCodes": [
+      "UA"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "katarzyna-kozielska-curlej",
+    "name": "Katarzyna Kozielska-Curlej",
+    "poster": "katarzyna-kozielska-curlej",
+    "links": [
+      {
+        "href": "https://www.instagram.com/slowianka_katarzyna_kozielska/",
+        "label": "@slowianka_katarzyna_kozielska"
+      }
+    ],
+    "category": "nails",
+    "countryCodes": [
+      "PL"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "tetiana-serazhym",
+    "name": "Tetiana Serazhym",
+    "poster": "tetiana-serazhym",
+    "links": [
+      {
+        "href": "https://www.instagram.com/pro.beauty.bg/",
+        "label": "@pro.beauty.bg"
+      }
+    ],
+    "category": "lamination",
+    "countryCodes": [
+      "BG",
+      "UA"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "cinthya-rodriguez",
+    "name": "Cinthya Rodríguez",
+    "poster": "cinthya-rodriguez",
+    "links": [
+      {
+        "href": "https://www.instagram.com/cr_lashxpert/",
+        "label": "@cr_lashxpert"
+      }
+    ],
+    "category": "lash",
+    "countryCodes": [
+      "ES"
+    ],
+    "tier": "standard"
+  },
+  {
+    "id": "doloreza-matka",
+    "name": "Doloreza Matka",
+    "poster": "doloreza-matka",
+    "links": [
+      {
+        "href": "https://www.instagram.com/doloreza.matka/",
+        "label": "@doloreza.matka"
+      }
+    ],
+    "category": "pmu",
+    "countryCodes": [
+      "GR"
+    ],
+    "tier": "vip"
   }
-] as const satisfies readonly Judge[]
+]

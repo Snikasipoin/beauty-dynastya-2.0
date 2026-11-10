@@ -99,7 +99,8 @@
       "brows": "Брови",
       "lamination": "Ламинирование",
       "nails": "Маникюр",
-      "hair": "Волосы"
+      "hair": "Волосы",
+      "makeup": "Макияж"
     },
     "people": {
       "tatjana-sakale-erenberga": {
@@ -260,7 +261,8 @@
       "jenny-tronci-hebbel": {
         "role": "VIP-судья по маникюру",
         "country": "Германия",
-        "bio": ""
+        "bio": "",
+        "secondaryRole": "Судья по ресницам"
       },
       "dayana-benitez": {
         "role": "VIP-судья по маникюру",
@@ -286,6 +288,182 @@
         "role": "Судья по волосам",
         "country": "США",
         "bio": "Чемпионка мира 2025 (тонкие волосы, Hair Extensions Guru Championship), лауреат IBA Beauty Awards XIII, международный судья IBIA 5-го уровня. Основательница Julia Beauty Academy, автор метода The 3D Layers Capsules Method™."
+      },
+      "cristina-ilie": {
+        "role": "VIP-судья PMU",
+        "country": "Румыния / Франция",
+        "bio": ""
+      },
+      "andreea-bisericaru": {
+        "role": "VIP-судья по ресницам",
+        "country": "Румыния",
+        "bio": "Тренер по наращиванию ресниц и международный судья. Работает в сфере наращивания ресниц с 2018 года."
+      },
+      "valeria-buzzerio": {
+        "role": "Судья по маникюру",
+        "country": "Италия",
+        "bio": ""
+      },
+      "iryna-babych": {
+        "role": "Судья по волосам",
+        "country": "США",
+        "bio": ""
+      },
+      "gina-paans": {
+        "role": "VIP-судья по ламинированию ресниц",
+        "country": "Нидерланды",
+        "bio": "Более 10 лет работает в бьюти-индустрии и специализируется на корейском ламинировании ресниц. Завоевала четыре награды в Бельгии и Барселоне."
+      },
+      "kamila-pawelec": {
+        "role": "VIP-судья по ресницам",
+        "country": "Польша",
+        "bio": ""
+      },
+      "viana-letitia-bubuioc": {
+        "role": "Судья по PMU",
+        "country": "Румыния",
+        "bio": ""
+      },
+      "kinga-myrcha": {
+        "role": "VIP-судья по маникюру",
+        "country": "Польша",
+        "bio": ""
+      },
+      "dayana-gomes": {
+        "role": "Судья по бровям",
+        "country": "Италия / Кабо-Верде",
+        "bio": ""
+      },
+      "elinor-beladev": {
+        "role": "Судья по PMU",
+        "country": "Израиль",
+        "bio": "Мастер и преподаватель из Израиля. Почти десять лет работает с бровями и перманентным макияжем. Специализируется на оформлении и восстановлении естественной формы бровей, микроблейдинге, пудровом напылении и лазерном удалении перманента."
+      },
+      "dominika-wilewska": {
+        "role": "VIP-судья по маникюру",
+        "country": "Польша",
+        "bio": ""
+      },
+      "manuela-stefancu": {
+        "role": "VIP-судья по ресницам",
+        "country": "Румыния",
+        "bio": "Мастер и преподаватель по наращиванию ресниц с девятилетним стажем. Проводит демонстрации и разрабатывает техники для индивидуального дизайна, включая наращивание ресниц для мужчин."
+      },
+      "katarzyna-stefanowicz": {
+        "role": "Судья по PMU",
+        "country": "Польша / Беларусь",
+        "bio": "Основатель KASICA STUDIO PMU в Польше и международный тренер по перманентному макияжу. Серебряный призёр WULOP 2022 в Австрии в технике HairStrokes, судья WULOP 2024 в Азербайджане и амбассадор PEINTO. Автор техник Velvet Eyeshadow и Combibrows."
+      },
+      "yolanda-flores-martinez": {
+        "role": "VIP-судья по маникюру",
+        "country": "Испания",
+        "bio": ""
+      },
+      "angelika-zawieja": {
+        "role": "VIP-судья по маникюру",
+        "country": "Польша",
+        "bio": ""
+      },
+      "laura-k": {
+        "role": "Судья по ресницам",
+        "country": "Германия",
+        "bio": ""
+      },
+      "uliana": {
+        "role": "Судья по макияжу",
+        "country": "США / Украина",
+        "bio": ""
+      },
+      "silvia-amadei-lash": {
+        "role": "VIP-судья по ресницам",
+        "country": "Италия",
+        "bio": "Мастер-тренер с 2024 года, основатель SA Academy Lash & Brows и автор FOXYLAMI, техники корейского ламинирования ресниц. Партнёр AURAMONACO и PURPLE Flame Cosmetics. Судила Roma World Beauty 2026 и другие международные чемпионаты по ресницам."
+      },
+      "simona-nardella": {
+        "role": "Судья по ресницам",
+        "country": "Италия",
+        "bio": "Мастер по наращиванию и ламинированию ресниц с 2024 года, мастер Lash Love Academy. Многократный призёр в категориях наращивания и ламинирования. Обладательница титула Lash Queen на Italian Lash Legends 2026 и Vulcanic Live Competition 2026."
+      },
+      "jenny-melacca": {
+        "role": "Судья по ресницам",
+        "country": "Италия",
+        "bio": "Выпускница Lash Love Academy и призёр чемпионатов по ресницам. На Vulcanic Live 2026 заняла первые места и получила награды Best Work в категориях One to One, Junior Brazilian Volume и Junior Soft Volume."
+      },
+      "cornelia-elena-iacob": {
+        "role": "VIP-судья по макияжу",
+        "country": "Великобритания",
+        "bio": "Визажист из Великобритании, аккредитованный преподаватель CPD и основатель ELN Glam Studio. Заняла второе место на The Female Boss Awards 2026."
+      },
+      "quynh-nguyen": {
+        "role": "Судья по ресницам",
+        "country": "Швейцария",
+        "bio": "",
+        "secondaryRole": "Судья по маникюру"
+      },
+      "karine-habriielian": {
+        "role": "Судья по маникюру",
+        "country": "США",
+        "bio": "Мастер и преподаватель ногтевого сервиса из Сан-Диего с опытом более 14 лет. Обладательница Гран-при TEORA Beauty 2026, вошла в десятку лучших мастеров WBC в 2026 году. Преподаёт продвинутые техники маникюра, педикюра, моделирования ногтей и работы с гелем."
+      },
+      "ugne-cepaite": {
+        "role": "Судья по ресницам",
+        "country": "США",
+        "bio": "Мастер, преподаватель и основатель LBU LASHES. Родом из Литвы, работает в районе Чикаго и имеет восемь лет опыта. Победила на European Online Championship в 2020 году и судила The Monte Carlo BEAUTY Championship в 2025 году."
+      },
+      "alexandra-chis": {
+        "role": "Судья по PMU",
+        "country": "Румыния",
+        "bio": ""
+      },
+      "giulia-di-rocco": {
+        "role": "Младший судья по ресницам",
+        "country": "Италия",
+        "bio": ""
+      },
+      "melania-petrilli": {
+        "role": "Судья по ресницам",
+        "country": "Италия",
+        "bio": ""
+      },
+      "mariana-shevchuk": {
+        "role": "Судья по ресницам",
+        "country": "Италия / Украина",
+        "bio": ""
+      },
+      "jessica-salcinovic": {
+        "role": "Судья по ламинированию",
+        "country": "Германия",
+        "bio": ""
+      },
+      "yvonne-herrmann": {
+        "role": "Судья по волосам",
+        "country": "Германия",
+        "bio": ""
+      },
+      "oksana-shevtsova": {
+        "role": "Судья по маникюру",
+        "country": "Украина",
+        "bio": ""
+      },
+      "katarzyna-kozielska-curlej": {
+        "role": "Судья по маникюру",
+        "country": "Польша",
+        "bio": ""
+      },
+      "tetiana-serazhym": {
+        "role": "Судья по ламинированию",
+        "country": "Болгария / Украина",
+        "bio": ""
+      },
+      "cinthya-rodriguez": {
+        "role": "Судья по ресницам",
+        "country": "Испания",
+        "bio": "Основатель и руководитель CR LashXpert Academy, более 15 лет в бьюти-индустрии. Создала техники Latin Lift и Método Fusión, обучила более 200 специалистов и судила более 30 международных чемпионатов."
+      },
+      "doloreza-matka": {
+        "role": "VIP-судья PMU",
+        "country": "Греция",
+        "bio": ""
       }
     }
   },
@@ -382,6 +560,51 @@
             "value": "Автор обучающих пособий и лекций по перманентному макияжу"
           }
         }
+      },
+      "katarzyna-stefanowicz": {
+        "label": "Спикер",
+        "country": "Польша / Беларусь",
+        "bio": "Международный тренер по перманентному макияжу и основатель KASICA STUDIO PMU в Польше. Преподаёт перманентный макияж и удаление пигмента, выступает на международных профильных мероприятиях.",
+        "facts": {
+          "fact0": {
+            "label": "Награды и судейство",
+            "value": "Серебро в технике HairStrokes на WULOP 2022 в Австрии. Судья WULOP 2024 в Азербайджане."
+          },
+          "fact1": {
+            "label": "Авторские техники",
+            "value": "Создала техники Velvet Eyeshadow и Combibrows. Амбассадор PEINTO."
+          }
+        }
+      },
+      "aleksandra-saska-markovic": {
+        "label": "Спикер",
+        "country": "Сербия",
+        "bio": "Преподаватель по наращиванию ресниц с опытом более семи лет. Выступает на международных мастер-классах и профильных конференциях.",
+        "facts": {
+          "fact0": {
+            "label": "Бренд",
+            "value": "Основала PERFECT ART LINE, бренд профессиональных материалов для наращивания ресниц."
+          },
+          "fact1": {
+            "label": "Обучение",
+            "value": "Автор техники PERFECT COMBO, профессиональных программ, мастер-классов и онлайн-курсов."
+          }
+        }
+      },
+      "ana-maria-dache": {
+        "label": "VIP-спикер",
+        "country": "Германия / Румыния",
+        "bio": "Мастер по наращиванию ресниц, преподаватель и предприниматель. Работает в бьюти-индустрии с 2019 года. В 2023 году открыла первый салон в Германии.",
+        "facts": {
+          "fact0": {
+            "label": "Команда",
+            "value": "Руководит командой из пяти специалистов, которых обучила лично."
+          },
+          "fact1": {
+            "label": "Обучение",
+            "value": "Имеет более 15 сертификатов и обучила более 50 учеников."
+          }
+        }
       }
     }
   },
@@ -392,10 +615,62 @@
         "country": "Израиль"
       },
       "koral-biton": {
-        "country": "Израиль"
+        "country": "Израиль",
+        "bio": "Преподаватель с семилетним опытом в бьюти-индустрии. Специализируется на перманентном макияже, микроблейдинге, перманентном макияже губ и ламинировании ресниц. Проводит курсы и повышение квалификации."
       },
       "angela-collica": {
         "country": "Италия"
+      },
+      "rosalia-fusco": {
+        "country": "Италия"
+      },
+      "giulia-cardinale": {
+        "country": "Италия"
+      },
+      "andreea-manole": {
+        "country": "Румыния"
+      },
+      "djamarah-mierop": {
+        "country": "Нидерланды"
+      },
+      "klaudia-hajdu": {
+        "country": "Венгрия"
+      },
+      "alexandra-oana-stoian": {
+        "country": "Румыния"
+      },
+      "kim-schmitz": {
+        "country": "Нидерланды"
+      },
+      "anamaria-cretoiu": {
+        "country": "Румыния"
+      },
+      "iulia-navin": {
+        "country": "Италия"
+      },
+      "evelin-major-takacs": {
+        "country": "Венгрия"
+      },
+      "ekaterina-kutsner": {
+        "country": "США"
+      },
+      "maira-palma": {
+        "country": "Италия"
+      },
+      "alba-esquivel-jimenez": {
+        "country": "Коста-Рика"
+      },
+      "goda-bakutiene": {
+        "country": "Великобритания"
+      },
+      "ana-maria-stoian": {
+        "country": "Германия"
+      },
+      "mata-mariann": {
+        "country": ""
+      },
+      "domjan-vivien": {
+        "country": "Венгрия"
       }
     }
   },

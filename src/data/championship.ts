@@ -3,7 +3,7 @@ import { judges } from './judges'
 
 // Номинации чемпионата и специализации судей — разные справочники.
 export const nominationIds = ['nails', 'lash', 'pmu', 'smp', 'brows', 'hair'] as const satisfies readonly NominationId[]
-export const judgeFilters = ['all', 'lash', 'pmu', 'brows', 'lamination', 'nails', 'hair'] as const satisfies readonly JudgeFilter[]
+export const judgeFilters = ['all', 'lash', 'pmu', 'brows', 'lamination', 'nails', 'hair', 'makeup'] as const satisfies readonly JudgeFilter[]
 export const processIds = ['registration', 'preparation', 'submission', 'evaluation', 'results', 'awards'] as const
 export const navigationIds = ['about', 'nominations', 'judges', 'speakers', 'participants', 'partners'] as const
 
