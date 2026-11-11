@@ -1,5 +1,6 @@
 import type { JudgeFilter, NominationId } from '../types/championship'
 import { judges } from './judges'
+import { participants } from './participants'
 
 // Номинации чемпионата и специализации судей — разные справочники.
 export const nominationIds = ['nails', 'lash', 'pmu', 'smp', 'brows', 'hair'] as const satisfies readonly NominationId[]
@@ -14,6 +15,8 @@ export const championship = {
   instagramHandle: '@beauty_dynastya',
   instagramMessage: 'https://ig.me/m/beauty_dynastya',
   judgeCount: judges.length,
+  // Счётчик всегда соответствует опубликованному списку участников.
+  participantCount: participants.length,
   countryCount: new Set(judges.flatMap((judge) => [...judge.countryCodes])).size,
   nominationCount: nominationIds.length,
 } as const

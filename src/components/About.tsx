@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { championship } from '../data/championship'
 import { gsap, useGSAP } from '../lib/gsap'
@@ -21,6 +22,10 @@ export function About() {
         <div className="rounded-2xl bg-panel p-7 sm:p-10 sm:col-span-2 xl:col-span-6">
           <p ref={scope} className="max-w-prose text-lg leading-relaxed sm:text-2xl">{t('about.text').split(' ').map((word, index) => <span key={`${i18n.language}-${index}`} data-word>{word} </span>)}</p>
           <p className="mt-8 inline-flex rounded-lg bg-card px-4 py-2 text-sm text-gold">{t('about.online')}</p>
+          <div className="mt-8">
+            <p id="about-join-description" className="max-w-md text-base leading-relaxed text-muted">{t('about.joinDescription')}</p>
+            <a href="#register" aria-describedby="about-join-description" className="btn-primary mt-4">{t('about.join')}<ArrowUpRight className="size-4 shrink-0" aria-hidden="true" /></a>
+          </div>
         </div>
         <dl className="about-stat-card flex flex-col justify-between gap-10 rounded-2xl bg-card p-7 sm:p-10 xl:col-span-3">
           <div><dt className="mb-3 text-sm text-muted">{t('about.facts.judges')}</dt><dd data-about-stat="judges" className="about-stat-number font-display text-gold tabular-nums">{championship.judgeCount}</dd></div>
@@ -28,7 +33,7 @@ export function About() {
         </dl>
         <dl className="about-stat-card flex flex-col justify-between gap-10 rounded-2xl bg-panel p-7 sm:p-10 xl:col-span-3">
           <div><dt className="mb-3 text-sm text-muted">{t('about.facts.nominations')}</dt><dd data-about-stat="nominations" className="about-stat-number font-display tabular-nums">{championship.nominationCount}</dd></div>
-          <div><dt className="mb-3 text-sm text-muted">{t('about.facts.format')}</dt><dd className="text-xl font-bold break-words">{t('about.online')}</dd></div>
+          <div><dt className="mb-3 text-sm text-muted">{t('about.facts.participants')}</dt><dd data-about-stat="participants" className="about-stat-number font-display text-gold tabular-nums">{championship.participantCount}</dd></div>
         </dl>
       </div>
     </Section>

@@ -25,10 +25,13 @@
     "facts": {
       "nominations": "Categorie",
       "judges": "Giudici",
+      "participants": "Partecipanti",
       "countries": "Paesi",
       "format": "Formato"
     },
-    "online": "Online"
+    "online": "Online",
+    "join": "Unisciti a noi",
+    "joinDescription": "Diventa partecipante, giudice o speaker di Beauty Dynastya. Scegli il tuo ruolo e invia la candidatura."
   },
   "nominations": {
     "title": "Categorie",

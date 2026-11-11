@@ -25,10 +25,13 @@
     "facts": {
       "nominations": "Kategorien",
       "judges": "Jurorinnen",
+      "participants": "Teilnehmerinnen",
       "countries": "Länder",
       "format": "Format"
     },
-    "online": "Online"
+    "online": "Online",
+    "join": "Jetzt mitmachen",
+    "joinDescription": "Werde Teilnehmerin, Jurorin oder Speakerin bei Beauty Dynastya. Wähle deine Rolle und bewirb dich."
   },
   "nominations": {
     "title": "Kategorien",

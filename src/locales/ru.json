@@ -25,10 +25,13 @@
     "facts": {
       "nominations": "Номинаций",
       "judges": "Судей",
+      "participants": "Участников",
       "countries": "Стран",
       "format": "Формат"
     },
-    "online": "Онлайн"
+    "online": "Онлайн",
+    "join": "Присоединиться",
+    "joinDescription": "Станьте участником, судьёй или спикером Beauty Dynastya. Выберите свою роль и подайте заявку."
   },
   "nominations": {
     "title": "Номинации",
