@@ -12,7 +12,7 @@ export function JudgeCard({ judge, filter }: { judge: Judge; filter: JudgeFilter
   const role = assignment === judge ? t(`${prefix}.role`) : t(`${prefix}.secondaryRole`)
   return (
     <li data-card data-judge-id={judge.id} data-category={assignment.category} className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl bg-panel transition-shadow duration-300 hover:shadow-[0_14px_36px_-16px_rgba(0,0,0,0.7)]">
-      <PersonPoster key={assignment.poster} poster={assignment.poster} name={judge.name} fit="cover" />
+      <PersonPoster key={assignment.poster} poster={assignment.poster} name={judge.name} />
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <h3 className="font-display text-xl leading-snug font-bold break-words">{judge.name}</h3>
         <p className="mt-2 text-sm font-medium text-gold">{t(`${prefix}.country`)}</p>

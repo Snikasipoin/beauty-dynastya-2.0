@@ -6,11 +6,10 @@ interface PersonPosterProps {
   poster: string
   name: string
   className?: string
-  fit?: 'contain' | 'cover'
   layout?: 'portrait' | 'speaker'
 }
 
-export function PersonPoster({ poster, name, className = '', fit = 'contain', layout = 'portrait' }: PersonPosterProps) {
+export function PersonPoster({ poster, name, className = '', layout = 'portrait' }: PersonPosterProps) {
   const [failed, setFailed] = useState(false)
   const { t } = useTranslation()
   return (
@@ -21,8 +20,8 @@ export function PersonPoster({ poster, name, className = '', fit = 'contain', la
           <span className="text-sm text-muted">{name}</span>
         </div>
       ) : (
-        // Изображение не участвует в расчёте высоты: разные исходники не меняют формат блока.
-        <img src={posterUrl(poster)} alt={name} width="800" height="1000" loading="lazy" decoding="async" onError={() => setFailed(true)} className={`${layout === 'speaker' ? 'absolute inset-y-0 left-0 h-full w-auto min-w-full object-cover object-left-top' : `absolute inset-0 h-full w-full ${fit === 'cover' ? 'object-cover object-top' : 'object-contain'}`} transition-transform duration-700 motion-safe:group-hover:scale-[1.025]`} />
+        // Постеры вписываются целиком без увеличения при наведении: надписи по краям остаются видны.
+        <img src={posterUrl(poster)} alt={name} width="800" height="1000" loading="lazy" decoding="async" onError={() => setFailed(true)} className={layout === 'speaker' ? 'absolute inset-y-0 left-0 h-full w-auto min-w-full object-cover object-left-top transition-transform duration-700 motion-safe:group-hover:scale-[1.025]' : 'absolute inset-0 h-full w-full object-contain'} />
       )}
     </div>
   )
