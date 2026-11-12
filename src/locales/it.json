@@ -10,7 +10,8 @@
     "speakers": "Speaker",
     "participants": "Partecipanti",
     "partners": "Partner",
-    "register": "Iscriviti"
+    "register": "Iscriviti",
+    "regulations": "Regolamenti"
   },
   "hero": {
     "subtitle": "Campionato Internazionale Online per Professionisti della Bellezza",
@@ -741,5 +742,40 @@
     "imageFallback": "Ritratto non disponibile",
     "judgesHint": "I professionisti che valuteranno il tuo lavoro.",
     "speakersHint": "Esperienza, competenza e una nuova prospettiva sul tuo mestiere."
+  },
+  "regulations": {
+    "back": "Torna alla home",
+    "description": "Regole di partecipazione e checklist per preparare i lavori Lash e Nails. Scegli una categoria e la lingua del documento per leggere i requisiti o scaricare il PDF.",
+    "category": "Categoria",
+    "all": "Tutte",
+    "language": "Lingua dei documenti",
+    "autoLanguage": "Come il sito ({{language}})",
+    "languageHint": "Per impostazione predefinita, i documenti seguono la lingua del sito. Puoi scegliere un’altra lingua separatamente.",
+    "search": "Cerca per titolo",
+    "searchPlaceholder": "Ad esempio, Lash o checklist",
+    "results": "Documenti trovati: {{count}}",
+    "availableLanguages": "Lingue disponibili:",
+    "open": "Apri / Leggi",
+    "download": "Scarica PDF",
+    "openLabel": "Apri / Leggi: {{title}} ({{language}}, PDF, nuova scheda)",
+    "downloadLabel": "Scarica PDF: {{title}} ({{language}})",
+    "unavailable": "La traduzione in {{language}} non è ancora disponibile. Scegli una delle lingue disponibili dal selettore qui sopra.",
+    "empty": "Nessun documento trovato",
+    "emptyHint": "Prova un altro titolo o reimposta i filtri.",
+    "reset": "Reimposta filtri",
+    "documents": {
+      "lash-regulations": {
+        "title": "Regolamento Lash",
+        "description": "Regolamento generale Lash: requisiti di partecipazione e dei lavori in gara per le ciglia."
+      },
+      "lash-checklist": {
+        "title": "Checklist Lash",
+        "description": "Controlla il tuo lavoro Lash prima di inviarlo al concorso."
+      },
+      "nails-regulations": {
+        "title": "Regolamento Nails",
+        "description": "Regolamento generale Nails: requisiti di partecipazione e dei lavori in gara per il settore unghie."
+      }
+    }
   }
 }

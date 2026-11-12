@@ -5,7 +5,7 @@ import { championship, navigationIds } from '../data/championship'
 import { logo } from '../lib/assets'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
-export function Header() {
+export function Header({ regulationsPage = false }: { regulationsPage?: boolean }) {
   const { t, i18n } = useTranslation()
   const [open, setOpen] = useState(false)
   const menuButton = useRef<HTMLButtonElement>(null)
@@ -15,7 +15,7 @@ export function Header() {
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') { setOpen(false); menuButton.current?.focus() }
     }
-    const query = window.matchMedia('(min-width: 1280px)')
+    const query = window.matchMedia('(min-width: 1440px)')
     const closeOnDesktop = () => { if (query.matches) setOpen(false) }
     document.addEventListener('keydown', closeOnEscape)
     query.addEventListener('change', closeOnDesktop)
@@ -29,17 +29,18 @@ export function Header() {
           <img src={logo} alt="" width="900" height="623" className="h-auto w-12 sm:w-14" />
           <span className="font-display text-base font-bold sm:text-lg">{championship.name}</span>
         </a>
-        <div className="order-3 flex w-full justify-center border-t border-line/50 pt-1 sm:order-2 sm:w-auto sm:border-0 sm:pt-0 xl:order-3">
+        <div className="order-3 flex w-full justify-center border-t border-line/50 pt-1 sm:order-2 sm:w-auto sm:border-0 sm:pt-0 min-[1440px]:order-3">
           <LanguageSwitcher />
         </div>
-        <button ref={menuButton} type="button" aria-controls="main-navigation" aria-expanded={open} aria-label={t(open ? 'ui.closeMenu' : 'ui.menu')} className="order-2 grid size-11 place-items-center rounded-lg bg-panel xl:hidden" onClick={() => setOpen(!open)}>
+        <button ref={menuButton} type="button" aria-controls="main-navigation" aria-expanded={open} aria-label={t(open ? 'ui.closeMenu' : 'ui.menu')} className="order-2 grid size-11 place-items-center rounded-lg bg-panel min-[1440px]:hidden" onClick={() => setOpen(!open)}>
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
-        <nav id="main-navigation" aria-label={t('ui.menu')} className={`${open ? 'flex' : 'hidden'} order-4 w-full flex-col gap-1 border-t border-line py-4 xl:order-2 xl:flex xl:w-auto xl:flex-row xl:items-center xl:gap-3 xl:border-0 xl:py-0`}>
+        <nav id="main-navigation" aria-label={t('ui.menu')} className={`${open ? 'flex' : 'hidden'} order-4 w-full flex-col gap-1 border-t border-line py-4 min-[1440px]:order-2 min-[1440px]:flex min-[1440px]:w-auto min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-3 min-[1440px]:border-0 min-[1440px]:py-0`}>
           {navigationIds.map((id) => (
             <a key={id} href={`#${id}`} className="flex min-h-11 items-center rounded-lg px-2 text-sm text-muted transition-colors hover:text-cream" onClick={() => setOpen(false)}>{t(`nav.${id}`)}</a>
           ))}
-          <a href="#register" className="btn-primary mt-2 text-sm xl:mt-0" onClick={() => setOpen(false)}>{t('nav.register')}</a>
+          <a href="#/regulations" aria-current={regulationsPage ? 'page' : undefined} className={`flex min-h-11 items-center rounded-lg px-2 text-sm transition-colors hover:text-cream ${regulationsPage ? 'text-gold' : 'text-muted'}`} onClick={() => setOpen(false)}>{t('nav.regulations')}</a>
+          <a href="#register" className="btn-primary mt-2 text-sm min-[1440px]:mt-0" onClick={() => setOpen(false)}>{t('nav.register')}</a>
         </nav>
       </div>
       {/* Язык меняется без пересоздания меню и без потери текущей позиции страницы. */}

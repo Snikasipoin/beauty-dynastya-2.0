@@ -10,7 +10,8 @@
     "speakers": "Speakers",
     "participants": "Participantes",
     "partners": "Partenaires",
-    "register": "S'inscrire"
+    "register": "S'inscrire",
+    "regulations": "Règlements"
   },
   "hero": {
     "subtitle": "Championnat international en ligne des professionnels de la beauté",
@@ -741,5 +742,40 @@
     "imageFallback": "Portrait indisponible",
     "judgesHint": "Les professionnels qui évalueront votre travail.",
     "speakersHint": "Expérience, expertise et un nouveau regard sur votre métier."
+  },
+  "regulations": {
+    "back": "Retour à l’accueil",
+    "description": "Règles de participation et listes de contrôle pour préparer vos travaux Lash et Nails. Choisissez une catégorie et la langue du document pour lire les exigences ou télécharger le PDF.",
+    "category": "Catégorie",
+    "all": "Toutes",
+    "language": "Langue des documents",
+    "autoLanguage": "Langue du site ({{language}})",
+    "languageHint": "Par défaut, les documents suivent la langue du site. Vous pouvez choisir une autre langue indépendamment.",
+    "search": "Rechercher par titre",
+    "searchPlaceholder": "Par exemple, Lash ou liste de contrôle",
+    "results": "Documents trouvés : {{count}}",
+    "availableLanguages": "Langues disponibles :",
+    "open": "Ouvrir / Lire",
+    "download": "Télécharger le PDF",
+    "openLabel": "Ouvrir / Lire : {{title}} ({{language}}, PDF, nouvel onglet)",
+    "downloadLabel": "Télécharger le PDF : {{title}} ({{language}})",
+    "unavailable": "La traduction en {{language}} n’est pas encore disponible. Choisissez l’une des langues disponibles dans le sélecteur ci-dessus.",
+    "empty": "Aucun document trouvé",
+    "emptyHint": "Essayez un autre titre ou réinitialisez les filtres.",
+    "reset": "Réinitialiser les filtres",
+    "documents": {
+      "lash-regulations": {
+        "title": "Règlement Lash",
+        "description": "Règlement général Lash : conditions de participation et exigences pour les travaux de cils."
+      },
+      "lash-checklist": {
+        "title": "Liste de contrôle Lash",
+        "description": "Vérifiez votre travail Lash avant de le soumettre au concours."
+      },
+      "nails-regulations": {
+        "title": "Règlement Nails",
+        "description": "Règlement général Nails : conditions de participation et exigences pour les travaux d’onglerie."
+      }
+    }
   }
 }

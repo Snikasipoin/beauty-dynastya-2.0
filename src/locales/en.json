@@ -10,7 +10,8 @@
     "speakers": "Speakers",
     "participants": "Participants",
     "partners": "Partners",
-    "register": "Register"
+    "register": "Register",
+    "regulations": "Regulations"
   },
   "hero": {
     "subtitle": "International Online Championship for Beauty Masters",
@@ -741,5 +742,40 @@
     "imageFallback": "Portrait unavailable",
     "judgesHint": "Meet the professionals who evaluate your work.",
     "speakersHint": "Experience, expertise and a new perspective on your craft."
+  },
+  "regulations": {
+    "back": "Back to home",
+    "description": "Participation rules and preparation checklists for Lash and Nails entries. Choose a category and document language to read the requirements or download a PDF.",
+    "category": "Category",
+    "all": "All",
+    "language": "Document language",
+    "autoLanguage": "Website language ({{language}})",
+    "languageHint": "Documents follow the website language by default. You can choose a different document language separately.",
+    "search": "Search by title",
+    "searchPlaceholder": "For example, Lash or checklist",
+    "results": "Documents found: {{count}}",
+    "availableLanguages": "Available languages:",
+    "open": "Open / Read",
+    "download": "Download PDF",
+    "openLabel": "Open / Read: {{title}} ({{language}}, PDF, new tab)",
+    "downloadLabel": "Download PDF: {{title}} ({{language}})",
+    "unavailable": "A {{language}} translation is not available yet. Choose one of the available languages using the selector above.",
+    "empty": "No documents found",
+    "emptyHint": "Try a different title or reset the filters.",
+    "reset": "Reset filters",
+    "documents": {
+      "lash-regulations": {
+        "title": "Lash regulations",
+        "description": "General Lash regulations: participation and competition entry requirements for lash artists."
+      },
+      "lash-checklist": {
+        "title": "Lash checklist",
+        "description": "Check your Lash competition entry before submission."
+      },
+      "nails-regulations": {
+        "title": "Nails regulations",
+        "description": "General Nails regulations: participation and competition entry requirements for nail artists."
+      }
+    }
   }
 }

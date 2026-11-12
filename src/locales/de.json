@@ -10,7 +10,8 @@
     "speakers": "Speakerinnen",
     "participants": "Teilnehmerinnen",
     "partners": "Partner",
-    "register": "Anmelden"
+    "register": "Anmelden",
+    "regulations": "Reglements"
   },
   "hero": {
     "subtitle": "Internationale Online-Meisterschaft für Beauty-Profis",
@@ -741,5 +742,40 @@
     "imageFallback": "Porträt nicht verfügbar",
     "judgesHint": "Die Fachleute, die deine Arbeit bewerten.",
     "speakersHint": "Erfahrung, Fachwissen und neue Perspektiven für dein Handwerk."
+  },
+  "regulations": {
+    "back": "Zur Startseite",
+    "description": "Teilnahmeregeln und Checklisten zur Vorbereitung der Wettbewerbsarbeiten für Lash und Nails. Wählen Sie eine Kategorie und Dokumentensprache, um die Anforderungen zu lesen oder eine PDF herunterzuladen.",
+    "category": "Kategorie",
+    "all": "Alle",
+    "language": "Dokumentensprache",
+    "autoLanguage": "Wie die Website ({{language}})",
+    "languageHint": "Die Dokumentensprache entspricht zunächst der Website. Sie können unabhängig davon eine andere Sprache wählen.",
+    "search": "Nach Titel suchen",
+    "searchPlaceholder": "Zum Beispiel Lash oder Checkliste",
+    "results": "Gefundene Dokumente: {{count}}",
+    "availableLanguages": "Verfügbare Sprachen:",
+    "open": "Öffnen / Lesen",
+    "download": "PDF herunterladen",
+    "openLabel": "Öffnen / Lesen: {{title}} ({{language}}, PDF, neuer Tab)",
+    "downloadLabel": "PDF herunterladen: {{title}} ({{language}})",
+    "unavailable": "Eine Übersetzung auf {{language}} ist noch nicht verfügbar. Wählen Sie oben eine der verfügbaren Sprachen.",
+    "empty": "Keine Dokumente gefunden",
+    "emptyHint": "Versuchen Sie einen anderen Titel oder setzen Sie die Filter zurück.",
+    "reset": "Filter zurücksetzen",
+    "documents": {
+      "lash-regulations": {
+        "title": "Lash-Reglement",
+        "description": "Allgemeines Lash-Reglement: Anforderungen an die Teilnahme und die Wettbewerbsarbeiten im Wimpernbereich."
+      },
+      "lash-checklist": {
+        "title": "Lash-Checkliste",
+        "description": "Prüfen Sie Ihre Lash-Wettbewerbsarbeit vor der Einreichung."
+      },
+      "nails-regulations": {
+        "title": "Nails-Reglement",
+        "description": "Allgemeines Nails-Reglement: Anforderungen an die Teilnahme und die Wettbewerbsarbeiten im Nagelbereich."
+      }
+    }
   }
 }
