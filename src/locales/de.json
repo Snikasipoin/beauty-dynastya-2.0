@@ -745,7 +745,7 @@
   },
   "regulations": {
     "back": "Zur Startseite",
-    "description": "Teilnahmeregeln und Checklisten zur Vorbereitung der Wettbewerbsarbeiten für Lash und Nails. Wählen Sie eine Kategorie und Dokumentensprache, um die Anforderungen zu lesen oder eine PDF herunterzuladen.",
+    "description": "Teilnahmeregeln und Checklisten zur Vorbereitung der Wettbewerbsarbeiten für Lash, Nails und PMU. Wählen Sie eine Kategorie und Dokumentensprache, um die Anforderungen zu lesen oder eine PDF herunterzuladen.",
     "category": "Kategorie",
     "all": "Alle",
     "language": "Dokumentensprache",
@@ -775,6 +775,10 @@
       "nails-regulations": {
         "title": "Nails-Reglement",
         "description": "Allgemeines Nails-Reglement: Anforderungen an die Teilnahme und die Wettbewerbsarbeiten im Nagelbereich."
+      },
+      "pmu-regulations": {
+        "title": "PMU-Reglement 2027",
+        "description": "Teilnahmeregeln und Anforderungen an Wettbewerbsarbeiten für Permanent Make-up und Mini-Tattoos."
       }
     }
   }

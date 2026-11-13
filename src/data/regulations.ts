@@ -11,7 +11,8 @@ export const regulationLanguages = [
 ] as const
 
 export type RegulationLanguage = typeof regulationLanguages[number]['code']
-export type RegulationCategory = 'lash' | 'nails'
+export const regulationCategoryLabels = { lash: 'Lash', nails: 'Nails', pmu: 'PMU' } as const
+export type RegulationCategory = keyof typeof regulationCategoryLabels
 export type RegulationKind = 'regulations' | 'checklist'
 
 export interface RegulationDocument {
@@ -38,10 +39,24 @@ const documents = new Map<string, RegulationDocument>()
 for (const [path, url] of Object.entries(files)) {
   // Язык берём из имени PDF: названия папок разнородны и ненадёжны.
   const match = path.match(/\/Beauty_Dynastya_(LASH|NAILS)_(Regulations|Checklist)_([A-Z]{2})(?: \(\d+\))?\.pdf$/)
-  if (!match) throw new Error(`Unknown regulation filename: ${path}`)
-  const category = match[1] === 'LASH' ? 'lash' : 'nails'
-  const kind = match[2] === 'Regulations' ? 'regulations' : 'checklist'
-  const language = match[3].toLowerCase()
+  const pmuMatch = path.match(/\/Beauty_Dynasty_PMU_2027_([A-Z]{2})\.pdf$/)
+  // Русский оригинал PMU состоит из изображений и не содержит кода языка в имени.
+  // Язык проверен по страницам PDF; исходное имя и содержимое сохраняем.
+  const pmuRussian = path === '../../reglament/pmu/Beauty_Dynasty_PMU_2027_NEW_PHOTOS_10_POINTS.pdf'
+  let category: RegulationCategory
+  let kind: RegulationKind
+  let language: string
+  if (match) {
+    category = match[1] === 'LASH' ? 'lash' : 'nails'
+    kind = match[2] === 'Regulations' ? 'regulations' : 'checklist'
+    language = match[3].toLowerCase()
+  } else if (pmuMatch || pmuRussian) {
+    category = 'pmu'
+    kind = 'regulations'
+    language = pmuMatch ? pmuMatch[1].toLowerCase() : 'ru'
+  } else {
+    throw new Error(`Unknown regulation filename: ${path}`)
+  }
   if (!isRegulationLanguage(language)) throw new Error(`Unknown regulation language: ${path}`)
   const id = `${category}-${kind}`
   const document: RegulationDocument = documents.get(id) ?? { id, category, kind, translations: {} }

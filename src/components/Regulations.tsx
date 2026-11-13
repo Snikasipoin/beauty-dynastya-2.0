@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { ArrowLeft, ArrowUpRight, Download, Search } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { isRegulationLanguage, regulationLanguages, regulations } from '../data/regulations'
+import { isRegulationLanguage, regulationCategoryLabels, regulationLanguages, regulations } from '../data/regulations'
 import type { RegulationCategory, RegulationLanguage } from '../data/regulations'
 
-const categories = ['all', 'lash', 'nails'] as const
+const categories = ['all', 'lash', 'nails', 'pmu'] as const
 
 export function Regulations() {
   const { t, i18n } = useTranslation()
@@ -35,7 +35,7 @@ export function Regulations() {
               <div className="flex flex-wrap gap-2" role="group" aria-labelledby="regulation-category-label">
                 {categories.map((value) => (
                   <button key={value} type="button" aria-pressed={category === value} onClick={() => setCategory(value)} className={`min-h-11 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${category === value ? 'bg-cream text-ink' : 'bg-panel text-muted hover:bg-card hover:text-cream'}`}>
-                    {value === 'all' ? t('regulations.all') : value === 'lash' ? 'Lash' : 'Nails'}
+                    {value === 'all' ? t('regulations.all') : regulationCategoryLabels[value]}
                   </button>
                 ))}
               </div>
@@ -70,7 +70,7 @@ export function Regulations() {
               return (
                 <li key={document.id} data-regulation-id={document.id} className="flex min-w-0 flex-col rounded-2xl bg-panel p-6 sm:p-8">
                   <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
-                    <span className="font-semibold text-gold">{document.category === 'lash' ? 'Lash' : 'Nails'}</span>
+                    <span className="font-semibold text-gold">{regulationCategoryLabels[document.category]}</span>
                     <span className="text-muted">PDF{url && ` · ${language.toUpperCase()}`}</span>
                   </div>
                   <h2 className="mt-5 font-display text-2xl leading-snug font-bold sm:text-3xl">{title}</h2>

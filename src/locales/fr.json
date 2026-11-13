@@ -745,7 +745,7 @@
   },
   "regulations": {
     "back": "Retour à l’accueil",
-    "description": "Règles de participation et listes de contrôle pour préparer vos travaux Lash et Nails. Choisissez une catégorie et la langue du document pour lire les exigences ou télécharger le PDF.",
+    "description": "Règles de participation et listes de contrôle pour préparer vos travaux Lash, Nails et PMU. Choisissez une catégorie et la langue du document pour lire les exigences ou télécharger le PDF.",
     "category": "Catégorie",
     "all": "Toutes",
     "language": "Langue des documents",
@@ -775,6 +775,10 @@
       "nails-regulations": {
         "title": "Règlement Nails",
         "description": "Règlement général Nails : conditions de participation et exigences pour les travaux d’onglerie."
+      },
+      "pmu-regulations": {
+        "title": "Règlement PMU 2027",
+        "description": "Règles de participation et exigences pour les travaux de maquillage permanent et de mini-tatouage."
       }
     }
   }

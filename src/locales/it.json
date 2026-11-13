@@ -745,7 +745,7 @@
   },
   "regulations": {
     "back": "Torna alla home",
-    "description": "Regole di partecipazione e checklist per preparare i lavori Lash e Nails. Scegli una categoria e la lingua del documento per leggere i requisiti o scaricare il PDF.",
+    "description": "Regole di partecipazione e checklist per preparare i lavori Lash, Nails e PMU. Scegli una categoria e la lingua del documento per leggere i requisiti o scaricare il PDF.",
     "category": "Categoria",
     "all": "Tutte",
     "language": "Lingua dei documenti",
@@ -775,6 +775,10 @@
       "nails-regulations": {
         "title": "Regolamento Nails",
         "description": "Regolamento generale Nails: requisiti di partecipazione e dei lavori in gara per il settore unghie."
+      },
+      "pmu-regulations": {
+        "title": "Regolamento PMU 2027",
+        "description": "Regole di partecipazione e requisiti dei lavori in gara per il trucco permanente e i mini tatuaggi."
       }
     }
   }

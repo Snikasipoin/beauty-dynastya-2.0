@@ -745,7 +745,7 @@
   },
   "regulations": {
     "back": "Back to home",
-    "description": "Participation rules and preparation checklists for Lash and Nails entries. Choose a category and document language to read the requirements or download a PDF.",
+    "description": "Participation rules and preparation checklists for Lash, Nails and PMU entries. Choose a category and document language to read the requirements or download a PDF.",
     "category": "Category",
     "all": "All",
     "language": "Document language",
@@ -775,6 +775,10 @@
       "nails-regulations": {
         "title": "Nails regulations",
         "description": "General Nails regulations: participation and competition entry requirements for nail artists."
+      },
+      "pmu-regulations": {
+        "title": "PMU regulations 2027",
+        "description": "Participation rules and competition entry requirements for permanent makeup and mini tattoos."
       }
     }
   }
