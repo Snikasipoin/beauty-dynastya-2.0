@@ -711,7 +711,107 @@
     "success": "Merci ! Votre demande a bien été reçue",
     "successText": "Dernière étape : rejoignez notre groupe Telegram. Vous y trouverez le règlement, les dates et les prochaines étapes."
   },
+  "legal": {
+    "back": "Revenir à la candidature",
+    "version": "Version du",
+    "navigation": "Informations juridiques",
+    "operatorTitle": "Responsable et contact",
+    "organizer": "Organisateur de {{name}}",
+    "contactHint": "Utilisez ces coordonnées pour vos questions, demandes de rectification ou d'effacement et retrait du consentement.",
+    "processorPrivacy": "Confidentialité Web3Forms",
+    "processorAgreement": "Conditions de traitement Web3Forms",
+    "separateDocuments": "Le consentement est distinct de cette politique, du règlement et des communications publicitaires.",
+    "checkbox": "Je consens au traitement de mes données personnelles pour l'examen de ma candidature. *",
+    "readConsent": "Lire le consentement (nouvel onglet)",
+    "formHint": "À l'envoi, les données sont transmises à l'organisateur via Web3Forms. Détails :",
+    "consent": {
+      "title": "Consentement au traitement des données personnelles",
+      "intro": "Je consens librement au traitement des données que je transmets dans le formulaire par l'organisateur de Beauty Dynastya désigné ci-dessous (le Responsable). Je donne mon consentement en cochant séparément la case puis en appuyant sur le bouton d'envoi.",
+      "sections": {
+        "purpose": {
+          "title": "Finalité du traitement",
+          "text": "Recevoir et examiner ma candidature comme participant, juge ou intervenant, identifier le rôle choisi et organiser les suites de ma candidature. Le traitement est limité à cette finalité et ne couvre pas la publicité ni les offres sans rapport avec la candidature."
+        },
+        "data": {
+          "title": "Données fournies",
+          "text": "Prénom et nom, pays et rôle choisi. S'ajoutent la langue du formulaire, la confirmation du consentement, sa version et le lien du document, le lien de la politique, ainsi que la date et l'heure d'envoi. Le formulaire ne demande ni pièce d'identité, ni données de paiement, de santé ou biométriques et ne permet pas de joindre des fichiers."
+        },
+        "actions": {
+          "title": "Opérations autorisées",
+          "text": "Collecte, enregistrement, organisation, accumulation, conservation, rectification, extraction, utilisation, transmission aux acteurs assurant la livraison et le traitement de la candidature, limitation, effacement et destruction. Le traitement peut être automatisé ou manuel, dans la seule mesure nécessaire à la finalité indiquée."
+        },
+        "processors": {
+          "title": "Destinataires et prestataires",
+          "text": "Le formulaire transmet les données à Web3Forms, service de Web3Creative (Inde), qui les traite et les livre par email à l'organisateur au moyen de son infrastructure et de ses sous-traitants. Le traitement peut avoir lieu dans d'autres pays. Des informations techniques, dont l'adresse IP, peuvent servir à la livraison et à la lutte contre le spam. Les conditions d'infrastructure, de transfert et de conservation figurent dans les documents liés. Ce consentement ne remplace pas les bases juridiques et procédures obligatoires des transferts internationaux."
+        },
+        "term": {
+          "title": "Durée et conservation",
+          "text": "Le consentement vaut jusqu'à la fin de l'examen de la candidature et des démarches liées, ou jusqu'à son retrait. Les données doivent ensuite être effacées ou anonymisées dans les délais légaux, sauf autre base juridique imposant ou autorisant la poursuite du traitement. Les conditions du sous-traitant externe s'appliquent aussi : Web3Forms indique un maximum de trois ans, sauf durée plus courte liée à l'offre ou à un effacement anticipé."
+        },
+        "withdrawal": {
+          "title": "Retrait du consentement",
+          "text": "Je peux retirer le consentement ou demander l'accès, la rectification ou l'effacement aux coordonnées du Responsable. Pour commencer, le nom, la date approximative de candidature et l'objet de la demande suffisent ; des précisions peuvent être nécessaires pour vérifier l'appartenance des données. Le traitement cesse après retrait, sauf autre base juridique. Le retrait n'affecte pas la licéité du traitement antérieur."
+        },
+        "limits": {
+          "title": "Limites du consentement",
+          "text": "Ce consentement n'autorise pas la publication du nom, de la photographie, du travail présenté ou d'autres données, les messages publicitaires, le traitement de catégories sensibles ou l'identification biométrique. Ces actions exigent des bases juridiques et, si nécessaire, des consentements distincts. Le formulaire n'est pas envoyé sans cocher la case. Ouvrir Telegram ou Instagram ne vaut pas consentement pour ce formulaire."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Politique de traitement des données personnelles",
+      "intro": "Cette politique explique quelles données le site Beauty Dynastya utilise, pourquoi elles sont nécessaires, comment la candidature est envoyée et comment nous contacter à leur sujet. Elle informe sur le traitement sans remplacer un consentement distinct.",
+      "sections": {
+        "scope": {
+          "title": "Champ d'application",
+          "text": "La politique concerne la navigation sur ce site et les candidatures de participants, juges et intervenants via le formulaire. Elle ne régit pas vos activités indépendantes sur les sites et messageries externes. Le traitement repose sur le consentement et les autres bases prévues par le droit applicable ; les règles précises dépendent du lieu d'activité du Responsable et des circonstances."
+        },
+        "data": {
+          "title": "Données de candidature et données techniques",
+          "text": "Le formulaire collecte prénom et nom, pays et rôle. L'envoi ajoute langue, confirmation du consentement, version et adresse du document, adresse de la politique, date et heure. Les hébergeurs et prestataires du formulaire peuvent recevoir IP, informations du navigateur et de la requête pour exploiter et protéger leur infrastructure. Aucun mot de passe, pièce d'identité, donnée de paiement ou de santé n'est demandé."
+        },
+        "purpose": {
+          "title": "Finalités et minimisation",
+          "text": "Les données servent à examiner la candidature et à organiser les suites du rôle choisi. Les informations techniques assurent livraison, disponibilité et protection contre les abus. L'envoi ne vaut pas consentement à la publicité, à la publication ou à des finalités marketing indépendantes."
+        },
+        "processing": {
+          "title": "Sous-traitants et transferts",
+          "text": "Le navigateur envoie la candidature directement par HTTPS à Web3Forms (Web3Creative, Inde), qui la livre à l'email de l'organisateur. Les conditions publiées citent AWS, Cloudflare, Hetzner et d'autres sous-traitants ; le traitement peut avoir lieu dans plusieurs pays. Les documents Web3Forms régissent également transfert et stockage. Une case cochée ne supprime pas les obligations applicables de localisation, de contrats de sous-traitance et de transfert international."
+        },
+        "retention": {
+          "title": "Conservation et effacement",
+          "text": "Les données sont nécessaires jusqu'à la fin de l'examen et des démarches liées ou jusqu'au retrait, sauf autre base juridique. Elles sont ensuite effacées ou anonymisées dans les délais légaux. Web3Forms indique un maximum de trois ans, sauf durée plus courte de l'offre ou effacement anticipé. Les demandes d'effacement, y compris chez les sous-traitants, sont à adresser au Responsable."
+        },
+        "rights": {
+          "title": "Vos droits",
+          "text": "Vous pouvez demander des informations et l'accès aux données, leur rectification, limitation ou effacement, et retirer le consentement. D'autres droits, dont portabilité et opposition, s'appliquent selon les conditions légales. Utilisez les coordonnées du Responsable ci-dessus. Si la question reste sans réponse satisfaisante, vous pouvez saisir l'autorité de contrôle compétente ou une juridiction selon le droit applicable."
+        },
+        "storage": {
+          "title": "Préférences du navigateur",
+          "text": "Le site utilise la clé localStorage beauty-dynastya-language uniquement pour mémoriser la langue choisie. Nom, pays et rôle restent dans l'état du formulaire jusqu'à l'envoi réussi ou au départ de la page et ne sont pas enregistrés par le site dans localStorage. Le code actuel ne contient ni pixels publicitaires ni systèmes d'analyse. Les mécanismes techniques des services externes et de l'hébergement suivent leurs propres conditions."
+        },
+        "external": {
+          "title": "Messageries et contenus publics",
+          "text": "Les boutons Telegram et Instagram ouvrent des services externes sans ajouter automatiquement les données de candidature aux liens. Les messages envoyés de votre initiative suivent les règles du service et du destinataire. La publication de profils et de contenus des juges, intervenants et participants exige une base juridique indépendante et n'est pas couverte par ce consentement. Toute modification du traitement nécessite la mise à jour de cette politique et, si nécessaire, du consentement."
+        }
+      }
+    },
+    "draftNotice": "Modèle de document : complétez les coordonnées du responsable ci-dessous avant utilisation.",
+    "operatorFields": {
+      "name": "Nom complet / raison sociale",
+      "country": "Pays d’immatriculation / d’activité",
+      "address": "Adresse postale",
+      "email": "Email pour les demandes sur les données"
+    },
+    "operatorPlaceholders": {
+      "name": "[Indiquer le nom complet ou la raison sociale]",
+      "country": "[Indiquer le pays]",
+      "address": "[Indiquer l’adresse postale du responsable]",
+      "email": "[Indiquer un email de contact]"
+    }
+  },
   "ui": {
+    "consentRequired": "Veuillez consentir au traitement des données personnelles avant l'envoi de votre candidature.",
     "skip": "Aller au contenu",
     "menu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",

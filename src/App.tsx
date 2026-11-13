@@ -15,6 +15,7 @@ import { Footer } from './components/Footer'
 import { Regulations } from './components/Regulations'
 import { Conference } from './components/Conference'
 import { ConferenceTeaser } from './components/ConferenceTeaser'
+import { LegalPage } from './components/LegalPage'
 import { pageFromHash } from './lib/routes'
 
 export default function App() {
@@ -27,8 +28,9 @@ export default function App() {
     return () => window.removeEventListener('hashchange', updatePage)
   }, [])
   useEffect(() => {
-    document.title = page === 'conference' ? t('conference.metaTitle') : page === 'regulations' ? `${t('nav.regulations')} — Beauty Dynastya` : t('meta.title')
-    document.querySelector('meta[name="description"]')?.setAttribute('content', page === 'conference' ? t('conference.metaDescription') : t('meta.description'))
+    const legalPage = page === 'consent' || page === 'privacy'
+    document.title = legalPage ? `${t(`legal.${page}.title`)} — Beauty Dynastya` : page === 'conference' ? t('conference.metaTitle') : page === 'regulations' ? `${t('nav.regulations')} — Beauty Dynastya` : t('meta.title')
+    document.querySelector('meta[name="description"]')?.setAttribute('content', legalPage ? t(`legal.${page}.intro`) : page === 'conference' ? t('conference.metaDescription') : t('meta.description'))
     if (previousPage.current === page) return
     previousPage.current = page
     document.getElementById('main')?.focus({ preventScroll: true })
@@ -52,7 +54,7 @@ export default function App() {
       }}>{t('ui.skip')}</a>
       <Header page={page} />
       <main id="main" tabIndex={-1} className="w-full max-w-full">
-        {page === 'conference' ? <Conference /> : page === 'regulations' ? <Regulations /> : <><Hero /><ConferenceTeaser /><About /><Nominations /><HowItWorks /><Judges /><Speakers /><Participants /><Partners /><ApplicationForm /></>}
+        {page === 'consent' || page === 'privacy' ? <LegalPage document={page} /> : page === 'conference' ? <Conference /> : page === 'regulations' ? <Regulations /> : <><Hero /><ConferenceTeaser /><About /><Nominations /><HowItWorks /><Judges /><Speakers /><Participants /><Partners /><ApplicationForm /></>}
       </main>
       <Footer page={page} />
     </div>

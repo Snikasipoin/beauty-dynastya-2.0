@@ -5,7 +5,8 @@ export interface ApplicationValues {
   country: string
   role: ApplicationRole | ''
   botcheck: boolean
+  consent: boolean
 }
 
-export type ApplicationErrors = Partial<Record<'fullName' | 'country' | 'role', 'required' | 'roleRequired'>>
+export type ApplicationErrors = Partial<Record<'fullName' | 'country' | 'role' | 'consent', 'required' | 'roleRequired' | 'consentRequired'>>
 export type SubmissionStatus = 'idle' | 'sending' | 'success' | 'error'

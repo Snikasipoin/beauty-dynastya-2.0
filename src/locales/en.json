@@ -711,7 +711,107 @@
     "success": "Thank you! Your application has been received",
     "successText": "One last step: join our Telegram group. Rules, deadlines and next steps are posted there."
   },
+  "legal": {
+    "back": "Back to the application",
+    "version": "Version dated",
+    "navigation": "Legal information",
+    "operatorTitle": "Controller and contact",
+    "organizer": "Organiser of {{name}}",
+    "contactHint": "Use the contacts below for data processing questions, correction or deletion requests, and withdrawal of consent.",
+    "processorPrivacy": "Web3Forms privacy policy",
+    "processorAgreement": "Web3Forms processing terms",
+    "separateDocuments": "Consent is separate from this policy, participation rules and marketing communications.",
+    "checkbox": "I consent to the processing of my personal data to review my application. *",
+    "readConsent": "Read the consent (new tab)",
+    "formHint": "On submission, your data is sent to the organiser through Web3Forms. Details:",
+    "consent": {
+      "title": "Consent to personal data processing",
+      "intro": "I freely consent to the organiser of Beauty Dynastya identified below (the Controller) processing the data I submit through the application form. I give consent by separately selecting the checkbox and pressing the submit button.",
+      "sections": {
+        "purpose": {
+          "title": "Purpose of processing",
+          "text": "To receive and review my application as a participant, judge or speaker, identify my chosen role and organise the next steps relating to my application. Processing is limited to this purpose. This consent does not cover advertising or unrelated offers."
+        },
+        "data": {
+          "title": "Data I provide",
+          "text": "My first and last name, country and selected role. The application also includes the form language, consent confirmation, the consent version and document link, the policy link, and submission date and time. The form does not request identity documents, payment details, health or biometric data, and does not accept file uploads."
+        },
+        "actions": {
+          "title": "Permitted operations",
+          "text": "Collection, recording, organisation, accumulation, storage, correction, retrieval, use, disclosure to parties delivering and processing the application, restriction, deletion and destruction. Processing may be automated or manual and is limited to what is necessary for the stated purpose."
+        },
+        "processors": {
+          "title": "Recipients and service providers",
+          "text": "The form sends data to Web3Forms, a service operated by Web3Creative (India), which processes it and delivers it to the organiser by email using its infrastructure and sub-processors. Processing may take place in other countries. The service may also process request information, including an IP address, for delivery and spam prevention. Its infrastructure, transfer and retention terms are described in the linked documents. This consent does not replace the independent legal grounds and mandatory procedures required for international transfers."
+        },
+        "term": {
+          "title": "Duration and retention",
+          "text": "Consent lasts until the application review and related organisational steps are completed, or until withdrawal. Once the purpose has been fulfilled or consent withdrawn, data must be deleted or anonymised within the time limits of applicable law, unless another legal ground requires or permits further processing. Retention by the external processor is also governed by its terms. Web3Forms specifies a maximum of three years unless a plan or earlier deletion provides a shorter period."
+        },
+        "withdrawal": {
+          "title": "Withdrawing consent",
+          "text": "I may withdraw consent or request access, correction or deletion using the Controller's contacts above. My name, approximate application date and the nature of my request are sufficient to start; further information may be needed only to verify ownership of the data. Processing stops after withdrawal unless another independent legal ground applies. Withdrawal does not affect the lawfulness of earlier processing."
+        },
+        "limits": {
+          "title": "Limits of this consent",
+          "text": "This consent does not authorise public disclosure of my name, photograph, competition entry or other data, marketing messages, processing of sensitive categories, or biometric identification. These require separate legal grounds and, where necessary, separate consent. Without selecting the checkbox, I cannot submit the form. Opening Telegram or Instagram does not itself give consent to processing through this form."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Personal data processing policy",
+      "intro": "This policy explains what data the Beauty Dynastya website uses, why it is needed, how applications are submitted and how to contact us about your data. It provides information about processing and does not replace separate consent.",
+      "sections": {
+        "scope": {
+          "title": "Scope",
+          "text": "This policy covers browsing this website and submitting its application form as a participant, judge or speaker. It does not govern your independent activity on external websites or messaging services. Applications rely on consent and other grounds provided by applicable law; the specific rules depend on the Controller's place of activity and the circumstances of processing."
+        },
+        "data": {
+          "title": "Application and technical data",
+          "text": "The form collects first and last name, country and selected role. Submission adds the language, consent confirmation, document version and address, policy address, and submission date and time. Hosting and form delivery providers may receive IP addresses, browser and request information to operate and protect their infrastructure. The form does not request passwords, identity documents, payment details or health information."
+        },
+        "purpose": {
+          "title": "Purposes and minimisation",
+          "text": "Application data is used to review the application and organise steps relating to the selected role. Technical information supports delivery, availability and protection against abuse. Submitting an application does not give consent to advertising, public disclosure or independent marketing uses."
+        },
+        "processing": {
+          "title": "Processors and transfers",
+          "text": "On submission, the browser sends the application directly over HTTPS to Web3Forms (Web3Creative, India), which delivers it to the organiser's email. Its published terms list AWS, Cloudflare, Hetzner and other named sub-processors; processing may occur in several countries. Transfers and storage are also governed by Web3Forms documents. A checkbox does not remove applicable data localisation, processor contract or international transfer requirements."
+        },
+        "retention": {
+          "title": "Retention and deletion",
+          "text": "Application data is needed until review and related organisational steps are completed, or consent is withdrawn, unless another legal ground requires or permits further processing. Once the grounds end, data is deleted or anonymised within the time limits of applicable law. Web3Forms states a maximum retention of three years unless a plan or earlier deletion shortens it. Requests for deletion, including data held by processors, should be directed to the Controller."
+        },
+        "rights": {
+          "title": "Your rights and requests",
+          "text": "You may request information about processing and access to your data, correction, restriction or deletion, and withdraw consent. Other rights, including portability and objection, may apply where the law provides for them. Send your request using the Controller's contacts above. If a concern remains unresolved, you may contact the competent supervisory authority or court under applicable law."
+        },
+        "storage": {
+          "title": "Browser preferences",
+          "text": "The website uses localStorage key beauty-dynastya-language only to remember the selected language. Name, country and role remain in form state until successful submission or leaving the page and are not saved by the website in localStorage. The current source code contains no advertising pixels or analytics systems. Technical mechanisms of hosting and external services are governed by their own terms."
+        },
+        "external": {
+          "title": "Messaging services and public content",
+          "text": "Telegram and Instagram buttons open external services; application data is not automatically added to these links. Messages you send there independently are processed under the service's and recipient's rules. Publication of judge, speaker and participant profiles and materials requires an independent legal basis and is not covered by application consent. Changes to processing require updates to this policy and, where necessary, consent."
+        }
+      }
+    },
+    "draftNotice": "Document template: complete the controller details below before using this document.",
+    "operatorFields": {
+      "name": "Controller name / legal name",
+      "country": "Country of registration / activity",
+      "address": "Postal address",
+      "email": "Email for personal data requests"
+    },
+    "operatorPlaceholders": {
+      "name": "[Enter the controller’s full name or legal name]",
+      "country": "[Enter country]",
+      "address": "[Enter the controller’s postal address]",
+      "email": "[Enter a contact email]"
+    }
+  },
   "ui": {
+    "consentRequired": "Please consent to personal data processing before submitting your application.",
     "skip": "Skip to content",
     "menu": "Open menu",
     "closeMenu": "Close menu",

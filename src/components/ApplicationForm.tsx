@@ -3,11 +3,12 @@ import type { FormEvent } from 'react'
 import { ArrowUpRight, Check, LoaderCircle, Send } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { championship } from '../data/championship'
+import { legalDocumentHref } from '../data/legal'
 import { hasWeb3FormsKey, submitApplication, validateApplication } from '../services/web3forms'
 import type { ApplicationErrors, ApplicationRole, ApplicationValues, SubmissionStatus } from '../types/application'
 
 const roles: readonly ApplicationRole[] = ['judge', 'participant', 'speaker']
-const emptyValues: ApplicationValues = { fullName: '', country: '', role: '', botcheck: false }
+const emptyValues: ApplicationValues = { fullName: '', country: '', role: '', botcheck: false, consent: false }
 
 export function ApplicationForm() {
   const { t, i18n } = useTranslation()
@@ -37,7 +38,7 @@ export function ApplicationForm() {
     const nextErrors = validateApplication(values)
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length) {
-      const firstInvalid = (['fullName', 'country', 'role'] as const).find((field) => nextErrors[field])
+      const firstInvalid = (['fullName', 'country', 'role', 'consent'] as const).find((field) => nextErrors[field])
       if (firstInvalid) formRef.current?.querySelector<HTMLInputElement>(`[data-field="${firstInvalid}"]`)?.focus()
       return
     }
@@ -90,6 +91,17 @@ export function ApplicationForm() {
                 <div><label htmlFor="application-name" className="field-label">{t('form.name')}</label><input id="application-name" name="full_name" data-field="fullName" type="text" autoComplete="name" maxLength={120} required value={values.fullName} onChange={(event) => update('fullName', event.target.value)} placeholder={t('ui.namePlaceholder')} aria-invalid={Boolean(errors.fullName)} aria-describedby="name-error" className="field-input" /><p id="name-error" className="field-error">{errors.fullName && t(`ui.${errors.fullName}`)}</p></div>
                 <div><label htmlFor="application-country" className="field-label">{t('form.country')}</label><input id="application-country" name="country" data-field="country" type="text" autoComplete="country-name" maxLength={100} required value={values.country} onChange={(event) => update('country', event.target.value)} placeholder={t('ui.countryPlaceholder')} aria-invalid={Boolean(errors.country)} aria-describedby="country-error" className="field-input" /><p id="country-error" className="field-error">{errors.country && t(`ui.${errors.country}`)}</p></div>
                 <fieldset aria-describedby="role-error"><legend className="field-label">{t('form.role')}</legend><div className="flex flex-wrap gap-2">{roles.map((role) => <label key={role} className="flex min-h-11 cursor-pointer items-center gap-2 rounded-lg bg-card px-4 py-3 text-sm has-checked:bg-cream has-checked:text-ink"><input type="radio" name="role" data-field="role" value={role} checked={values.role === role} onChange={() => update('role', role)} required aria-invalid={Boolean(errors.role)} className="size-4 accent-accent" /><span>{t(`form.roles.${role}`)}</span></label>)}</div><p id="role-error" className="field-error">{errors.role && t(`ui.${errors.role}`)}</p></fieldset>
+                <div>
+                  <div className="flex items-start gap-3">
+                    <input id="application-consent" name="personal_data_consent" data-field="consent" type="checkbox" required checked={values.consent} onChange={(event) => update('consent', event.target.checked)} aria-invalid={Boolean(errors.consent)} aria-describedby="consent-error consent-help" className="mt-3 size-5 shrink-0 cursor-pointer accent-gold" />
+                    <div className="min-w-0 text-sm leading-relaxed">
+                      <label htmlFor="application-consent" className="flex min-h-11 cursor-pointer items-center">{t('legal.checkbox')}</label>
+                      <a href={legalDocumentHref('consent', i18n.language)} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-gold underline underline-offset-4 hover:text-cream">{t('legal.readConsent')}</a>
+                    </div>
+                  </div>
+                  <p id="consent-error" className="field-error" aria-live="polite">{errors.consent && t(`ui.${errors.consent}`)}</p>
+                  <p id="consent-help" className="mt-3 text-sm leading-relaxed text-muted">{t('legal.formHint')} <a href={legalDocumentHref('privacy', i18n.language)} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-4 hover:text-cream">{t('legal.privacy.title')}</a></p>
+                </div>
                 <div className="hidden" aria-hidden="true"><label htmlFor="application-botcheck">Website<input id="application-botcheck" name="botcheck" type="checkbox" tabIndex={-1} autoComplete="off" checked={values.botcheck} onChange={(event) => update('botcheck', event.target.checked)} /></label></div>
               </fieldset>
               <button type="submit" disabled={status === 'sending'} className="btn-primary mt-7 w-full">{status === 'sending' && <LoaderCircle className="size-4 shrink-0 motion-safe:animate-spin" aria-hidden="true" />}{t(status === 'sending' ? 'ui.sending' : 'form.submit')}</button>

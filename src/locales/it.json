@@ -711,7 +711,107 @@
     "success": "Grazie! La tua richiesta è stata ricevuta",
     "successText": "Ultimo passo: unisciti al nostro gruppo Telegram. Lì trovi regolamento, scadenze e prossimi passi."
   },
+  "legal": {
+    "back": "Torna alla candidatura",
+    "version": "Versione del",
+    "navigation": "Informazioni legali",
+    "operatorTitle": "Titolare e contatti",
+    "organizer": "Organizzatore di {{name}}",
+    "contactHint": "Per domande sui dati, richieste di rettifica o cancellazione e revoca del consenso, usa i contatti indicati.",
+    "processorPrivacy": "Privacy di Web3Forms",
+    "processorAgreement": "Condizioni di trattamento Web3Forms",
+    "separateDocuments": "Il consenso è distinto dall'informativa, dal regolamento e dalle comunicazioni promozionali.",
+    "checkbox": "Acconsento al trattamento dei miei dati personali per l'esame della candidatura. *",
+    "readConsent": "Leggi il consenso (nuova scheda)",
+    "formHint": "All'invio, i dati sono trasmessi all'organizzatore tramite Web3Forms. Dettagli:",
+    "consent": {
+      "title": "Consenso al trattamento dei dati personali",
+      "intro": "Acconsento liberamente al trattamento, da parte dell'organizzatore di Beauty Dynastya indicato di seguito (il Titolare), dei dati che invio con il modulo di candidatura. Esprimo il consenso selezionando separatamente la casella e premendo il pulsante di invio.",
+      "sections": {
+        "purpose": {
+          "title": "Finalità",
+          "text": "Ricevere ed esaminare la mia candidatura come partecipante, giudice o relatore, individuare il ruolo scelto e organizzare le attività connesse alla candidatura. Il trattamento è limitato a questa finalità e non comprende pubblicità o offerte estranee."
+        },
+        "data": {
+          "title": "Dati forniti",
+          "text": "Nome e cognome, paese e ruolo scelto. La candidatura comprende anche lingua del modulo, conferma del consenso, versione e link del documento, link dell'informativa, data e ora dell'invio. Il modulo non richiede documenti d'identità, dati di pagamento, sanitari o biometrici e non accetta allegati."
+        },
+        "actions": {
+          "title": "Operazioni autorizzate",
+          "text": "Raccolta, registrazione, organizzazione, accumulo, conservazione, rettifica, estrazione, utilizzo, comunicazione ai soggetti che consegnano e trattano la candidatura, limitazione, cancellazione e distruzione. Il trattamento può essere automatizzato o manuale, nella misura necessaria alla finalità indicata."
+        },
+        "processors": {
+          "title": "Destinatari e fornitori",
+          "text": "Il modulo invia i dati a Web3Forms, servizio di Web3Creative (India), che li tratta e li consegna all'organizzatore via email usando infrastrutture e sub-responsabili. Il trattamento può avvenire in altri paesi. Per la consegna e la prevenzione dello spam il servizio può trattare dati tecnici della richiesta, incluso l'indirizzo IP. Le condizioni su infrastrutture, trasferimenti e conservazione sono nei documenti collegati. Il consenso non sostituisce le basi giuridiche e le procedure obbligatorie per i trasferimenti internazionali."
+        },
+        "term": {
+          "title": "Durata e conservazione",
+          "text": "Il consenso vale fino al completamento dell'esame della candidatura e delle attività organizzative connesse, oppure fino alla revoca. Al termine, i dati devono essere cancellati o anonimizzati entro i termini di legge, salvo altra base giuridica che richieda o consenta di conservarli. Si applicano anche le condizioni del responsabile esterno: Web3Forms indica un massimo di tre anni, salvo durata inferiore prevista dal piano o cancellazione anticipata."
+        },
+        "withdrawal": {
+          "title": "Revoca del consenso",
+          "text": "Posso revocare il consenso o richiedere accesso, rettifica o cancellazione tramite i contatti del Titolare. Per iniziare bastano nome, data approssimativa della candidatura e oggetto della richiesta; ulteriori informazioni possono servire solo a verificare l'appartenenza dei dati. Dopo la revoca il trattamento cessa, salvo altra base giuridica. La revoca non pregiudica la liceità del trattamento precedente."
+        },
+        "limits": {
+          "title": "Limiti del consenso",
+          "text": "Il consenso non autorizza la pubblicazione del nome, della foto, del lavoro in concorso o di altri dati, messaggi promozionali, trattamento di categorie particolari o identificazione biometrica. Tali attività richiedono basi giuridiche e, ove necessario, consensi separati. Senza selezionare la casella il modulo non viene inviato. Aprire Telegram o Instagram non costituisce consenso al trattamento tramite questo modulo."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Informativa sul trattamento dei dati personali",
+      "intro": "Questa informativa spiega quali dati utilizza il sito Beauty Dynastya, per quali finalità, come viene inviata la candidatura e come contattarci in merito ai dati. Non sostituisce il consenso separato.",
+      "sections": {
+        "scope": {
+          "title": "Ambito di applicazione",
+          "text": "L'informativa riguarda la navigazione sul sito e le candidature di partecipanti, giudici e relatori tramite il modulo. Non disciplina le attività autonome su siti o servizi di messaggistica esterni. Il trattamento delle candidature si fonda sul consenso e sulle altre basi previste dalla legge applicabile; le norme specifiche dipendono dal luogo di attività del Titolare e dalle circostanze."
+        },
+        "data": {
+          "title": "Dati della candidatura e dati tecnici",
+          "text": "Il modulo raccoglie nome e cognome, paese e ruolo. All'invio si aggiungono lingua, conferma del consenso, versione e indirizzo del documento, indirizzo dell'informativa, data e ora. Hosting e fornitori del modulo possono ricevere IP, informazioni sul browser e sulla richiesta per gestire e proteggere l'infrastruttura. Non vengono richieste password, documenti d'identità, dati di pagamento o sanitari."
+        },
+        "purpose": {
+          "title": "Finalità e minimizzazione",
+          "text": "I dati servono a esaminare la candidatura e organizzare le attività relative al ruolo scelto. Le informazioni tecniche consentono consegna, disponibilità e protezione dagli abusi. L'invio non comporta consenso alla pubblicità, alla pubblicazione o a finalità autonome di marketing."
+        },
+        "processing": {
+          "title": "Responsabili e trasferimenti",
+          "text": "Il browser invia la candidatura via HTTPS direttamente a Web3Forms (Web3Creative, India), che la consegna all'email dell'organizzatore. Le condizioni pubblicate elencano AWS, Cloudflare, Hetzner e altri sub-responsabili; il trattamento può svolgersi in più paesi. Si applicano anche i documenti Web3Forms. La casella di consenso non elimina i requisiti applicabili di localizzazione, contratti con i responsabili o trasferimenti internazionali."
+        },
+        "retention": {
+          "title": "Conservazione e cancellazione",
+          "text": "I dati servono fino al completamento dell'esame e delle attività connesse oppure fino alla revoca, salvo altra base giuridica. Cessati i presupposti, sono cancellati o anonimizzati nei termini di legge. Web3Forms indica una durata massima di tre anni, salvo termine inferiore del piano o cancellazione anticipata. Le richieste di cancellazione, anche presso i responsabili, vanno inviate al Titolare."
+        },
+        "rights": {
+          "title": "Diritti e richieste",
+          "text": "Puoi richiedere informazioni sul trattamento, accesso, rettifica, limitazione o cancellazione e revocare il consenso. Quando previsti dalla legge, si applicano anche altri diritti, come portabilità e opposizione. Usa i contatti del Titolare. Se il problema non viene risolto, puoi rivolgerti all'autorità di controllo competente o al giudice secondo la legge applicabile."
+        },
+        "storage": {
+          "title": "Preferenze nel browser",
+          "text": "Il sito usa localStorage con la chiave beauty-dynastya-language solo per ricordare la lingua scelta. Nome, paese e ruolo restano nello stato del modulo fino all'invio riuscito o all'uscita dalla pagina e non sono salvati dal sito in localStorage. Il codice attuale non contiene pixel pubblicitari o sistemi di analisi. I meccanismi tecnici di hosting e servizi esterni seguono le rispettive condizioni."
+        },
+        "external": {
+          "title": "Messaggistica e contenuti pubblici",
+          "text": "I pulsanti Telegram e Instagram aprono servizi esterni senza aggiungere automaticamente i dati della candidatura ai link. I messaggi inviati autonomamente seguono le regole del servizio e del destinatario. La pubblicazione di profili e materiali di giudici, relatori e partecipanti richiede una base giuridica autonoma e non è coperta da questo consenso. Le modifiche al trattamento richiedono aggiornamenti all'informativa e, se necessario, al consenso."
+        }
+      }
+    },
+    "draftNotice": "Modello di documento: completare i dati del titolare qui sotto prima dell’utilizzo.",
+    "operatorFields": {
+      "name": "Nome completo / denominazione del titolare",
+      "country": "Paese di registrazione / attività",
+      "address": "Indirizzo postale",
+      "email": "Email per richieste sui dati personali"
+    },
+    "operatorPlaceholders": {
+      "name": "[Inserire nome completo o denominazione del titolare]",
+      "country": "[Inserire il paese]",
+      "address": "[Inserire l’indirizzo postale del titolare]",
+      "email": "[Inserire un’email di contatto]"
+    }
+  },
   "ui": {
+    "consentRequired": "Acconsenti al trattamento dei dati personali per inviare la candidatura.",
     "skip": "Vai al contenuto",
     "menu": "Apri menu",
     "closeMenu": "Chiudi menu",

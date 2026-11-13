@@ -159,6 +159,7 @@ test('controlled form validates, translates errors and survives API failures', a
   await page.locator('#application-name').fill('Test Applicant')
   await page.locator('#application-country').fill('Germany')
   await page.locator('input[value="participant"]').check()
+  await page.locator('#application-consent').check()
   await page.route('https://api.web3forms.com/submit', (route) => route.fulfill({ status: 500, contentType: 'application/json', body: '{"success":false}' }))
   await submit.click()
   await expect(page.locator('#register [role="alert"]')).toHaveText(de.ui.error)

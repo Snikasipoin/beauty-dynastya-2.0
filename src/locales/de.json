@@ -711,7 +711,107 @@
     "success": "Danke! Deine Anfrage ist eingegangen",
     "successText": "Nur noch ein Schritt: Tritt unserer Telegram-Gruppe bei. Dort findest du Reglement, Fristen und die nächsten Schritte."
   },
+  "legal": {
+    "back": "Zurück zur Bewerbung",
+    "version": "Fassung vom",
+    "navigation": "Rechtliche Informationen",
+    "operatorTitle": "Verantwortlicher und Kontakt",
+    "organizer": "Veranstalter von {{name}}",
+    "contactHint": "Nutzen Sie diese Kontakte für Datenschutzfragen, Berichtigung, Löschung und den Widerruf Ihrer Einwilligung.",
+    "processorPrivacy": "Datenschutz bei Web3Forms",
+    "processorAgreement": "Verarbeitungsbedingungen von Web3Forms",
+    "separateDocuments": "Die Einwilligung ist von dieser Richtlinie, den Teilnahmebedingungen und Werbemitteilungen getrennt.",
+    "checkbox": "Ich willige in die Verarbeitung meiner personenbezogenen Daten zur Prüfung meiner Bewerbung ein. *",
+    "readConsent": "Einwilligung lesen (neuer Tab)",
+    "formHint": "Beim Absenden werden Ihre Daten über Web3Forms an den Veranstalter übermittelt. Einzelheiten:",
+    "consent": {
+      "title": "Einwilligung zur Verarbeitung personenbezogener Daten",
+      "intro": "Ich willige freiwillig ein, dass der unten genannte Veranstalter von Beauty Dynastya (Verantwortlicher) die von mir im Bewerbungsformular übermittelten Daten verarbeitet. Ich erteile die Einwilligung durch gesondertes Ankreuzen des Feldes und Betätigen der Schaltfläche zum Absenden.",
+      "sections": {
+        "purpose": {
+          "title": "Zweck der Verarbeitung",
+          "text": "Entgegennahme und Prüfung meiner Bewerbung als Teilnehmer, Juror oder Referent, Zuordnung meiner gewählten Rolle und Organisation der nächsten Schritte. Die Verarbeitung ist auf diesen Zweck beschränkt. Werbung und sachfremde Angebote sind nicht umfasst."
+        },
+        "data": {
+          "title": "Übermittelte Daten",
+          "text": "Vor- und Nachname, Land und gewählte Rolle. Hinzu kommen Sprache, Bestätigung der Einwilligung, Fassung und Link des Dokuments, Link der Datenschutzrichtlinie sowie Datum und Uhrzeit der Übermittlung. Das Formular verlangt keine Ausweis-, Zahlungs-, Gesundheits- oder biometrischen Daten und bietet keine Datei-Uploads."
+        },
+        "actions": {
+          "title": "Erlaubte Vorgänge",
+          "text": "Erhebung, Erfassung, Organisation, Zusammenführung, Speicherung, Berichtigung, Abruf, Verwendung, Übermittlung an die mit Zustellung und Bearbeitung befassten Stellen, Einschränkung, Löschung und Vernichtung. Die Verarbeitung kann automatisiert oder manuell erfolgen und bleibt auf den genannten Zweck beschränkt."
+        },
+        "processors": {
+          "title": "Empfänger und Dienstleister",
+          "text": "Das Formular sendet Daten an Web3Forms, einen Dienst von Web3Creative (Indien). Dieser verarbeitet sie und stellt sie über seine Infrastruktur und Unterauftragsverarbeiter per E-Mail zu. Die Verarbeitung kann in anderen Ländern erfolgen. Technische Anfragedaten einschließlich der IP-Adresse können zur Zustellung und Spam-Abwehr verarbeitet werden. Einzelheiten zu Infrastruktur, Übermittlung und Speicherung stehen in den verlinkten Dokumenten. Diese Einwilligung ersetzt keine eigenständigen Rechtsgrundlagen und vorgeschriebenen Verfahren für internationale Übermittlungen."
+        },
+        "term": {
+          "title": "Geltungsdauer und Speicherung",
+          "text": "Die Einwilligung gilt bis zum Abschluss der Bewerbungsprüfung und der zugehörigen organisatorischen Schritte oder bis zum Widerruf. Danach sind die Daten innerhalb der gesetzlichen Fristen zu löschen oder zu anonymisieren, soweit keine andere Rechtsgrundlage die weitere Verarbeitung verlangt oder erlaubt. Zusätzlich gelten die Bedingungen des externen Verarbeiters: Web3Forms nennt höchstens drei Jahre, sofern Tarif oder vorzeitige Löschung keine kürzere Dauer vorsehen."
+        },
+        "withdrawal": {
+          "title": "Widerruf",
+          "text": "Ich kann die Einwilligung widerrufen oder Auskunft, Berichtigung und Löschung über die oben genannten Kontakte verlangen. Für eine erste Anfrage genügen Name, ungefähres Bewerbungsdatum und Anliegen; weitere Angaben können zur Zuordnung der Daten erforderlich sein. Nach dem Widerruf endet die Verarbeitung, sofern keine andere Rechtsgrundlage besteht. Die Rechtmäßigkeit der früheren Verarbeitung bleibt unberührt."
+        },
+        "limits": {
+          "title": "Grenzen der Einwilligung",
+          "text": "Die Einwilligung erlaubt weder die Veröffentlichung meines Namens, Fotos, Wettbewerbsbeitrags oder anderer Daten noch Werbenachrichten, die Verarbeitung besonderer Datenkategorien oder biometrische Identifikation. Dafür sind eigenständige Rechtsgrundlagen und gegebenenfalls gesonderte Einwilligungen erforderlich. Ohne Ankreuzen wird das Formular nicht gesendet. Das Öffnen von Telegram oder Instagram gilt nicht als Einwilligung für dieses Formular."
+        }
+      }
+    },
+    "privacy": {
+      "title": "Richtlinie zur Verarbeitung personenbezogener Daten",
+      "intro": "Diese Richtlinie erläutert, welche Daten die Website Beauty Dynastya verwendet, wozu sie benötigt werden, wie Bewerbungen versendet werden und wie Sie uns zu Ihren Daten kontaktieren. Sie informiert über die Verarbeitung und ersetzt keine gesonderte Einwilligung.",
+      "sections": {
+        "scope": {
+          "title": "Geltungsbereich",
+          "text": "Die Richtlinie betrifft den Besuch dieser Website und Bewerbungen als Teilnehmer, Juror oder Referent über das Formular. Eigenständige Aktivitäten auf externen Websites und in Messengern sind nicht umfasst. Bewerbungen werden auf Grundlage der Einwilligung und anderer gesetzlicher Grundlagen verarbeitet. Die konkret anwendbaren Regeln hängen vom Tätigkeitsort des Verantwortlichen und den Umständen ab."
+        },
+        "data": {
+          "title": "Bewerbungsdaten und technische Angaben",
+          "text": "Das Formular erhebt Vor- und Nachname, Land und Rolle. Beim Absenden werden Sprache, Einwilligungsbestätigung, Fassung und Adresse des Dokuments, Adresse der Richtlinie sowie Datum und Uhrzeit ergänzt. Hosting- und Formulardienste können IP-Adresse, Browser- und Anfragedaten für Betrieb und Schutz ihrer Infrastruktur erhalten. Passwörter, Ausweise, Zahlungs- und Gesundheitsdaten werden nicht verlangt."
+        },
+        "purpose": {
+          "title": "Zwecke und Datenminimierung",
+          "text": "Bewerbungsdaten dienen der Prüfung und Organisation der Schritte zur gewählten Rolle. Technische Angaben unterstützen Zustellung, Verfügbarkeit und Schutz vor Missbrauch. Mit der Bewerbung wird keine Einwilligung zu Werbung, Veröffentlichung oder eigenständigen Marketingzwecken erteilt."
+        },
+        "processing": {
+          "title": "Auftragsverarbeiter und Übermittlungen",
+          "text": "Der Browser übermittelt die Bewerbung per HTTPS direkt an Web3Forms (Web3Creative, Indien), das sie an die E-Mail-Adresse des Veranstalters zustellt. Die veröffentlichten Bedingungen nennen AWS, Cloudflare, Hetzner und weitere Unterauftragsverarbeiter; die Verarbeitung kann in mehreren Ländern stattfinden. Zusätzlich gelten die Web3Forms-Dokumente. Das Ankreuzen ersetzt keine anwendbaren Anforderungen an Datenlokalisierung, Auftragsverarbeitungsverträge und internationale Übermittlungen."
+        },
+        "retention": {
+          "title": "Speicherdauer und Löschung",
+          "text": "Bewerbungsdaten werden bis zum Abschluss der Prüfung und zugehöriger Schritte oder bis zum Widerruf benötigt, sofern keine andere Rechtsgrundlage besteht. Danach werden sie innerhalb der gesetzlichen Fristen gelöscht oder anonymisiert. Web3Forms nennt höchstens drei Jahre, sofern Tarif oder vorzeitige Löschung die Dauer nicht verkürzen. Löschanfragen, auch für Daten bei Verarbeitern, sind an den Verantwortlichen zu richten."
+        },
+        "rights": {
+          "title": "Ihre Rechte",
+          "text": "Sie können Informationen und Auskunft, Berichtigung, Einschränkung oder Löschung verlangen und Ihre Einwilligung widerrufen. Weitere Rechte, etwa Datenübertragbarkeit und Widerspruch, gelten unter den gesetzlichen Voraussetzungen. Nutzen Sie die oben genannten Kontakte. Bleibt eine Frage ungelöst, können Sie sich nach anwendbarem Recht an die zuständige Aufsichtsbehörde oder ein Gericht wenden."
+        },
+        "storage": {
+          "title": "Einstellungen im Browser",
+          "text": "Die Website verwendet den localStorage-Schlüssel beauty-dynastya-language ausschließlich für die Sprachwahl. Name, Land und Rolle bleiben bis zum erfolgreichen Absenden oder Verlassen der Seite im Formularzustand und werden von der Website nicht in localStorage gespeichert. Der aktuelle Quellcode enthält keine Werbepixel oder Analysesysteme. Technische Mechanismen externer Dienste und des Hostings unterliegen deren Bedingungen."
+        },
+        "external": {
+          "title": "Messenger und öffentliche Inhalte",
+          "text": "Telegram- und Instagram-Schaltflächen öffnen externe Dienste, ohne Bewerbungsdaten automatisch an die Links anzuhängen. Selbstständig versendete Nachrichten unterliegen den Regeln des Dienstes und Empfängers. Die Veröffentlichung von Profilen und Materialien von Juroren, Referenten und Teilnehmern erfordert eine eigene Rechtsgrundlage und ist nicht von der Bewerbungseinwilligung erfasst. Änderungen der Verarbeitung erfordern Aktualisierungen dieser Richtlinie und gegebenenfalls der Einwilligung."
+        }
+      }
+    },
+    "draftNotice": "Dokumentvorlage: Ergänzen Sie vor der Verwendung die untenstehenden Angaben zum Verantwortlichen.",
+    "operatorFields": {
+      "name": "Vollständiger Name / Firmenname",
+      "country": "Registrierungsland / Tätigkeitsland",
+      "address": "Postanschrift",
+      "email": "E-Mail für Datenschutzanfragen"
+    },
+    "operatorPlaceholders": {
+      "name": "[Vollständigen Namen oder Firmennamen eintragen]",
+      "country": "[Land eintragen]",
+      "address": "[Postanschrift des Verantwortlichen eintragen]",
+      "email": "[Kontakt-E-Mail eintragen]"
+    }
+  },
   "ui": {
+    "consentRequired": "Bitte willigen Sie vor dem Absenden in die Verarbeitung Ihrer personenbezogenen Daten ein.",
     "skip": "Zum Inhalt springen",
     "menu": "Menü öffnen",
     "closeMenu": "Menü schließen",

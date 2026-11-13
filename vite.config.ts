@@ -1,10 +1,14 @@
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 
-export default defineConfig(({ command, isPreview }) => ({
-  // Project Pages размещает сайт в подпапке с именем репозитория.
-  base: command === 'build' || isPreview ? '/beauty-dynastya-2.0/' : '/',
-  plugins: [react(), tailwindcss()],
-  build: { target: 'es2022' },
-}))
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), 'VITE_')
+
+  return {
+    // Timeweb публикует сайт в корне; подпапка GitHub Pages задаётся в workflow.
+    base: env.VITE_BASE_PATH || '/',
+    plugins: [react(), tailwindcss()],
+    build: { target: 'es2022' },
+  }
+})
