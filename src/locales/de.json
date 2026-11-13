@@ -11,7 +11,8 @@
     "participants": "Teilnehmerinnen",
     "partners": "Partner",
     "register": "Anmelden",
-    "regulations": "Reglements"
+    "regulations": "Reglements",
+    "conference": "Konferenz"
   },
   "hero": {
     "subtitle": "Internationale Online-Meisterschaft für Beauty-Profis",
@@ -781,5 +782,43 @@
         "description": "Teilnahmeregeln und Anforderungen an Wettbewerbsarbeiten für Permanent Make-up und Mini-Tattoos."
       }
     }
+  },
+  "conference": {
+    "title": "Internationale Online-Beauty-Konferenz",
+    "metaTitle": "BEAUTY DYNASTY — Beauty-Konferenz, 1.–15. Dezember 2026",
+    "metaDescription": "Internationale Online-Konferenz BEAUTY DYNASTY: 1.–15. Dezember 2026, Experten, Masterclasses und Simultandolmetschen. 100 kostenlose Plätze. Anmeldung auf Telegram.",
+    "back": "Zur Startseite",
+    "dates": "1.–15. Dezember 2026",
+    "invitation": "Wir laden Beauty-Profis zur internationalen Online-Konferenz ein!",
+    "freeSeats": "{{count}} kostenlose Plätze",
+    "cta": "Kostenlosen Platz sichern",
+    "telegramHint": "Anmeldung auf Telegram · öffnet einen neuen Tab",
+    "imageCaption": "Online. Aus jedem Land.",
+    "heroAlt": "Beauty-Fotografie mit Make-up, Wimpern und bordeauxroten Nägeln",
+    "detailAlt": "Professionelle Pinsel, Wimpern und Kosmetikpigmente auf dunklem Untergrund",
+    "programTitle": "Neue Techniken. Frische Perspektiven. Internationale Expertise.",
+    "programDescription": "Freuen Sie sich auf Vorträge internationaler Experten, Masterclasses, neue Techniken und aktuelle Beauty-Trends.",
+    "benefits": {
+      "online": {
+        "title": "Online, aus jedem Land",
+        "description": "Nehmen Sie an der internationalen Konferenz teil, wo immer Sie sind."
+      },
+      "translation": {
+        "title": "Simultandolmetschen",
+        "description": "Die Vorträge internationaler Experten werden simultan gedolmetscht."
+      },
+      "experts": {
+        "title": "Experten und Masterclasses",
+        "description": "Entdecken Sie neue Techniken und aktuelle Trends mit internationalen Beauty-Profis."
+      }
+    },
+    "tracksTitle": "Sieben Beauty-Bereiche",
+    "tracksDescription": "Von Permanent Make-up und Wimpern bis zu Nägeln, Haaren und Kosmetologie. Entdecken Sie die Bereiche, die Sie beruflich weiterbringen.",
+    "freeSeatsLabel": "kostenlose Plätze",
+    "limited": "Die Plätze sind begrenzt — melden Sie sich rechtzeitig an!",
+    "closing": "Verbringen Sie den 1.–15. Dezember mit der internationalen Beauty-Community. Entdecken Sie bei BEAUTY DYNASTY neue Techniken und Ideen.",
+    "teaserTitle": "Beauty ohne Grenzen",
+    "teaserDescription": "BEAUTY DYNASTY — die internationale Online-Beauty-Konferenz. Experten, Masterclasses und Simultandolmetschen.",
+    "teaserCta": "Konferenz entdecken"
   }
 }

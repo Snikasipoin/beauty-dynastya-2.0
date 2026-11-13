@@ -64,4 +64,45 @@
     .nomination-link:is(:hover, :focus-visible, :active) .nomination-title { color: var(--color-nomination-hover); }
   }
   .registration-surface { background: linear-gradient(135deg, #29141c, var(--color-canvas) 70%); }
+  .conference-nav-link { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-gold px-3 text-sm font-bold text-ink transition-colors hover:bg-cream; }
+  .conference-back { @apply mb-6 inline-flex min-h-11 items-center gap-2 text-sm text-muted transition-colors hover:text-cream; }
+  .conference-hero { @apply pt-6 pb-14 sm:pb-20; }
+  .conference-hero-layout { @apply grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12; }
+  .conference-hero-copy { min-width: 0; }
+  .conference-title { font-size: clamp(2.75rem, 4.5vw, 4.75rem); font-weight: 700; line-height: 1.04; letter-spacing: -0.025em; text-wrap: initial; }
+  .conference-event-name { @apply mt-5 font-display text-xl font-bold tracking-wide text-gold; }
+  .conference-date { @apply my-6 flex items-center gap-3 text-base font-semibold sm:text-lg; }
+  .conference-hero .conference-date { @apply text-gold; }
+  .conference-lead { @apply max-w-xl text-base leading-relaxed text-muted sm:text-lg; }
+  .conference-seats { @apply mt-7 mb-4 text-lg font-bold text-cream sm:text-xl; }
+  .conference-cta { @apply bg-gold text-ink hover:bg-cream; }
+  .conference-hero-media { @apply relative min-w-0 overflow-hidden rounded-2xl bg-panel; aspect-ratio: 1 / 1.08; }
+  .conference-hero-image { @apply h-full w-full object-cover; object-position: 72% center; }
+  .conference-image-caption { @apply absolute inset-x-0 bottom-0 flex flex-wrap justify-between gap-3 bg-canvas/90 px-5 py-4 text-xs font-semibold tracking-wide text-cream sm:px-7 sm:text-sm; }
+  .conference-program { @apply border-t border-line; }
+  .conference-program-heading { @apply mb-10 grid items-end gap-6 lg:grid-cols-2 lg:gap-12; }
+  .conference-benefits { @apply grid gap-x-10 gap-y-7 border-y border-line py-8 md:grid-cols-3 md:py-10; }
+  .conference-benefits dt { @apply flex items-start gap-3 text-base font-bold; }
+  .conference-benefits dd { @apply mt-4 max-w-prose text-sm leading-relaxed text-muted; }
+  .conference-topics { @apply mt-12 grid items-center gap-8 lg:mt-16 lg:grid-cols-2 lg:gap-12; }
+  .conference-topics > img { @apply aspect-[3/2] w-full rounded-2xl object-cover; object-position: 65% center; }
+  .conference-track-list { @apply mt-7 flex flex-wrap gap-2; }
+  .conference-track-list li { @apply rounded-full border border-line px-4 py-2.5 text-xs font-bold tracking-wide text-gold sm:text-sm; }
+  .conference-light { @apply bg-cream text-ink; }
+  .conference-light :focus-visible { outline-color: var(--color-accent); }
+  .conference-cta-dark { @apply bg-ink text-cream; }
+  .conference-cta-dark:hover { color: var(--color-ink); background: var(--color-gold); }
+  .conference-registration { @apply py-14 sm:py-20; }
+  .conference-registration-layout { @apply grid items-center gap-10 lg:grid-cols-2 lg:gap-16; }
+  .conference-offer { @apply flex flex-wrap items-center gap-x-6 gap-y-2 font-display text-4xl leading-tight font-bold sm:text-5xl; }
+  .conference-offer > span { color: var(--color-accent); font-size: clamp(6rem, 12vw, 10rem); line-height: 0.9; }
+  .conference-limited { @apply mt-6 max-w-md text-sm leading-relaxed sm:text-base; }
+  .conference-registration-copy { @apply mb-6 max-w-lg text-lg leading-relaxed sm:text-xl; }
+  .conference-teaser { @apply overflow-hidden border-y border-cream py-10 sm:py-14; }
+  .conference-teaser-layout { @apply grid items-center gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-16; }
+  .conference-teaser-copy { min-width: 0; }
+  .conference-teaser h2 { max-width: 14ch; font-size: clamp(2.5rem, 4.6vw, 4.25rem); line-height: 1.05; letter-spacing: -0.025em; font-weight: 700; }
+  .conference-teaser-media { @apply relative overflow-hidden rounded-2xl bg-canvas; aspect-ratio: 4 / 3; }
+  .conference-teaser-media img { @apply h-full w-full object-cover; object-position: 75% center; }
+  .conference-teaser-media > p { @apply absolute right-4 bottom-4 left-4 rounded-lg bg-gold px-5 py-4 text-center font-display text-2xl leading-tight font-bold text-ink sm:text-3xl; }
 }

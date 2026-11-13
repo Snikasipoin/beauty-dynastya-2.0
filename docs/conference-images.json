@@ -1,0 +1,14 @@
+{
+  "tool": "image_gen.imagegen",
+  "purpose": "Illustrative beauty campaign imagery; no named experts depicted.",
+  "assets": [
+    {
+      "file": "src/assets/images/conference/hero.webp",
+      "prompt": "Use case: ads-marketing. Create a photorealistic editorial beauty campaign photograph for the established Beauty Dynasty international online beauty conference. LANDSCAPE image 3:2 aspect ratio, high resolution. Absolutely NO text, NO letters, NO logos, NO watermarks. A striking confident adult woman beauty model, natural visible skin texture, luminous expertly done makeup, refined brows, long elegant lash styling, softly glossy burgundy lips. One hand with immaculate long almond-shaped burgundy/red nails rests gently along her cheek. Close three-quarter portrait, gaze to camera, elegant sculptural pose. Main face occupies center-right, generous nearly black negative space at left, entire top of head and hand visible with breathing room. Cinematic studio lighting with warm soft gold key light and a decisive deep crimson side rim light, dark wine-red fabric in background, rich nearly black shadows. Luxury professional beauty magazine photography, tactile believable skin and hair, sophisticated glamour, beautifully controlled red-black-cream-gold palette. A promotional illustration, not a portrait of any real or named expert. Avoid plastic AI skin, excessive jewellery, crowns, microphones, digital UI, overly shiny metallic surfaces, fake bokeh shapes, medical instruments."
+    },
+    {
+      "file": "src/assets/images/conference/detail.webp",
+      "prompt": "Use case: ads-marketing. Create a photorealistic premium beauty education campaign still-life photograph. LANDSCAPE widescreen 16:9. No text, no letters, no logos, no watermark. An art-directed close-up flat-lay of professional beauty tools: two elegant black and gold makeup brushes with natural soft bristles, a fan of individual lash extensions on a clean dark dish, burgundy nail polish brush with a single smooth swatch, small round pots of warm rose and nude cosmetic pigment. Restrained cohesive composition on nearly black surface with rich crimson draped satin crossing the lower right. Warm directional gold studio light, red side light, delicate real material textures, rich shadows, luxurious red-black-cream-gold palette. Arrange tools mostly on the right two thirds, quiet black space on left. Editorial cosmetics magazine photography, knowledgeable precise professional setting, actual believable objects, no devices screens and no medical needles. Avoid decorative confetti, sparkles, crowns, silhouettes, floating objects, clutter."
+    }
+  ]
+}

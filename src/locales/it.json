@@ -11,7 +11,8 @@
     "participants": "Partecipanti",
     "partners": "Partner",
     "register": "Iscriviti",
-    "regulations": "Regolamenti"
+    "regulations": "Regolamenti",
+    "conference": "Conferenza"
   },
   "hero": {
     "subtitle": "Campionato Internazionale Online per Professionisti della Bellezza",
@@ -781,5 +782,43 @@
         "description": "Regole di partecipazione e requisiti dei lavori in gara per il trucco permanente e i mini tatuaggi."
       }
     }
+  },
+  "conference": {
+    "title": "Conferenza internazionale di bellezza online",
+    "metaTitle": "BEAUTY DYNASTY — conferenza beauty, 1–15 dicembre 2026",
+    "metaDescription": "Conferenza internazionale online BEAUTY DYNASTY: 1–15 dicembre 2026, esperti, masterclass e interpretazione simultanea. 100 posti gratuiti. Iscrizioni su Telegram.",
+    "back": "Torna alla home",
+    "dates": "1–15 dicembre 2026",
+    "invitation": "Partecipa alla conferenza internazionale online per i professionisti del settore beauty!",
+    "freeSeats": "{{count}} posti gratuiti",
+    "cta": "Prenota un posto gratuito",
+    "telegramHint": "Iscrizione su Telegram · nuova scheda",
+    "imageCaption": "Online. Da qualsiasi paese.",
+    "heroAlt": "Fotografia beauty con trucco, ciglia e manicure bordeaux",
+    "detailAlt": "Pennelli professionali, ciglia e pigmenti cosmetici su una superficie scura",
+    "programTitle": "Nuove tecniche. Nuove prospettive. Esperienza internazionale.",
+    "programDescription": "Ti aspettano interventi di esperti internazionali, masterclass, nuove tecniche e tendenze attuali del settore beauty.",
+    "benefits": {
+      "online": {
+        "title": "Online, da qualsiasi paese",
+        "description": "Partecipa alla conferenza internazionale ovunque ti trovi."
+      },
+      "translation": {
+        "title": "Interpretazione simultanea",
+        "description": "Gli interventi degli esperti internazionali sono accompagnati dall’interpretazione simultanea."
+      },
+      "experts": {
+        "title": "Esperti e masterclass",
+        "description": "Scopri nuove tecniche e tendenze attuali insieme a professionisti internazionali."
+      }
+    },
+    "tracksTitle": "Sette settori della bellezza",
+    "tracksDescription": "Dal trucco permanente e dalle ciglia alle unghie, ai capelli e alla cosmetologia. Esplora i settori che ispirano la tua crescita professionale.",
+    "freeSeatsLabel": "posti gratuiti",
+    "limited": "I posti sono limitati — iscriviti in tempo!",
+    "closing": "Trascorri il periodo 1–15 dicembre con la comunità beauty internazionale. Unisciti a BEAUTY DYNASTY e scopri nuove tecniche e idee.",
+    "teaserTitle": "Bellezza senza confini",
+    "teaserDescription": "BEAUTY DYNASTY — conferenza internazionale di bellezza online. Esperti, masterclass e interpretazione simultanea.",
+    "teaserCta": "Scopri la conferenza"
   }
 }

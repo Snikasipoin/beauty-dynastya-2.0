@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, Video, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { championship, navigationIds } from '../data/championship'
 import { logo } from '../lib/assets'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import type { PageRoute } from '../lib/routes'
 
-export function Header({ regulationsPage = false }: { regulationsPage?: boolean }) {
+export function Header({ page = 'home' }: { page?: PageRoute }) {
   const { t, i18n } = useTranslation()
   const [open, setOpen] = useState(false)
   const menuButton = useRef<HTMLButtonElement>(null)
@@ -29,18 +30,19 @@ export function Header({ regulationsPage = false }: { regulationsPage?: boolean 
           <img src={logo} alt="" width="900" height="623" className="h-auto w-12 sm:w-14" />
           <span className="font-display text-base font-bold sm:text-lg">{championship.name}</span>
         </a>
-        <div className="order-3 flex w-full justify-center border-t border-line/50 pt-1 sm:order-2 sm:w-auto sm:border-0 sm:pt-0 min-[1440px]:order-3">
+        <div className="order-3 flex w-full justify-center border-t border-line/50 pt-1 sm:max-[1439px]:order-2 sm:w-auto sm:border-0 sm:pt-0">
           <LanguageSwitcher />
         </div>
         <button ref={menuButton} type="button" aria-controls="main-navigation" aria-expanded={open} aria-label={t(open ? 'ui.closeMenu' : 'ui.menu')} className="order-2 grid size-11 place-items-center rounded-lg bg-panel min-[1440px]:hidden" onClick={() => setOpen(!open)}>
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
-        <nav id="main-navigation" aria-label={t('ui.menu')} className={`${open ? 'flex' : 'hidden'} order-4 w-full flex-col gap-1 border-t border-line py-4 min-[1440px]:order-2 min-[1440px]:flex min-[1440px]:w-auto min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-3 min-[1440px]:border-0 min-[1440px]:py-0`}>
+        <nav id="main-navigation" aria-label={t('ui.menu')} className={`${open ? 'flex' : 'hidden'} order-4 w-full flex-col gap-1 border-t border-line py-4 min-[1440px]:order-2 min-[1440px]:flex min-[1440px]:w-auto min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-0.5 min-[1440px]:border-0 min-[1440px]:py-0`}>
           {navigationIds.map((id) => (
-            <a key={id} href={`#${id}`} className="flex min-h-11 items-center rounded-lg px-2 text-sm text-muted transition-colors hover:text-cream" onClick={() => setOpen(false)}>{t(`nav.${id}`)}</a>
+            <a key={id} href={`#${id}`} className="flex min-h-11 items-center rounded-lg px-2 text-sm text-muted transition-colors hover:text-cream min-[1440px]:px-1.5" onClick={() => setOpen(false)}>{t(`nav.${id}`)}</a>
           ))}
-          <a href="#/regulations" aria-current={regulationsPage ? 'page' : undefined} className={`flex min-h-11 items-center rounded-lg px-2 text-sm transition-colors hover:text-cream ${regulationsPage ? 'text-gold' : 'text-muted'}`} onClick={() => setOpen(false)}>{t('nav.regulations')}</a>
-          <a href="#register" className="btn-primary mt-2 text-sm min-[1440px]:mt-0" onClick={() => setOpen(false)}>{t('nav.register')}</a>
+          <a href="#/regulations" aria-current={page === 'regulations' ? 'page' : undefined} className={`flex min-h-11 items-center rounded-lg px-2 text-sm transition-colors hover:text-cream min-[1440px]:px-1.5 ${page === 'regulations' ? 'text-gold' : 'text-muted'}`} onClick={() => setOpen(false)}>{t('nav.regulations')}</a>
+          <a href="#/conference" aria-current={page === 'conference' ? 'page' : undefined} className="conference-nav-link" onClick={() => setOpen(false)}><Video className="size-4 shrink-0" aria-hidden="true" />{t('nav.conference')}</a>
+          <a href="#register" className="btn-primary mt-2 text-sm min-[1440px]:mt-0 min-[1440px]:px-4" onClick={() => setOpen(false)}>{t('nav.register')}</a>
         </nav>
       </div>
       {/* Язык меняется без пересоздания меню и без потери текущей позиции страницы. */}

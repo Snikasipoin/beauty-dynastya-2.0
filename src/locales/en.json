@@ -11,7 +11,8 @@
     "participants": "Participants",
     "partners": "Partners",
     "register": "Register",
-    "regulations": "Regulations"
+    "regulations": "Regulations",
+    "conference": "Conference"
   },
   "hero": {
     "subtitle": "International Online Championship for Beauty Masters",
@@ -781,5 +782,43 @@
         "description": "Participation rules and competition entry requirements for permanent makeup and mini tattoos."
       }
     }
+  },
+  "conference": {
+    "title": "International online beauty conference",
+    "metaTitle": "BEAUTY DYNASTY — beauty conference, 1–15 December 2026",
+    "metaDescription": "BEAUTY DYNASTY international online conference: 1–15 December 2026, experts, masterclasses and simultaneous interpretation. 100 free places. Register on Telegram.",
+    "back": "Back to home",
+    "dates": "1–15 December 2026",
+    "invitation": "Join an international online conference for beauty industry professionals!",
+    "freeSeats": "{{count}} free places",
+    "cta": "Reserve a free place",
+    "telegramHint": "Register on Telegram · opens in a new tab",
+    "imageCaption": "Online. From any country.",
+    "heroAlt": "Editorial beauty photograph featuring makeup, lashes and burgundy nails",
+    "detailAlt": "Professional brushes, lashes and cosmetic pigments on a dark surface",
+    "programTitle": "New techniques. Fresh perspectives. International expertise.",
+    "programDescription": "Discover talks by international experts, masterclasses, new techniques and the latest beauty industry trends.",
+    "benefits": {
+      "online": {
+        "title": "Online, from any country",
+        "description": "Join the international conference wherever you are."
+      },
+      "translation": {
+        "title": "Simultaneous interpretation",
+        "description": "International expert presentations are accompanied by simultaneous interpretation."
+      },
+      "experts": {
+        "title": "Experts and masterclasses",
+        "description": "Explore new techniques and current trends with international beauty professionals."
+      }
+    },
+    "tracksTitle": "Seven beauty fields",
+    "tracksDescription": "From permanent makeup and lashes to nails, hair and cosmetology. Explore the fields that inspire your professional growth.",
+    "freeSeatsLabel": "free places",
+    "limited": "Places are limited — register while they are available!",
+    "closing": "Spend 1–15 December with the international beauty community. Join BEAUTY DYNASTY and discover new techniques and ideas.",
+    "teaserTitle": "Beauty without borders",
+    "teaserDescription": "BEAUTY DYNASTY — an international online beauty conference. Experts, masterclasses and simultaneous interpretation.",
+    "teaserCta": "Explore the conference"
   }
 }
