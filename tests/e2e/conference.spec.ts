@@ -40,7 +40,15 @@ for (const [language, locale] of Object.entries(locales)) {
         }).map((element) => ({ tag: element.tagName, className: element.className }))
       })
       expect(overflow).toEqual([])
-      if (width >= 1440) expect((await page.locator('header').boundingBox())!.height).toBeLessThan(100)
+      if (width >= 1440) {
+        expect((await page.locator('header').boundingBox())!.height).toBeLessThan(100)
+        const actions = await page.locator('.header-actions a').evaluateAll((links) => links.map((link) => link.getBoundingClientRect().toJSON()))
+        expect(actions).toHaveLength(2)
+        expect(actions[0].height).toBe(48)
+        expect(actions[1].height).toBe(actions[0].height)
+        expect(actions[1].y).toBe(actions[0].y)
+        expect(actions[1].left - actions[0].right).toBeGreaterThanOrEqual(12)
+      }
       expect(errors).toEqual([])
     })
   }
@@ -52,6 +60,9 @@ test('homepage teaser, dedicated pages, history and language changes stay connec
   await expect(teaser.getByRole('heading')).toHaveText(ru.conference.teaserTitle)
   await expect(teaser).toContainText(ru.conference.dates)
   await expect(teaser).toContainText('100')
+  await expect(teaser.locator('img')).toBeVisible()
+  const background = await teaser.evaluate((element) => getComputedStyle(element, '::before').backgroundImage)
+  expect(background).toContain('linear-gradient')
   await teaser.getByRole('link', { name: ru.conference.teaserCta }).click()
   await expect(page.locator('#conference-title')).toHaveText(ru.conference.title)
   await expect(page.locator('#main')).toBeFocused()

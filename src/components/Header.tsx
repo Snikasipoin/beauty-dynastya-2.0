@@ -41,8 +41,10 @@ export function Header({ page = 'home' }: { page?: PageRoute }) {
             <a key={id} href={`#${id}`} className="flex min-h-11 items-center rounded-lg px-2 text-sm text-muted transition-colors hover:text-cream min-[1440px]:px-1.5" onClick={() => setOpen(false)}>{t(`nav.${id}`)}</a>
           ))}
           <a href="#/regulations" aria-current={page === 'regulations' ? 'page' : undefined} className={`flex min-h-11 items-center rounded-lg px-2 text-sm transition-colors hover:text-cream min-[1440px]:px-1.5 ${page === 'regulations' ? 'text-gold' : 'text-muted'}`} onClick={() => setOpen(false)}>{t('nav.regulations')}</a>
-          <a href="#/conference" aria-current={page === 'conference' ? 'page' : undefined} className="conference-nav-link" onClick={() => setOpen(false)}><Video className="size-4 shrink-0" aria-hidden="true" />{t('nav.conference')}</a>
-          <a href="#register" className="btn-primary mt-2 text-sm min-[1440px]:mt-0 min-[1440px]:px-4" onClick={() => setOpen(false)}>{t('nav.register')}</a>
+          <div className="header-actions">
+            <a href="#/conference" aria-current={page === 'conference' ? 'page' : undefined} className="conference-nav-link header-action" onClick={() => setOpen(false)}><Video className="size-4 shrink-0" aria-hidden="true" />{t('nav.conference')}</a>
+            <a href="#register" className="btn-primary header-action" onClick={() => setOpen(false)}>{t('nav.register')}</a>
+          </div>
         </nav>
       </div>
       {/* Язык меняется без пересоздания меню и без потери текущей позиции страницы. */}
