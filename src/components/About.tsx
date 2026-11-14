@@ -33,7 +33,7 @@ export function About() {
         </dl>
         <dl className="about-stat-card flex flex-col justify-between gap-10 rounded-2xl bg-panel p-7 sm:p-10 xl:col-span-3">
           <div><dt className="mb-3 text-sm text-muted">{t('about.facts.nominations')}</dt><dd data-about-stat="nominations" className="about-stat-number font-display tabular-nums">{championship.nominationCount}</dd></div>
-          <div><dt className="mb-3 text-sm text-muted">{t('about.facts.participants')}</dt><dd data-about-stat="participants" className="about-stat-number font-display text-gold tabular-nums">{championship.participantCount}</dd></div>
+          {/* Количество участников временно скрыто; данные сохранены для возврата счётчика. */}
         </dl>
       </div>
     </Section>
