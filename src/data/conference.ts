@@ -5,5 +5,5 @@ export const conference = {
   startDate: '2026-12-01',
   endDate: '2026-12-15',
   freeSeats: 100,
-  tracks: ['PMU', 'LASH', 'BROW', 'NAILS', 'MAKEUP', 'HAIR', 'COSMETOLOGY'],
+  tracks: ['PMU', 'LASH', 'BROW', 'NAILS', 'MAKEUP', 'HAIR'],
 } as const
