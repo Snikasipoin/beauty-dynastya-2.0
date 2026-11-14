@@ -27,7 +27,7 @@ Production preview доступен по адресу `http://localhost:4173/`.
 
 Основной сайт остаётся статическим React-приложением: Node.js 24 для сборки, `pnpm build`, каталог `dist`, `VITE_BASE_PATH=/`. Обработчик заявок запускается отдельно в оплаченном слоте Bothost.
 
-После создания сервиса Bothost задайте в переменных сборки Timeweb `VITE_APPLICATION_API_URL` с его фактическим HTTPS-адресом и путём `/api/applications`, затем пересоберите сайт. Токен Telegram и список получателей задаются только в Bothost.
+Production-сборка использует подключённый API Bothost из `src/data/application.ts` автоматически. Переменная сборки `VITE_APPLICATION_API_URL` позволяет явно переопределить адрес; если она уже задана в Timeweb, её значение должно соответствовать текущему API. Токен Telegram и список получателей задаются только в Bothost.
 
 [Поля формы Bothost и подключение сайта](docs/bothost-setup.md). Для Bothost используется тот же Git URL, но отдельная ветка `codex/bothost-bot`, содержащая только обработчик.
 

@@ -1,5 +1,6 @@
 import type { ApplicationErrors, ApplicationValues } from '../types/application'
 import { legalDocumentHref, legalDocuments } from '../data/legal'
+import { applicationApiUrl } from '../data/application'
 
 export function validateApplication(values: ApplicationValues): ApplicationErrors {
   const errors: ApplicationErrors = {}
@@ -27,7 +28,7 @@ export async function submitApplication(
 ): Promise<void> {
   if (Object.keys(validateApplication(values)).length || values.botcheck) throw new Error('Invalid application')
   // URL отдельного API публичный; токен Telegram остаётся на сервере.
-  const endpoint = import.meta.env.VITE_APPLICATION_API_URL?.trim() || '/api/applications'
+  const endpoint = import.meta.env.VITE_APPLICATION_API_URL?.trim() || (import.meta.env.PROD ? applicationApiUrl : '/api/applications')
   const response = await fetch(endpoint, {
     method: 'POST',
     signal,
