@@ -690,14 +690,14 @@
   },
   "registration": {
     "title": "Take part",
-    "text": "Registration and all details are in our Telegram group. Join, name your nomination — and we'll send you the rules and instructions for submitting your work.",
+    "text": "Apply using the form: choose your role and preferred contact method. Participation rules and details are available in our Telegram group.",
     "note": "Winners receive a trophy, a certificate of recognition and an official VIP card.",
     "telegram": "Join on Telegram",
     "instagram": "Message us on Instagram"
   },
   "form": {
     "title": "Join the championship",
-    "lead": "Leave your details and we'll get in touch.",
+    "lead": "Leave your details and choose how we can contact you.",
     "name": "First and last name",
     "country": "Country",
     "role": "I want to join as",
@@ -709,7 +709,32 @@
     "submit": "Send application",
     "telegram": "News, rules and results in our Telegram group",
     "success": "Thank you! Your application has been received",
-    "successText": "One last step: join our Telegram group. Rules, deadlines and next steps are posted there."
+    "successText": "We received your application and will contact you using your preferred method. Championship rules and news are available in our Telegram group.",
+    "contactMethod": "Preferred contact method",
+    "contactMethods": {
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    },
+    "contactLabels": {
+      "instagram": "Your Instagram",
+      "telegram": "Your Telegram",
+      "email": "Email address",
+      "whatsapp": "WhatsApp number"
+    },
+    "contactHints": {
+      "instagram": "Enter your Instagram username or profile link.",
+      "telegram": "Enter your public Telegram username or profile link.",
+      "email": "The organiser can reply to your application at this address.",
+      "whatsapp": "Include the country code, starting with +."
+    },
+    "contactPlaceholders": {
+      "instagram": "@username",
+      "telegram": "@username",
+      "email": "name@example.com",
+      "whatsapp": "+44 7700 900123"
+    }
   },
   "legal": {
     "back": "Back to the application",
@@ -729,11 +754,11 @@
       "sections": {
         "purpose": {
           "title": "Purpose of processing",
-          "text": "To receive and review my application as a participant, judge or speaker, identify my chosen role and organise the next steps relating to my application. Processing is limited to this purpose. This consent does not cover advertising or unrelated offers."
+          "text": "To receive and review my application as a participant, judge or speaker, identify my chosen role and organise the next steps relating to my application. Processing is limited to this purpose. This consent does not cover advertising or unrelated offers. The organiser uses your selected contact to reply and communicate about your application using your preferred method."
         },
         "data": {
           "title": "Data I provide",
-          "text": "My first and last name, country and selected role. The application also includes the form language, consent confirmation, the consent version and document link, the policy link, and submission date and time. The form does not request identity documents, payment details, health or biometric data, and does not accept file uploads."
+          "text": "My full name, country, selected role, preferred contact method and its contact details: Instagram/Telegram username or profile link, email address or WhatsApp number. The application also includes the form language, consent confirmation, the consent version and document link, the policy link, and submission date and time. The form does not request identity documents, payment details, health or biometric data, and does not accept file uploads."
         },
         "actions": {
           "title": "Permitted operations",
@@ -767,11 +792,11 @@
         },
         "data": {
           "title": "Application and technical data",
-          "text": "The form collects first and last name, country and selected role. Submission adds the language, consent confirmation, document version and address, policy address, and submission date and time. Hosting and form delivery providers may receive IP addresses, browser and request information to operate and protect their infrastructure. The form does not request passwords, identity documents, payment details or health information."
+          "text": "The form collects your full name, country, role, preferred contact method and the contact details you provide: Instagram/Telegram profile, email address or WhatsApp number. Submission adds the language, consent confirmation, document version and address, policy address, and submission date and time. Hosting and form delivery providers may receive IP addresses, browser and request information to operate and protect their infrastructure. The form does not request passwords, identity documents, payment details or health information."
         },
         "purpose": {
           "title": "Purposes and minimisation",
-          "text": "Application data is used to review the application and organise steps relating to the selected role. Technical information supports delivery, availability and protection against abuse. Submitting an application does not give consent to advertising, public disclosure or independent marketing uses."
+          "text": "Application data is used to review the application and organise steps relating to the selected role. Technical information supports delivery, availability and protection against abuse. Submitting an application does not give consent to advertising, public disclosure or independent marketing uses. The organiser uses your selected contact to reply and communicate about your application using your preferred method."
         },
         "processing": {
           "title": "Processors and transfers",
@@ -787,7 +812,7 @@
         },
         "storage": {
           "title": "Browser preferences",
-          "text": "The website uses localStorage key beauty-dynastya-language only to remember the selected language. Name, country and role remain in form state until successful submission or leaving the page and are not saved by the website in localStorage. The current source code contains no advertising pixels or analytics systems. Technical mechanisms of hosting and external services are governed by their own terms."
+          "text": "The website uses localStorage key beauty-dynastya-language only to remember the selected language. Application data, including contact method and contact details, remains in form state until successful submission or leaving the page and is not saved in localStorage. The current code has no advertising pixels or analytics. Technical mechanisms of hosting and external services are governed by their terms."
         },
         "external": {
           "title": "Messaging services and public content",
@@ -842,7 +867,11 @@
     "imageFallback": "Portrait unavailable",
     "judgesHint": "Meet the professionals who evaluate your work.",
     "speakersHint": "Experience, expertise and a new perspective on your craft.",
-    "applicationForm": "Application form"
+    "applicationForm": "Application form",
+    "contactMethodRequired": "Choose your preferred contact method.",
+    "contactEmailInvalid": "Enter a valid email address.",
+    "contactPhoneInvalid": "Enter a country code and number: + followed by 7–15 digits.",
+    "contactProfileInvalid": "Enter a username or profile link for the selected service."
   },
   "regulations": {
     "back": "Back to home",

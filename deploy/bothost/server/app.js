@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { isIP } from 'node:net';
 import { extname, resolve, sep } from 'node:path';
 import { parseApplication, telegramText } from './application.js';
+import { legalDocuments } from '../src/data/legal.js';
 class HttpError extends Error {
     status;
     code;
@@ -79,6 +80,7 @@ export function createApplicationServer(config, dependencies = {}) {
         response.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
         const path = new URL(request.url ?? '/', 'http://localhost').pathname;
         if ((path === '/api/health' || path === '/health' || (config.apiOnly && path === '/')) && request.method === 'GET') {
+            response.setHeader('X-Application-Version', legalDocuments.version);
             json(response, 200, { status: 'ok' });
             return;
         }

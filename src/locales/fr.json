@@ -690,14 +690,14 @@
   },
   "registration": {
     "title": "Participez",
-    "text": "Inscriptions et informations dans notre groupe Telegram. Rejoignez-nous en indiquant votre catégorie : nous vous enverrons le règlement et les instructions pour soumettre votre travail.",
+    "text": "Candidatez avec le formulaire : choisissez votre rôle et votre moyen de contact préféré. Les règles et détails sont disponibles dans notre groupe Telegram.",
     "note": "Les lauréates reçoivent un trophée, un certificat de reconnaissance et une carte VIP officielle.",
     "telegram": "Rejoindre sur Telegram",
     "instagram": "Nous écrire sur Instagram"
   },
   "form": {
     "title": "Rejoignez le championnat",
-    "lead": "Laissez vos coordonnées, nous vous recontacterons.",
+    "lead": "Laissez vos coordonnées et choisissez comment vous contacter.",
     "name": "Prénom et nom",
     "country": "Pays",
     "role": "Je souhaite participer en tant que",
@@ -709,7 +709,32 @@
     "submit": "Envoyer la demande",
     "telegram": "Actualités, règlement et résultats dans notre groupe Telegram",
     "success": "Merci ! Votre demande a bien été reçue",
-    "successText": "Dernière étape : rejoignez notre groupe Telegram. Vous y trouverez le règlement, les dates et les prochaines étapes."
+    "successText": "Votre candidature a été reçue. Nous vous contacterons par le moyen choisi. Les règles et actualités sont disponibles dans notre groupe Telegram.",
+    "contactMethod": "Moyen de contact préféré",
+    "contactMethods": {
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "email": "E-mail",
+      "whatsapp": "WhatsApp"
+    },
+    "contactLabels": {
+      "instagram": "Votre Instagram",
+      "telegram": "Votre Telegram",
+      "email": "Adresse e-mail",
+      "whatsapp": "Numéro WhatsApp"
+    },
+    "contactHints": {
+      "instagram": "Indiquez votre nom d'utilisateur Instagram ou le lien de votre profil.",
+      "telegram": "Indiquez votre nom d'utilisateur public Telegram ou le lien de votre profil.",
+      "email": "L'organisateur pourra répondre à votre candidature à cette adresse.",
+      "whatsapp": "Incluez l'indicatif du pays, en commençant par +."
+    },
+    "contactPlaceholders": {
+      "instagram": "@username",
+      "telegram": "@username",
+      "email": "name@example.com",
+      "whatsapp": "+44 7700 900123"
+    }
   },
   "legal": {
     "back": "Revenir à la candidature",
@@ -729,11 +754,11 @@
       "sections": {
         "purpose": {
           "title": "Finalité du traitement",
-          "text": "Recevoir et examiner ma candidature comme participant, juge ou intervenant, identifier le rôle choisi et organiser les suites de ma candidature. Le traitement est limité à cette finalité et ne couvre pas la publicité ni les offres sans rapport avec la candidature."
+          "text": "Recevoir et examiner ma candidature comme participant, juge ou intervenant, identifier le rôle choisi et organiser les suites de ma candidature. Le traitement est limité à cette finalité et ne couvre pas la publicité ni les offres sans rapport avec la candidature. L'organisateur utilise le contact choisi pour répondre et communiquer au sujet de la candidature par le moyen préféré."
         },
         "data": {
           "title": "Données fournies",
-          "text": "Prénom et nom, pays et rôle choisi. S'ajoutent la langue du formulaire, la confirmation du consentement, sa version et le lien du document, le lien de la politique, ainsi que la date et l'heure d'envoi. Le formulaire ne demande ni pièce d'identité, ni données de paiement, de santé ou biométriques et ne permet pas de joindre des fichiers."
+          "text": "Mon nom complet, mon pays, le rôle choisi, mon moyen de contact préféré et les coordonnées correspondantes : nom d'utilisateur ou lien Instagram/Telegram, adresse e-mail ou numéro WhatsApp. S'ajoutent la langue du formulaire, la confirmation du consentement, sa version et le lien du document, le lien de la politique, ainsi que la date et l'heure d'envoi. Le formulaire ne demande ni pièce d'identité, ni données de paiement, de santé ou biométriques et ne permet pas de joindre des fichiers."
         },
         "actions": {
           "title": "Opérations autorisées",
@@ -767,11 +792,11 @@
         },
         "data": {
           "title": "Données de candidature et données techniques",
-          "text": "Le formulaire collecte prénom et nom, pays et rôle. L'envoi ajoute langue, confirmation du consentement, version et adresse du document, adresse de la politique, date et heure. Les hébergeurs et prestataires du formulaire peuvent recevoir IP, informations du navigateur et de la requête pour exploiter et protéger leur infrastructure. Aucun mot de passe, pièce d'identité, donnée de paiement ou de santé n'est demandé."
+          "text": "Le formulaire recueille le nom complet, le pays, le rôle, le moyen de contact préféré et les coordonnées indiquées : profil Instagram/Telegram, adresse e-mail ou numéro WhatsApp. L'envoi ajoute langue, confirmation du consentement, version et adresse du document, adresse de la politique, date et heure. Les hébergeurs et prestataires du formulaire peuvent recevoir IP, informations du navigateur et de la requête pour exploiter et protéger leur infrastructure. Aucun mot de passe, pièce d'identité, donnée de paiement ou de santé n'est demandé."
         },
         "purpose": {
           "title": "Finalités et minimisation",
-          "text": "Les données servent à examiner la candidature et à organiser les suites du rôle choisi. Les informations techniques assurent livraison, disponibilité et protection contre les abus. L'envoi ne vaut pas consentement à la publicité, à la publication ou à des finalités marketing indépendantes."
+          "text": "Les données servent à examiner la candidature et à organiser les suites du rôle choisi. Les informations techniques assurent livraison, disponibilité et protection contre les abus. L'envoi ne vaut pas consentement à la publicité, à la publication ou à des finalités marketing indépendantes. L'organisateur utilise le contact choisi pour répondre et communiquer au sujet de la candidature par le moyen préféré."
         },
         "processing": {
           "title": "Sous-traitants et transferts",
@@ -787,7 +812,7 @@
         },
         "storage": {
           "title": "Préférences du navigateur",
-          "text": "Le site utilise la clé localStorage beauty-dynastya-language uniquement pour mémoriser la langue choisie. Nom, pays et rôle restent dans l'état du formulaire jusqu'à l'envoi réussi ou au départ de la page et ne sont pas enregistrés par le site dans localStorage. Le code actuel ne contient ni pixels publicitaires ni systèmes d'analyse. Les mécanismes techniques des services externes et de l'hébergement suivent leurs propres conditions."
+          "text": "Le site utilise la clé localStorage beauty-dynastya-language uniquement pour mémoriser la langue choisie. Les données de candidature, y compris le moyen de contact et les coordonnées, restent dans le formulaire jusqu'à l'envoi réussi ou au départ de la page et ne sont pas enregistrées dans localStorage. Le code actuel ne contient ni pixels publicitaires ni outils d'analyse. Les mécanismes techniques de l'hébergement et des services externes suivent leurs conditions."
         },
         "external": {
           "title": "Messageries et contenus publics",
@@ -842,7 +867,11 @@
     "imageFallback": "Portrait indisponible",
     "judgesHint": "Les professionnels qui évalueront votre travail.",
     "speakersHint": "Expérience, expertise et un nouveau regard sur votre métier.",
-    "applicationForm": "Formulaire de candidature"
+    "applicationForm": "Formulaire de candidature",
+    "contactMethodRequired": "Choisissez votre moyen de contact préféré.",
+    "contactEmailInvalid": "Indiquez une adresse e-mail valide.",
+    "contactPhoneInvalid": "Indiquez l'indicatif et le numéro : + suivi de 7 à 15 chiffres.",
+    "contactProfileInvalid": "Indiquez un nom d'utilisateur ou un lien de profil du service choisi."
   },
   "regulations": {
     "back": "Retour à l’accueil",

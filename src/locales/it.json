@@ -690,14 +690,14 @@
   },
   "registration": {
     "title": "Partecipa",
-    "text": "Iscrizioni e dettagli nel nostro gruppo Telegram. Unisciti e indica la tua categoria: ti invieremo il regolamento e le istruzioni per inviare il tuo lavoro.",
+    "text": "Candidati tramite il modulo: scegli il ruolo e il metodo di contatto preferito. Regole e dettagli sono disponibili nel nostro gruppo Telegram.",
     "note": "I vincitori ricevono un trofeo, un certificato di riconoscimento e la VIP card ufficiale.",
     "telegram": "Unisciti su Telegram",
     "instagram": "Scrivici su Instagram"
   },
   "form": {
     "title": "Unisciti al campionato",
-    "lead": "Lascia i tuoi dati e ti contatteremo.",
+    "lead": "Lascia i tuoi dati e scegli come possiamo contattarti.",
     "name": "Nome e cognome",
     "country": "Paese",
     "role": "Voglio partecipare come",
@@ -709,7 +709,32 @@
     "submit": "Invia richiesta",
     "telegram": "Novità, regolamento e risultati nel nostro gruppo Telegram",
     "success": "Grazie! La tua richiesta è stata ricevuta",
-    "successText": "Ultimo passo: unisciti al nostro gruppo Telegram. Lì trovi regolamento, scadenze e prossimi passi."
+    "successText": "Abbiamo ricevuto la candidatura e ti contatteremo con il metodo scelto. Regole e notizie del campionato sono disponibili nel nostro gruppo Telegram.",
+    "contactMethod": "Metodo di contatto preferito",
+    "contactMethods": {
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    },
+    "contactLabels": {
+      "instagram": "Il tuo Instagram",
+      "telegram": "Il tuo Telegram",
+      "email": "Indirizzo email",
+      "whatsapp": "Numero WhatsApp"
+    },
+    "contactHints": {
+      "instagram": "Inserisci il nome utente o il link al tuo profilo Instagram.",
+      "telegram": "Inserisci il nome utente pubblico o il link al tuo profilo Telegram.",
+      "email": "L'organizzatore potrà rispondere alla candidatura a questo indirizzo.",
+      "whatsapp": "Includi il prefisso internazionale, iniziando con +."
+    },
+    "contactPlaceholders": {
+      "instagram": "@username",
+      "telegram": "@username",
+      "email": "name@example.com",
+      "whatsapp": "+44 7700 900123"
+    }
   },
   "legal": {
     "back": "Torna alla candidatura",
@@ -729,11 +754,11 @@
       "sections": {
         "purpose": {
           "title": "Finalità",
-          "text": "Ricevere ed esaminare la mia candidatura come partecipante, giudice o relatore, individuare il ruolo scelto e organizzare le attività connesse alla candidatura. Il trattamento è limitato a questa finalità e non comprende pubblicità o offerte estranee."
+          "text": "Ricevere ed esaminare la mia candidatura come partecipante, giudice o relatore, individuare il ruolo scelto e organizzare le attività connesse alla candidatura. Il trattamento è limitato a questa finalità e non comprende pubblicità o offerte estranee. L'organizzatore usa il recapito scelto per rispondere e comunicare sulla candidatura tramite il metodo preferito."
         },
         "data": {
           "title": "Dati forniti",
-          "text": "Nome e cognome, paese e ruolo scelto. La candidatura comprende anche lingua del modulo, conferma del consenso, versione e link del documento, link dell'informativa, data e ora dell'invio. Il modulo non richiede documenti d'identità, dati di pagamento, sanitari o biometrici e non accetta allegati."
+          "text": "Nome e cognome, paese, ruolo scelto, metodo di contatto preferito e relativo recapito: nome utente o link Instagram/Telegram, indirizzo email o numero WhatsApp. La candidatura comprende anche lingua del modulo, conferma del consenso, versione e link del documento, link dell'informativa, data e ora dell'invio. Il modulo non richiede documenti d'identità, dati di pagamento, sanitari o biometrici e non accetta allegati."
         },
         "actions": {
           "title": "Operazioni autorizzate",
@@ -767,11 +792,11 @@
         },
         "data": {
           "title": "Dati della candidatura e dati tecnici",
-          "text": "Il modulo raccoglie nome e cognome, paese e ruolo. All'invio si aggiungono lingua, conferma del consenso, versione e indirizzo del documento, indirizzo dell'informativa, data e ora. Hosting e fornitori del modulo possono ricevere IP, informazioni sul browser e sulla richiesta per gestire e proteggere l'infrastruttura. Non vengono richieste password, documenti d'identità, dati di pagamento o sanitari."
+          "text": "Il modulo raccoglie nome e cognome, paese, ruolo, metodo di contatto preferito e recapito indicato: profilo Instagram/Telegram, indirizzo email o numero WhatsApp. All'invio si aggiungono lingua, conferma del consenso, versione e indirizzo del documento, indirizzo dell'informativa, data e ora. Hosting e fornitori del modulo possono ricevere IP, informazioni sul browser e sulla richiesta per gestire e proteggere l'infrastruttura. Non vengono richieste password, documenti d'identità, dati di pagamento o sanitari."
         },
         "purpose": {
           "title": "Finalità e minimizzazione",
-          "text": "I dati servono a esaminare la candidatura e organizzare le attività relative al ruolo scelto. Le informazioni tecniche consentono consegna, disponibilità e protezione dagli abusi. L'invio non comporta consenso alla pubblicità, alla pubblicazione o a finalità autonome di marketing."
+          "text": "I dati servono a esaminare la candidatura e organizzare le attività relative al ruolo scelto. Le informazioni tecniche consentono consegna, disponibilità e protezione dagli abusi. L'invio non comporta consenso alla pubblicità, alla pubblicazione o a finalità autonome di marketing. L'organizzatore usa il recapito scelto per rispondere e comunicare sulla candidatura tramite il metodo preferito."
         },
         "processing": {
           "title": "Responsabili e trasferimenti",
@@ -787,7 +812,7 @@
         },
         "storage": {
           "title": "Preferenze nel browser",
-          "text": "Il sito usa localStorage con la chiave beauty-dynastya-language solo per ricordare la lingua scelta. Nome, paese e ruolo restano nello stato del modulo fino all'invio riuscito o all'uscita dalla pagina e non sono salvati dal sito in localStorage. Il codice attuale non contiene pixel pubblicitari o sistemi di analisi. I meccanismi tecnici di hosting e servizi esterni seguono le rispettive condizioni."
+          "text": "Il sito usa la chiave localStorage beauty-dynastya-language solo per ricordare la lingua scelta. I dati della candidatura, inclusi metodo di contatto e recapito, rimangono nello stato del modulo fino al buon esito o alla chiusura della pagina e non vengono salvati in localStorage. Il codice attuale non include pixel pubblicitari o analisi. I meccanismi tecnici di hosting e servizi esterni seguono le rispettive condizioni."
         },
         "external": {
           "title": "Messaggistica e contenuti pubblici",
@@ -842,7 +867,11 @@
     "imageFallback": "Ritratto non disponibile",
     "judgesHint": "I professionisti che valuteranno il tuo lavoro.",
     "speakersHint": "Esperienza, competenza e una nuova prospettiva sul tuo mestiere.",
-    "applicationForm": "Modulo di candidatura"
+    "applicationForm": "Modulo di candidatura",
+    "contactMethodRequired": "Scegli il metodo di contatto preferito.",
+    "contactEmailInvalid": "Inserisci un indirizzo email valido.",
+    "contactPhoneInvalid": "Inserisci prefisso e numero: + seguito da 7–15 cifre.",
+    "contactProfileInvalid": "Inserisci un nome utente o un link al profilo del servizio scelto."
   },
   "regulations": {
     "back": "Torna alla home",

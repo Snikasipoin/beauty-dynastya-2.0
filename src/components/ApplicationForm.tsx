@@ -4,11 +4,12 @@ import { ArrowUpRight, Check, LoaderCircle, Send } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { championship } from '../data/championship'
 import { legalDocumentHref } from '../data/legal'
+import { contactMethods } from '../lib/applicationContact'
 import { SubmissionError, submitApplication, validateApplication } from '../services/applications'
 import type { ApplicationErrors, ApplicationRole, ApplicationValues, SubmissionStatus } from '../types/application'
 
 const roles: readonly ApplicationRole[] = ['judge', 'participant', 'speaker']
-const emptyValues: ApplicationValues = { fullName: '', country: '', role: '', botcheck: false, consent: false }
+const emptyValues: ApplicationValues = { fullName: '', country: '', role: '', contactMethod: '', contactValue: '', botcheck: false, consent: false }
 
 export function ApplicationForm() {
   const { t, i18n } = useTranslation()
@@ -27,6 +28,8 @@ export function ApplicationForm() {
 
   function update<K extends keyof ApplicationValues>(key: K, value: ApplicationValues[K]) {
     const next = { ...values, [key]: value }
+    // При смене канала не переносим прежний контакт в поле другого формата.
+    if (key === 'contactMethod' && value !== values.contactMethod) next.contactValue = ''
     setValues(next)
     submission.current = null
     // Ошибки хранятся ключами: язык можно менять и после неудачной валидации.
@@ -40,7 +43,7 @@ export function ApplicationForm() {
     const nextErrors = validateApplication(values)
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length) {
-      const firstInvalid = (['fullName', 'country', 'role', 'consent'] as const).find((field) => nextErrors[field])
+      const firstInvalid = (['fullName', 'country', 'role', 'contactMethod', 'contactValue', 'consent'] as const).find((field) => nextErrors[field])
       if (firstInvalid) formRef.current?.querySelector<HTMLInputElement>(`[data-field="${firstInvalid}"]`)?.focus()
       return
     }
@@ -97,6 +100,26 @@ export function ApplicationForm() {
                 <div><label htmlFor="application-name" className="field-label">{t('form.name')}</label><input id="application-name" name="full_name" data-field="fullName" type="text" autoComplete="name" maxLength={120} required value={values.fullName} onChange={(event) => update('fullName', event.target.value)} placeholder={t('ui.namePlaceholder')} aria-invalid={Boolean(errors.fullName)} aria-describedby="name-error" className="field-input" /><p id="name-error" className="field-error">{errors.fullName && t(`ui.${errors.fullName}`)}</p></div>
                 <div><label htmlFor="application-country" className="field-label">{t('form.country')}</label><input id="application-country" name="country" data-field="country" type="text" autoComplete="country-name" maxLength={100} required value={values.country} onChange={(event) => update('country', event.target.value)} placeholder={t('ui.countryPlaceholder')} aria-invalid={Boolean(errors.country)} aria-describedby="country-error" className="field-input" /><p id="country-error" className="field-error">{errors.country && t(`ui.${errors.country}`)}</p></div>
                 <fieldset aria-describedby="role-error"><legend className="field-label">{t('form.role')}</legend><div className="flex flex-wrap gap-2">{roles.map((role) => <label key={role} className="flex min-h-11 cursor-pointer items-center gap-2 rounded-lg bg-card px-4 py-3 text-sm has-checked:bg-cream has-checked:text-ink"><input type="radio" name="role" data-field="role" value={role} checked={values.role === role} onChange={() => update('role', role)} required aria-invalid={Boolean(errors.role)} className="size-4 accent-accent" /><span>{t(`form.roles.${role}`)}</span></label>)}</div><p id="role-error" className="field-error">{errors.role && t(`ui.${errors.role}`)}</p></fieldset>
+                <fieldset aria-describedby="contact-method-error">
+                  <legend className="field-label">{t('form.contactMethod')}</legend>
+                  <div className="grid grid-cols-2 gap-2">
+                    {contactMethods.map(method => (
+                      <label key={method} className="flex min-h-11 min-w-0 cursor-pointer items-center gap-2 rounded-lg bg-card px-3 py-3 text-sm has-checked:bg-cream has-checked:text-ink">
+                        <input type="radio" name="contact_method" data-field="contactMethod" value={method} required checked={values.contactMethod === method} onChange={() => update('contactMethod', method)} aria-invalid={Boolean(errors.contactMethod)} className="size-4 shrink-0 accent-accent" />
+                        <span>{t(`form.contactMethods.${method}`)}</span>
+                      </label>
+                    ))}
+                  </div>
+                  <p id="contact-method-error" className="field-error">{errors.contactMethod && t(`ui.${errors.contactMethod}`)}</p>
+                </fieldset>
+                {values.contactMethod && (
+                  <div>
+                    <label htmlFor="application-contact" className="field-label">{t(`form.contactLabels.${values.contactMethod}`)}</label>
+                    <input id="application-contact" name="contact_value" data-field="contactValue" type={values.contactMethod === 'email' ? 'email' : values.contactMethod === 'whatsapp' ? 'tel' : 'text'} inputMode={values.contactMethod === 'email' ? 'email' : values.contactMethod === 'whatsapp' ? 'tel' : 'text'} autoComplete={values.contactMethod === 'email' ? 'email' : values.contactMethod === 'whatsapp' ? 'tel' : 'off'} autoCapitalize="none" autoCorrect="off" spellCheck={false} maxLength={254} required value={values.contactValue} onChange={event => update('contactValue', event.target.value)} placeholder={t(`form.contactPlaceholders.${values.contactMethod}`)} aria-invalid={Boolean(errors.contactValue)} aria-describedby="contact-hint contact-error" className="field-input" />
+                    <p id="contact-hint" className="mt-2 text-sm leading-relaxed text-muted">{t(`form.contactHints.${values.contactMethod}`)}</p>
+                    <p id="contact-error" className="field-error">{errors.contactValue && t(`ui.${errors.contactValue}`)}</p>
+                  </div>
+                )}
                 <div>
                   <div className="flex items-start gap-3">
                     <input id="application-consent" name="personal_data_consent" data-field="consent" type="checkbox" required checked={values.consent} onChange={(event) => update('consent', event.target.checked)} aria-invalid={Boolean(errors.consent)} aria-describedby="consent-error consent-help" className="mt-3 size-5 shrink-0 cursor-pointer accent-gold" />

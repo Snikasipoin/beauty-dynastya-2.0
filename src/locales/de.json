@@ -690,14 +690,14 @@
   },
   "registration": {
     "title": "Jetzt teilnehmen",
-    "text": "Anmeldung und alle Details findest du in unserer Telegram-Gruppe. Tritt bei, nenne deine Kategorie – und wir schicken dir das Reglement und die Anleitung zur Einreichung deiner Arbeit.",
+    "text": "Bewerben Sie sich über das Formular: Wählen Sie Ihre Rolle und Ihren bevorzugten Kontaktweg. Regeln und Einzelheiten finden Sie in unserer Telegram-Gruppe.",
     "note": "Die Gewinnerinnen erhalten einen Pokal, eine Urkunde und eine offizielle VIP-Card.",
     "telegram": "Zur Telegram-Gruppe",
     "instagram": "Auf Instagram schreiben"
   },
   "form": {
     "title": "Sei dabei",
-    "lead": "Hinterlasse deine Daten, wir melden uns bei dir.",
+    "lead": "Hinterlassen Sie Ihre Angaben und wählen Sie Ihren Kontaktweg.",
     "name": "Vor- und Nachname",
     "country": "Land",
     "role": "Ich möchte mitmachen als",
@@ -709,7 +709,32 @@
     "submit": "Anfrage senden",
     "telegram": "News, Reglement und Ergebnisse in unserer Telegram-Gruppe",
     "success": "Danke! Deine Anfrage ist eingegangen",
-    "successText": "Nur noch ein Schritt: Tritt unserer Telegram-Gruppe bei. Dort findest du Reglement, Fristen und die nächsten Schritte."
+    "successText": "Ihre Bewerbung ist eingegangen. Wir kontaktieren Sie über den gewählten Weg. Regeln und Neuigkeiten finden Sie in unserer Telegram-Gruppe.",
+    "contactMethod": "Bevorzugter Kontaktweg",
+    "contactMethods": {
+      "instagram": "Instagram",
+      "telegram": "Telegram",
+      "email": "E-Mail",
+      "whatsapp": "WhatsApp"
+    },
+    "contactLabels": {
+      "instagram": "Ihr Instagram",
+      "telegram": "Ihr Telegram",
+      "email": "E-Mail-Adresse",
+      "whatsapp": "WhatsApp-Nummer"
+    },
+    "contactHints": {
+      "instagram": "Geben Sie Ihren Instagram-Nutzernamen oder Profillink an.",
+      "telegram": "Geben Sie Ihren öffentlichen Telegram-Nutzernamen oder Profillink an.",
+      "email": "Unter dieser Adresse kann der Veranstalter auf Ihre Bewerbung antworten.",
+      "whatsapp": "Geben Sie die Nummer mit Ländervorwahl ein, beginnend mit +."
+    },
+    "contactPlaceholders": {
+      "instagram": "@username",
+      "telegram": "@username",
+      "email": "name@example.com",
+      "whatsapp": "+44 7700 900123"
+    }
   },
   "legal": {
     "back": "Zurück zur Bewerbung",
@@ -729,11 +754,11 @@
       "sections": {
         "purpose": {
           "title": "Zweck der Verarbeitung",
-          "text": "Entgegennahme und Prüfung meiner Bewerbung als Teilnehmer, Juror oder Referent, Zuordnung meiner gewählten Rolle und Organisation der nächsten Schritte. Die Verarbeitung ist auf diesen Zweck beschränkt. Werbung und sachfremde Angebote sind nicht umfasst."
+          "text": "Entgegennahme und Prüfung meiner Bewerbung als Teilnehmer, Juror oder Referent, Zuordnung meiner gewählten Rolle und Organisation der nächsten Schritte. Die Verarbeitung ist auf diesen Zweck beschränkt. Werbung und sachfremde Angebote sind nicht umfasst. Der Veranstalter nutzt den gewählten Kontakt, um auf die Bewerbung zu antworten und über den bevorzugten Weg dazu zu kommunizieren."
         },
         "data": {
           "title": "Übermittelte Daten",
-          "text": "Vor- und Nachname, Land und gewählte Rolle. Hinzu kommen Sprache, Bestätigung der Einwilligung, Fassung und Link des Dokuments, Link der Datenschutzrichtlinie sowie Datum und Uhrzeit der Übermittlung. Das Formular verlangt keine Ausweis-, Zahlungs-, Gesundheits- oder biometrischen Daten und bietet keine Datei-Uploads."
+          "text": "Meinen vollständigen Namen, mein Land, die gewählte Rolle, den bevorzugten Kontaktweg und die zugehörigen Kontaktdaten: Instagram-/Telegram-Nutzernamen oder Profillink, E-Mail-Adresse oder WhatsApp-Nummer. Hinzu kommen Sprache, Bestätigung der Einwilligung, Fassung und Link des Dokuments, Link der Datenschutzrichtlinie sowie Datum und Uhrzeit der Übermittlung. Das Formular verlangt keine Ausweis-, Zahlungs-, Gesundheits- oder biometrischen Daten und bietet keine Datei-Uploads."
         },
         "actions": {
           "title": "Erlaubte Vorgänge",
@@ -767,11 +792,11 @@
         },
         "data": {
           "title": "Bewerbungsdaten und technische Angaben",
-          "text": "Das Formular erhebt Vor- und Nachname, Land und Rolle. Beim Absenden werden Sprache, Einwilligungsbestätigung, Fassung und Adresse des Dokuments, Adresse der Richtlinie sowie Datum und Uhrzeit ergänzt. Hosting- und Formulardienste können IP-Adresse, Browser- und Anfragedaten für Betrieb und Schutz ihrer Infrastruktur erhalten. Passwörter, Ausweise, Zahlungs- und Gesundheitsdaten werden nicht verlangt."
+          "text": "Das Formular erfasst vollständigen Namen, Land, Rolle, bevorzugten Kontaktweg und die angegebenen Kontaktdaten: Instagram-/Telegram-Profil, E-Mail-Adresse oder WhatsApp-Nummer. Beim Absenden werden Sprache, Einwilligungsbestätigung, Fassung und Adresse des Dokuments, Adresse der Richtlinie sowie Datum und Uhrzeit ergänzt. Hosting- und Formulardienste können IP-Adresse, Browser- und Anfragedaten für Betrieb und Schutz ihrer Infrastruktur erhalten. Passwörter, Ausweise, Zahlungs- und Gesundheitsdaten werden nicht verlangt."
         },
         "purpose": {
           "title": "Zwecke und Datenminimierung",
-          "text": "Bewerbungsdaten dienen der Prüfung und Organisation der Schritte zur gewählten Rolle. Technische Angaben unterstützen Zustellung, Verfügbarkeit und Schutz vor Missbrauch. Mit der Bewerbung wird keine Einwilligung zu Werbung, Veröffentlichung oder eigenständigen Marketingzwecken erteilt."
+          "text": "Bewerbungsdaten dienen der Prüfung und Organisation der Schritte zur gewählten Rolle. Technische Angaben unterstützen Zustellung, Verfügbarkeit und Schutz vor Missbrauch. Mit der Bewerbung wird keine Einwilligung zu Werbung, Veröffentlichung oder eigenständigen Marketingzwecken erteilt. Der Veranstalter nutzt den gewählten Kontakt, um auf die Bewerbung zu antworten und über den bevorzugten Weg dazu zu kommunizieren."
         },
         "processing": {
           "title": "Auftragsverarbeiter und Übermittlungen",
@@ -787,7 +812,7 @@
         },
         "storage": {
           "title": "Einstellungen im Browser",
-          "text": "Die Website verwendet den localStorage-Schlüssel beauty-dynastya-language ausschließlich für die Sprachwahl. Name, Land und Rolle bleiben bis zum erfolgreichen Absenden oder Verlassen der Seite im Formularzustand und werden von der Website nicht in localStorage gespeichert. Der aktuelle Quellcode enthält keine Werbepixel oder Analysesysteme. Technische Mechanismen externer Dienste und des Hostings unterliegen deren Bedingungen."
+          "text": "Die Website verwendet den localStorage-Schlüssel beauty-dynastya-language nur zum Speichern der gewählten Sprache. Bewerbungsdaten einschließlich Kontaktweg und Kontaktdaten bleiben bis zur erfolgreichen Übermittlung oder zum Verlassen der Seite im Formularzustand und werden nicht in localStorage gespeichert. Der aktuelle Code enthält keine Werbepixel oder Analysesysteme. Technische Mechanismen von Hosting und externen Diensten unterliegen deren Bedingungen."
         },
         "external": {
           "title": "Messenger und öffentliche Inhalte",
@@ -842,7 +867,11 @@
     "imageFallback": "Porträt nicht verfügbar",
     "judgesHint": "Die Fachleute, die deine Arbeit bewerten.",
     "speakersHint": "Erfahrung, Fachwissen und neue Perspektiven für dein Handwerk.",
-    "applicationForm": "Bewerbungsformular"
+    "applicationForm": "Bewerbungsformular",
+    "contactMethodRequired": "Wählen Sie Ihren bevorzugten Kontaktweg.",
+    "contactEmailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+    "contactPhoneInvalid": "Geben Sie Ländervorwahl und Nummer an: + und 7–15 Ziffern.",
+    "contactProfileInvalid": "Geben Sie einen Nutzernamen oder Profillink des gewählten Dienstes ein."
   },
   "regulations": {
     "back": "Zur Startseite",

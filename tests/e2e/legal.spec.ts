@@ -49,6 +49,8 @@ test('consent is explicit, translated, and its document opens without losing the
   await expect(consent).not.toBeChecked()
   await page.locator('#application-name').fill('Test Applicant')
   await page.locator('#application-country').fill('Germany')
+  await page.locator('input[name="contact_method"][value="email"]').check()
+  await page.locator('#application-contact').fill('contact@example.com')
   await page.locator('input[value="participant"]').check()
   await page.locator('#register button[type="submit"]').click()
   await expect(consent).toBeFocused()
@@ -86,12 +88,14 @@ for (const role of ['participant', 'judge', 'speaker']) {
     await page.goto('/?lang=ru')
     await page.locator('#application-name').fill('Test Applicant')
     await page.locator('#application-country').fill('Italy')
+    await page.locator('input[name="contact_method"][value="email"]').check()
+    await page.locator('#application-contact').fill('contact@example.com')
     await page.locator(`input[value="${role}"]`).check()
     await page.locator('#application-consent').check()
     await page.locator('#register button[type="submit"]').click()
     await expect(page.locator('#register [role="status"]')).toContainText(ru.form.success)
     expect(bodies).toHaveLength(1)
-    expect(bodies[0]).toMatchObject({ personal_data_consent: true, consent_version: legalDocuments.version, language: 'ru', role })
+    expect(bodies[0]).toMatchObject({ personal_data_consent: true, consent_version: legalDocuments.version, language: 'ru', role, contact_method: 'email', contact_value: 'contact@example.com' })
     expect(bodies[0].consent_document).toBe('http://127.0.0.1:5174/?lang=ru#/consent')
     expect(bodies[0].privacy_policy).toBe('http://127.0.0.1:5174/?lang=ru#/privacy')
     expect(Number.isFinite(Date.parse(String(bodies[0].consent_given_at)))).toBe(true)
@@ -128,7 +132,7 @@ test('the submission service rejects missing consent before making a request', a
   const rejected = await page.evaluate(async () => {
     const { submitApplication } = await import('/src/services/applications.ts')
     try {
-      await submitApplication({ fullName: 'Test Applicant', country: 'Italy', role: 'judge', botcheck: false, consent: false }, 'ru', new AbortController().signal)
+      await submitApplication({ fullName: 'Test Applicant', country: 'Italy', role: 'judge', contactMethod: 'email', contactValue: 'contact@example.com', botcheck: false, consent: false }, 'ru', new AbortController().signal)
       return false
     } catch { return true }
   })

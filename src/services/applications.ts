@@ -1,12 +1,18 @@
 import type { ApplicationErrors, ApplicationValues } from '../types/application'
 import { legalDocumentHref, legalDocuments } from '../data/legal'
 import { applicationApiUrl } from '../data/application'
+import { contactError, isContactMethod, normalizeContact } from '../lib/applicationContact'
 
 export function validateApplication(values: ApplicationValues): ApplicationErrors {
   const errors: ApplicationErrors = {}
   if (!values.fullName.trim()) errors.fullName = 'required'
   if (!values.country.trim()) errors.country = 'required'
   if (!['participant', 'judge', 'speaker'].includes(values.role)) errors.role = 'roleRequired'
+  if (!isContactMethod(values.contactMethod)) errors.contactMethod = 'contactMethodRequired'
+  else {
+    const error = contactError(values.contactMethod, values.contactValue)
+    if (error) errors.contactValue = error
+  }
   if (values.consent !== true) errors.consent = 'consentRequired'
   return errors
 }
@@ -26,7 +32,7 @@ export async function submitApplication(
   submissionId: string = crypto.randomUUID(),
   consentGivenAt = new Date().toISOString(),
 ): Promise<void> {
-  if (Object.keys(validateApplication(values)).length || values.botcheck) throw new Error('Invalid application')
+  if (Object.keys(validateApplication(values)).length || values.botcheck || !isContactMethod(values.contactMethod)) throw new Error('Invalid application')
   // URL отдельного API публичный; токен Telegram остаётся на сервере.
   const endpoint = import.meta.env.VITE_APPLICATION_API_URL?.trim() || (import.meta.env.PROD ? applicationApiUrl : '/api/applications')
   const response = await fetch(endpoint, {
@@ -37,6 +43,8 @@ export async function submitApplication(
       full_name: values.fullName.trim(),
       country: values.country.trim(),
       role: values.role,
+      contact_method: values.contactMethod,
+      contact_value: normalizeContact(values.contactMethod, values.contactValue),
       language,
       botcheck: values.botcheck,
       personal_data_consent: values.consent,

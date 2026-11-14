@@ -13,6 +13,7 @@ const origin = 'https://example.test'
 const token = '123456789:test-token-kept-only-on-server'
 const payload = () => ({
   full_name: 'Test Applicant', country: 'Italy', role: 'participant', language: 'ru',
+  contact_method: 'telegram', contact_value: '@test_user',
   botcheck: false, personal_data_consent: true, consent_version: legalDocuments.version,
   consent_given_at: '2026-11-14T10:00:00.000Z', submission_id: randomUUID(),
 })
@@ -74,6 +75,11 @@ const invalid: Record<string, unknown>[] = [
   { personal_data_consent: false }, { personal_data_consent: 'true' },
   { botcheck: true }, { botcheck: undefined }, { consent_version: 'old' },
   { consent_given_at: 'invalid' }, { submission_id: 'not-a-uuid' },
+  { contact_method: '' }, { contact_method: 'sms' }, { contact_method: undefined }, { contact_value: undefined },
+  { contact_value: '' }, { contact_value: '@bad\nname' }, { contact_value: 'x'.repeat(255) },
+  { contact_method: 'email', contact_value: 'not-an-email' },
+  { contact_method: 'whatsapp', contact_value: '1234567' },
+  { contact_method: 'telegram', contact_value: 'https://foreign.test/user' },
 ]
 for (const [index, change] of invalid.entries()) {
   test('rejects invalid application before contacting Telegram: case ' + index, async (t) => {
@@ -238,4 +244,31 @@ test('standalone Bothost service provides health checks and never publishes site
   for (const path of ['/', '/health', '/api/health']) assert.deepEqual(await (await fetch(f.base + path)).json(), { status: 'ok' })
   assert.equal((await fetch(f.base + '/assets/app-hash.js')).status, 404)
   assert.equal((await f.post()).status, 200)
+})
+
+for (const [method, value, normalized, label, link] of [
+  ['instagram', 'https://www.instagram.com/test.user/?igsh=example', '@test.user', 'Instagram', 'https://www.instagram.com/test.user/'],
+  ['telegram', 'https://t.me/test_user', '@test_user', 'Telegram', 'https://t.me/test_user'],
+  ['email', ' member+test@example.org ', 'member+test@example.org', 'Почта', undefined],
+  ['whatsapp', '+44 (7700) 900-123', '+447700900123', 'WhatsApp', 'https://wa.me/447700900123'],
+] as const) {
+  test('delivers the preferred contact and a usable link: ' + method, async (t) => {
+    const f = await fixture(t)
+    assert.equal((await f.post({ ...payload(), contact_method: method, contact_value: value })).status, 200)
+    const text = String(f.calls[0].body.text)
+    assert(text.includes('Способ связи: ' + label))
+    assert(text.includes('Контакт: ' + normalized))
+    if (link) assert(text.includes('Связаться: ' + link))
+  })
+}
+
+test('cached previous form works without collecting contacts under its old consent', async (t) => {
+  const f = await fixture(t)
+  const body: Record<string, unknown> = { ...payload(), consent_version: '2026-11-14.3' }
+  delete body.contact_method
+  delete body.contact_value
+  assert.equal((await f.post(body)).status, 200)
+  assert(String(f.calls[0].body.text).includes('Редакция: 2026-11-14.3'))
+  assert(String(f.calls[0].body.text).includes('Контакт не указан'))
+  assert.equal((await f.post({ ...payload(), consent_version: '2026-11-14.3' })).status, 422)
 })

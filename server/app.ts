@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto'
 import { isIP } from 'node:net'
 import { extname, resolve, sep } from 'node:path'
 import { parseApplication, telegramText } from './application.ts'
+import { legalDocuments } from '../src/data/legal.ts'
 
 export interface ServerConfig {
   botToken?: string
@@ -91,6 +92,7 @@ export function createApplicationServer(config: ServerConfig, dependencies: Depe
     response.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
     const path = new URL(request.url ?? '/', 'http://localhost').pathname
     if ((path === '/api/health' || path === '/health' || (config.apiOnly && path === '/')) && request.method === 'GET') {
+      response.setHeader('X-Application-Version', legalDocuments.version)
       json(response, 200, { status: 'ok' })
       return
     }

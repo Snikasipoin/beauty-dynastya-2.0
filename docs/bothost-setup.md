@@ -66,3 +66,7 @@ VITE_APPLICATION_API_URL=https://ВЫДАННЫЙ-ДОМЕН/api/applications
 Ветка генерируется из явного списка файлов. .env.local, токен и изображения сайта в неё не включаются. Ограничения доставки и повторов описаны в основной документации проекта docs/telegram-setup.md.
 
 Официальные инструкции: [Dockerfile](https://bothost.ru/docs/custom-dockerfile), [главный файл](https://bothost.ru/docs/main-file-entrypoint), [домены и порты](https://bothost.ru/docs/domains-and-ports), [переменные окружения](https://bothost.ru/docs/environment-variables).
+
+## Заявки с контактами
+
+Форма передаёт contact_method (instagram, telegram, email или whatsapp) и contact_value. Оба поля обязательны для редакции согласия 2026-11-14.4. Сообщение содержит выбранный канал, контакт и ссылку на профиль или WhatsApp. При обновлении сначала выполните новый деплой Bothost из codex/bothost-bot, затем сайта Timeweb из main. Заголовок X-Application-Version ответа /health должен показывать 2026-11-14.4.
