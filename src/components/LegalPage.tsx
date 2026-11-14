@@ -18,7 +18,7 @@ export function LegalPage({ document }: { document: LegalDocument }) {
         </a>
         <div className="max-w-[72ch]">
           <h1 id="legal-title" className="section-title">{t(`legal.${document}.title`)}</h1>
-          <p className="mt-5 text-sm text-muted">{t('legal.version')} <time dateTime={legalDocuments.version}>{legalDocuments.version}</time></p>
+          <p className="mt-5 text-sm text-muted">{t('legal.version')} <time dateTime={legalDocuments.publishedOn}>{legalDocuments.version}</time></p>
           {operatorIsIncomplete && <p className="mt-5 leading-relaxed text-gold" data-legal-draft>{t('legal.draftNotice')}</p>}
           <p className="mt-6 leading-relaxed text-muted">{t(`legal.${document}.intro`)}</p>
 
@@ -47,7 +47,7 @@ export function LegalPage({ document }: { document: LegalDocument }) {
                 {id === 'processors' || id === 'processing' ? (
                   <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
                     <a href={legalDocuments.processorPrivacyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-gold underline underline-offset-4 hover:text-cream">{t('legal.processorPrivacy')}</a>
-                    <a href={legalDocuments.processorAgreementUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-gold underline underline-offset-4 hover:text-cream">{t('legal.processorAgreement')}</a>
+                    <a href={legalDocuments.hostingPrivacyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-gold underline underline-offset-4 hover:text-cream">{t('legal.hostingPrivacy')}</a>
                   </p>
                 ) : null}
               </section>

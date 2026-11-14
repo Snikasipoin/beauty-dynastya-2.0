@@ -1,6 +1,7 @@
 // При изменении условий согласия обновляйте версию: она передаётся вместе с заявкой.
 export const legalDocuments = {
-  version: '2026-11-14',
+  version: '2026-11-14.2',
+  publishedOn: '2026-11-14',
   // Бренд не заменяет реквизиты оператора. Заполните их перед публикацией документов.
   operator: {
     name: '',
@@ -8,8 +9,8 @@ export const legalDocuments = {
     address: '',
     email: '',
   } satisfies Record<'name' | 'country' | 'address' | 'email', string>,
-  processorPrivacyUrl: 'https://web3forms.com/privacy',
-  processorAgreementUrl: 'https://web3forms.com/dpa',
+  processorPrivacyUrl: 'https://telegram.org/privacy',
+  hostingPrivacyUrl: 'https://st.timeweb.com/cloud-static/legal-info/personal-data-policy.pdf',
 } as const
 
 export type LegalDocument = 'consent' | 'privacy'

@@ -1,0 +1,13 @@
+.git
+node_modules
+dist
+.env
+.env.*
+!.env.example
+.agents
+.codex
+.impeccable
+img
+beauty-dynastya-main
+playwright-report
+test-results

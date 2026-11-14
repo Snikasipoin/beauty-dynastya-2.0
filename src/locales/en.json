@@ -718,12 +718,11 @@
     "operatorTitle": "Controller and contact",
     "organizer": "Organiser of {{name}}",
     "contactHint": "Use the contacts below for data processing questions, correction or deletion requests, and withdrawal of consent.",
-    "processorPrivacy": "Web3Forms privacy policy",
-    "processorAgreement": "Web3Forms processing terms",
+    "processorPrivacy": "Telegram privacy policy",
     "separateDocuments": "Consent is separate from this policy, participation rules and marketing communications.",
     "checkbox": "I consent to the processing of my personal data to review my application. *",
     "readConsent": "Read the consent (new tab)",
-    "formHint": "On submission, your data is sent to the organiser through Web3Forms. Details:",
+    "formHint": "Your application is sent through the website server to the organiser's private Telegram chat. Details:",
     "consent": {
       "title": "Consent to personal data processing",
       "intro": "I freely consent to the organiser of Beauty Dynastya identified below (the Controller) processing the data I submit through the application form. I give consent by separately selecting the checkbox and pressing the submit button.",
@@ -742,11 +741,11 @@
         },
         "processors": {
           "title": "Recipients and service providers",
-          "text": "The form sends data to Web3Forms, a service operated by Web3Creative (India), which processes it and delivers it to the organiser by email using its infrastructure and sub-processors. Processing may take place in other countries. The service may also process request information, including an IP address, for delivery and spam prevention. Its infrastructure, transfer and retention terms are described in the linked documents. This consent does not replace the independent legal grounds and mandatory procedures required for international transfers."
+          "text": "The application reaches the website server hosted on Timeweb Cloud, is validated and is sent through the Telegram Bot API to the organiser's private chat with the bot. The hosting provider processes technical request information, and Telegram processes the message content. Their policies also govern processing and storage. Transfers may involve other countries; applicable processor and international transfer requirements still apply."
         },
         "term": {
           "title": "Duration and retention",
-          "text": "Consent lasts until the application review and related organisational steps are completed, or until withdrawal. Once the purpose has been fulfilled or consent withdrawn, data must be deleted or anonymised within the time limits of applicable law, unless another legal ground requires or permits further processing. Retention by the external processor is also governed by its terms. Web3Forms specifies a maximum of three years unless a plan or earlier deletion provides a shorter period."
+          "text": "Consent lasts until the application and related organisational steps are completed or consent is withdrawn. Data is then deleted or anonymised within applicable legal time limits unless another ground requires or permits continued processing. Applications are kept in the organiser's Telegram messages; storage and deletion are also governed by Telegram settings and rules. Direct deletion requests to the Controller."
         },
         "withdrawal": {
           "title": "Withdrawing consent",
@@ -776,11 +775,11 @@
         },
         "processing": {
           "title": "Processors and transfers",
-          "text": "On submission, the browser sends the application directly over HTTPS to Web3Forms (Web3Creative, India), which delivers it to the organiser's email. Its published terms list AWS, Cloudflare, Hetzner and other named sub-processors; processing may occur in several countries. Transfers and storage are also governed by Web3Forms documents. A checkbox does not remove applicable data localisation, processor contract or international transfer requirements."
+          "text": "The browser sends the application over HTTPS to the website server hosted on Timeweb Cloud. The server validates the fields and consent, then sends the information through the Telegram Bot API to the organiser's private chat with the bot. There is no separate application database on the server; messages are stored in Telegram. Technical information supports delivery, rate limits and duplicate prevention. Hosting and Telegram policies also apply."
         },
         "retention": {
           "title": "Retention and deletion",
-          "text": "Application data is needed until review and related organisational steps are completed, or consent is withdrawn, unless another legal ground requires or permits further processing. Once the grounds end, data is deleted or anonymised within the time limits of applicable law. Web3Forms states a maximum retention of three years unless a plan or earlier deletion shortens it. Requests for deletion, including data held by processors, should be directed to the Controller."
+          "text": "Data is needed until the application and related organisational steps are completed or consent is withdrawn, unless another ground requires further processing. Once the grounds end, data is deleted or anonymised within applicable legal time limits. The organiser receives applications as Telegram messages and manages their storage and deletion under the service's rules. Direct deletion requests to the Controller."
         },
         "rights": {
           "title": "Your rights and requests",
@@ -808,7 +807,8 @@
       "country": "[Enter country]",
       "address": "[Enter the controller’s postal address]",
       "email": "[Enter a contact email]"
-    }
+    },
+    "hostingPrivacy": "Timeweb Cloud privacy policy"
   },
   "ui": {
     "consentRequired": "Please consent to personal data processing before submitting your application.",
@@ -836,13 +836,13 @@
     "vip": "VIP judge",
     "smp": "SMP",
     "filterReset": "Show all judges",
-    "web3forms": "Application form",
     "footerNote": "An international stage for beauty professionals.",
     "telegramHint": "Rules, deadlines and registration details are available from the organisers.",
     "heroExplore": "Explore the championship",
     "imageFallback": "Portrait unavailable",
     "judgesHint": "Meet the professionals who evaluate your work.",
-    "speakersHint": "Experience, expertise and a new perspective on your craft."
+    "speakersHint": "Experience, expertise and a new perspective on your craft.",
+    "applicationForm": "Application form"
   },
   "regulations": {
     "back": "Back to home",

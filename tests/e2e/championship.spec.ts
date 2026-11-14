@@ -160,14 +160,14 @@ test('controlled form validates, translates errors and survives API failures', a
   await page.locator('#application-country').fill('Germany')
   await page.locator('input[value="participant"]').check()
   await page.locator('#application-consent').check()
-  await page.route('https://api.web3forms.com/submit', (route) => route.fulfill({ status: 500, contentType: 'application/json', body: '{"success":false}' }))
+  await page.route('**/api/applications', (route) => route.fulfill({ status: 500, contentType: 'application/json', body: '{"success":false}' }))
   await submit.click()
   await expect(page.locator('#register [role="alert"]')).toHaveText(de.ui.error)
   await expect(page.locator('#application-name')).toHaveValue('Test Applicant')
   await expect(submit).toBeEnabled()
-  await page.unroute('https://api.web3forms.com/submit')
+  await page.unroute('**/api/applications')
   let requests = 0
-  await page.route('https://api.web3forms.com/submit', async (route) => {
+  await page.route('**/api/applications', async (route) => {
     requests++
     const body = route.request().postDataJSON() as Record<string, unknown>
     expect(body.language).toBe('de')
@@ -213,4 +213,43 @@ test('motion preferences clean up GSAP and do not duplicate triggers', async ({ 
   await expect.poll(triggerCount).toBe(0)
   const hidden = await page.locator('[data-card]').evaluateAll((cards) => cards.some((card) => getComputedStyle(card).opacity !== '1'))
   expect(hidden).toBe(false)
+})
+
+test('unavailable Telegram server preserves the application and does not report success', async ({ page }) => {
+  await page.route('**/api/applications', route => route.fulfill({ status: 503, contentType: 'application/json', body: '{"success":false,"error":"unavailable"}' }))
+  await page.goto('/?lang=ru')
+  await page.locator('#application-name').fill('Test Applicant')
+  await page.locator('#application-country').fill('Italy')
+  await page.locator('input[value="participant"]').check()
+  await page.locator('#application-consent').check()
+  await page.locator('#register button[type="submit"]').click()
+  await expect(page.locator('#register [role="alert"]')).toHaveText(ru.ui.unavailable)
+  await expect(page.locator('#application-name')).toHaveValue('Test Applicant')
+  await expect(page.locator('#application-consent')).toBeChecked()
+  await expect(page.locator('#register [role="status"]')).toHaveCount(0)
+})
+
+test('an unchanged retry keeps its number and consent time; editing starts a new application', async ({ page }) => {
+  const bodies: Record<string, unknown>[] = []
+  await page.route('**/api/applications', route => {
+    bodies.push(route.request().postDataJSON() as Record<string, unknown>)
+    return route.fulfill({ status: 502, contentType: 'application/json', body: '{"success":false}' })
+  })
+  await page.goto('/?lang=ru')
+  await page.locator('#application-name').fill('Test Applicant')
+  await page.locator('#application-country').fill('Italy')
+  await page.locator('input[value="participant"]').check()
+  await page.locator('#application-consent').check()
+  const submit = page.locator('#register button[type="submit"]')
+  await submit.click()
+  await expect(page.locator('#register [role="alert"]')).toHaveText(ru.ui.error)
+  await submit.click()
+  await expect.poll(() => bodies.length).toBe(2)
+  expect(bodies[1].submission_id).toBe(bodies[0].submission_id)
+  expect(bodies[1].consent_given_at).toBe(bodies[0].consent_given_at)
+  await expect(submit).toBeEnabled()
+  await page.locator('#application-country').fill('Germany')
+  await submit.click()
+  await expect.poll(() => bodies.length).toBe(3)
+  expect(bodies[2].submission_id).not.toBe(bodies[0].submission_id)
 })

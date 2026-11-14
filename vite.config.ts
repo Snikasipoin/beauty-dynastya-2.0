@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
     // Timeweb публикует сайт в корне; подпапка GitHub Pages задаётся в workflow.
     base: env.VITE_BASE_PATH || '/',
     plugins: [react(), tailwindcss()],
+    server: { proxy: { '/api': 'http://127.0.0.1:3000' } },
     build: { target: 'es2022' },
   }
 })

@@ -20,7 +20,7 @@ for (const [language, locale] of Object.entries(locales)) {
         await expect(page).toHaveTitle(`${locale.legal[document].title} — Beauty Dynastya`)
         await expect(page.locator('html')).toHaveAttribute('lang', language)
         await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', locale.legal[document].intro)
-        await expect(page.locator('article time')).toHaveAttribute('datetime', legalDocuments.version)
+        await expect(page.locator('article time')).toHaveAttribute('datetime', legalDocuments.publishedOn)
         if (Object.values(legalDocuments.operator).some((value) => !value.trim())) {
           await expect(page.locator('[data-legal-draft]')).toHaveText(locale.legal.draftNotice)
         } else {
@@ -40,7 +40,7 @@ for (const [language, locale] of Object.entries(locales)) {
 
 test('consent is explicit, translated, and its document opens without losing the application', async ({ page }) => {
   let requests = 0
-  await page.route('https://api.web3forms.com/submit', (route) => {
+  await page.route('**/api/applications', (route) => {
     requests++
     return route.fulfill({ status: 200, contentType: 'application/json', body: '{"success":true}' })
   })
@@ -79,7 +79,7 @@ test('consent is explicit, translated, and its document opens without losing the
 for (const role of ['participant', 'judge', 'speaker']) {
   test(`${role}: submission includes the consent record and resets the checkbox on success`, async ({ page }) => {
     const bodies: Record<string, unknown>[] = []
-    await page.route('https://api.web3forms.com/submit', (route) => {
+    await page.route('**/api/applications', (route) => {
       bodies.push(route.request().postDataJSON() as Record<string, unknown>)
       return route.fulfill({ status: 200, contentType: 'application/json', body: '{"success":true}' })
     })
@@ -120,13 +120,13 @@ test('legal navigation supports language switching, related documents and return
 
 test('the submission service rejects missing consent before making a request', async ({ page }) => {
   let requests = 0
-  await page.route('https://api.web3forms.com/submit', (route) => {
+  await page.route('**/api/applications', (route) => {
     requests++
     return route.abort()
   })
   await page.goto('/?lang=ru')
   const rejected = await page.evaluate(async () => {
-    const { submitApplication } = await import('/src/services/web3forms.ts')
+    const { submitApplication } = await import('/src/services/applications.ts')
     try {
       await submitApplication({ fullName: 'Test Applicant', country: 'Italy', role: 'judge', botcheck: false, consent: false }, 'ru', new AbortController().signal)
       return false

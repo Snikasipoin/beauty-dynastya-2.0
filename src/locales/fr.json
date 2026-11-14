@@ -718,12 +718,11 @@
     "operatorTitle": "Responsable et contact",
     "organizer": "Organisateur de {{name}}",
     "contactHint": "Utilisez ces coordonnées pour vos questions, demandes de rectification ou d'effacement et retrait du consentement.",
-    "processorPrivacy": "Confidentialité Web3Forms",
-    "processorAgreement": "Conditions de traitement Web3Forms",
+    "processorPrivacy": "Politique de confidentialité de Telegram",
     "separateDocuments": "Le consentement est distinct de cette politique, du règlement et des communications publicitaires.",
     "checkbox": "Je consens au traitement de mes données personnelles pour l'examen de ma candidature. *",
     "readConsent": "Lire le consentement (nouvel onglet)",
-    "formHint": "À l'envoi, les données sont transmises à l'organisateur via Web3Forms. Détails :",
+    "formHint": "Votre candidature est transmise par le serveur du site à la conversation Telegram privée de l'organisateur. Détails :",
     "consent": {
       "title": "Consentement au traitement des données personnelles",
       "intro": "Je consens librement au traitement des données que je transmets dans le formulaire par l'organisateur de Beauty Dynastya désigné ci-dessous (le Responsable). Je donne mon consentement en cochant séparément la case puis en appuyant sur le bouton d'envoi.",
@@ -742,11 +741,11 @@
         },
         "processors": {
           "title": "Destinataires et prestataires",
-          "text": "Le formulaire transmet les données à Web3Forms, service de Web3Creative (Inde), qui les traite et les livre par email à l'organisateur au moyen de son infrastructure et de ses sous-traitants. Le traitement peut avoir lieu dans d'autres pays. Des informations techniques, dont l'adresse IP, peuvent servir à la livraison et à la lutte contre le spam. Les conditions d'infrastructure, de transfert et de conservation figurent dans les documents liés. Ce consentement ne remplace pas les bases juridiques et procédures obligatoires des transferts internationaux."
+          "text": "La candidature arrive sur le serveur du site hébergé par Timeweb Cloud, est vérifiée puis transmise via Telegram Bot API à la conversation privée de l'organisateur avec le bot. L'hébergeur traite les informations techniques de la requête et Telegram le contenu du message. Leurs politiques régissent aussi le traitement et la conservation. Les transferts peuvent concerner d'autres pays ; les obligations applicables aux prestataires et aux transferts internationaux demeurent."
         },
         "term": {
           "title": "Durée et conservation",
-          "text": "Le consentement vaut jusqu'à la fin de l'examen de la candidature et des démarches liées, ou jusqu'à son retrait. Les données doivent ensuite être effacées ou anonymisées dans les délais légaux, sauf autre base juridique imposant ou autorisant la poursuite du traitement. Les conditions du sous-traitant externe s'appliquent aussi : Web3Forms indique un maximum de trois ans, sauf durée plus courte liée à l'offre ou à un effacement anticipé."
+          "text": "Le consentement dure jusqu'à la fin de l'examen de la candidature et des démarches associées ou jusqu'à son retrait. Les données sont ensuite supprimées ou anonymisées dans les délais légaux, sauf autre fondement exigeant ou permettant leur traitement. Les candidatures sont conservées dans les messages Telegram de l'organisateur ; les paramètres et règles de Telegram s'appliquent aussi. Les demandes de suppression sont adressées au Responsable."
         },
         "withdrawal": {
           "title": "Retrait du consentement",
@@ -776,11 +775,11 @@
         },
         "processing": {
           "title": "Sous-traitants et transferts",
-          "text": "Le navigateur envoie la candidature directement par HTTPS à Web3Forms (Web3Creative, Inde), qui la livre à l'email de l'organisateur. Les conditions publiées citent AWS, Cloudflare, Hetzner et d'autres sous-traitants ; le traitement peut avoir lieu dans plusieurs pays. Les documents Web3Forms régissent également transfert et stockage. Une case cochée ne supprime pas les obligations applicables de localisation, de contrats de sous-traitance et de transfert international."
+          "text": "Le navigateur envoie la candidature en HTTPS au serveur du site hébergé par Timeweb Cloud. Le serveur vérifie les champs et le consentement, puis transmet les informations via Telegram Bot API à la conversation privée de l'organisateur avec le bot. Le serveur ne tient pas de base distincte de candidatures ; les messages sont conservés dans Telegram. Les informations techniques servent à la livraison, à la limitation des requêtes et à la prévention des doublons. Les politiques de l'hébergeur et de Telegram s'appliquent également."
         },
         "retention": {
           "title": "Conservation et effacement",
-          "text": "Les données sont nécessaires jusqu'à la fin de l'examen et des démarches liées ou jusqu'au retrait, sauf autre base juridique. Elles sont ensuite effacées ou anonymisées dans les délais légaux. Web3Forms indique un maximum de trois ans, sauf durée plus courte de l'offre ou effacement anticipé. Les demandes d'effacement, y compris chez les sous-traitants, sont à adresser au Responsable."
+          "text": "Les données sont nécessaires jusqu'à la fin de l'examen de la candidature et des démarches associées ou jusqu'au retrait du consentement, sauf autre fondement de traitement. Elles sont ensuite supprimées ou anonymisées dans les délais légaux. L'organisateur reçoit les candidatures sous forme de messages Telegram et gère leur conservation et suppression selon les règles du service. Les demandes de suppression sont adressées au Responsable."
         },
         "rights": {
           "title": "Vos droits",
@@ -808,7 +807,8 @@
       "country": "[Indiquer le pays]",
       "address": "[Indiquer l’adresse postale du responsable]",
       "email": "[Indiquer un email de contact]"
-    }
+    },
+    "hostingPrivacy": "Politique de confidentialité de Timeweb Cloud"
   },
   "ui": {
     "consentRequired": "Veuillez consentir au traitement des données personnelles avant l'envoi de votre candidature.",
@@ -836,13 +836,13 @@
     "vip": "Juge VIP",
     "smp": "SMP",
     "filterReset": "Afficher tous les juges",
-    "web3forms": "Formulaire de candidature",
     "footerNote": "Une scène internationale pour les professionnels de la beauté.",
     "telegramHint": "Les règles, les dates limites et les modalités d’inscription sont disponibles auprès des organisateurs.",
     "heroExplore": "Découvrir le championnat",
     "imageFallback": "Portrait indisponible",
     "judgesHint": "Les professionnels qui évalueront votre travail.",
-    "speakersHint": "Expérience, expertise et un nouveau regard sur votre métier."
+    "speakersHint": "Expérience, expertise et un nouveau regard sur votre métier.",
+    "applicationForm": "Formulaire de candidature"
   },
   "regulations": {
     "back": "Retour à l’accueil",

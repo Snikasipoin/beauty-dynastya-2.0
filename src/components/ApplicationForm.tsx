@@ -4,7 +4,7 @@ import { ArrowUpRight, Check, LoaderCircle, Send } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { championship } from '../data/championship'
 import { legalDocumentHref } from '../data/legal'
-import { hasWeb3FormsKey, submitApplication, validateApplication } from '../services/web3forms'
+import { SubmissionError, submitApplication, validateApplication } from '../services/applications'
 import type { ApplicationErrors, ApplicationRole, ApplicationValues, SubmissionStatus } from '../types/application'
 
 const roles: readonly ApplicationRole[] = ['judge', 'participant', 'speaker']
@@ -17,6 +17,7 @@ export function ApplicationForm() {
   const [status, setStatus] = useState<SubmissionStatus>('idle')
   const [failure, setFailure] = useState<'error' | 'unavailable'>('error')
   const sending = useRef(false)
+  const submission = useRef<{ id: string; consentGivenAt: string; language: string } | null>(null)
   const controller = useRef<AbortController | null>(null)
   const formRef = useRef<HTMLFormElement>(null)
   const successHeading = useRef<HTMLHeadingElement>(null)
@@ -27,6 +28,7 @@ export function ApplicationForm() {
   function update<K extends keyof ApplicationValues>(key: K, value: ApplicationValues[K]) {
     const next = { ...values, [key]: value }
     setValues(next)
+    submission.current = null
     // Ошибки хранятся ключами: язык можно менять и после неудачной валидации.
     if (Object.keys(errors).length) setErrors(validateApplication(next))
     if (status === 'error') setStatus('idle')
@@ -42,7 +44,6 @@ export function ApplicationForm() {
       if (firstInvalid) formRef.current?.querySelector<HTMLInputElement>(`[data-field="${firstInvalid}"]`)?.focus()
       return
     }
-    if (!hasWeb3FormsKey()) { setFailure('unavailable'); setStatus('error'); return }
     if (values.botcheck) { setFailure('error'); setStatus('error'); return }
     const request = new AbortController()
     controller.current = request
@@ -50,11 +51,16 @@ export function ApplicationForm() {
     setStatus('sending')
     const timeout = window.setTimeout(() => request.abort(), 15000)
     try {
-      await submitApplication(values, i18n.language, request.signal)
+      // Повтор неизменённой заявки использует прежний номер, чтобы избежать дублей.
+      if (!submission.current || submission.current.language !== i18n.language) {
+        submission.current = { id: crypto.randomUUID(), consentGivenAt: new Date().toISOString(), language: i18n.language }
+      }
+      await submitApplication(values, i18n.language, request.signal, submission.current.id, submission.current.consentGivenAt)
+      submission.current = null
       setStatus('success')
       setValues(emptyValues)
-    } catch {
-      setFailure('error')
+    } catch (error) {
+      setFailure(error instanceof SubmissionError && error.unavailable ? 'unavailable' : 'error')
       setStatus('error')
     } finally {
       window.clearTimeout(timeout)
@@ -87,7 +93,7 @@ export function ApplicationForm() {
               <h3 id="application-title" className="font-display text-2xl font-bold sm:text-3xl">{t('form.title')}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">{t('form.lead')} {t('ui.requiredNote')}</p>
               <fieldset disabled={status === 'sending'} className="mt-7 space-y-6 disabled:opacity-70">
-                <legend className="sr-only">{t('ui.web3forms')}</legend>
+                <legend className="sr-only">{t('ui.applicationForm')}</legend>
                 <div><label htmlFor="application-name" className="field-label">{t('form.name')}</label><input id="application-name" name="full_name" data-field="fullName" type="text" autoComplete="name" maxLength={120} required value={values.fullName} onChange={(event) => update('fullName', event.target.value)} placeholder={t('ui.namePlaceholder')} aria-invalid={Boolean(errors.fullName)} aria-describedby="name-error" className="field-input" /><p id="name-error" className="field-error">{errors.fullName && t(`ui.${errors.fullName}`)}</p></div>
                 <div><label htmlFor="application-country" className="field-label">{t('form.country')}</label><input id="application-country" name="country" data-field="country" type="text" autoComplete="country-name" maxLength={100} required value={values.country} onChange={(event) => update('country', event.target.value)} placeholder={t('ui.countryPlaceholder')} aria-invalid={Boolean(errors.country)} aria-describedby="country-error" className="field-input" /><p id="country-error" className="field-error">{errors.country && t(`ui.${errors.country}`)}</p></div>
                 <fieldset aria-describedby="role-error"><legend className="field-label">{t('form.role')}</legend><div className="flex flex-wrap gap-2">{roles.map((role) => <label key={role} className="flex min-h-11 cursor-pointer items-center gap-2 rounded-lg bg-card px-4 py-3 text-sm has-checked:bg-cream has-checked:text-ink"><input type="radio" name="role" data-field="role" value={role} checked={values.role === role} onChange={() => update('role', role)} required aria-invalid={Boolean(errors.role)} className="size-4 accent-accent" /><span>{t(`form.roles.${role}`)}</span></label>)}</div><p id="role-error" className="field-error">{errors.role && t(`ui.${errors.role}`)}</p></fieldset>
