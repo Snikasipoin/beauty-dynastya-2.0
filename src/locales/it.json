@@ -741,7 +741,7 @@
         },
         "processors": {
           "title": "Destinatari e fornitori",
-          "text": "La candidatura arriva al server del sito ospitato su Timeweb Cloud, viene verificata e inviata tramite Telegram Bot API alla chat privata dell'organizzatore con il bot. Il fornitore di hosting tratta i dati tecnici della richiesta e Telegram il contenuto del messaggio. Le loro informative disciplinano anche trattamento e conservazione. I trasferimenti possono coinvolgere altri paesi; restano applicabili i requisiti relativi ai responsabili e ai trasferimenti internazionali."
+          "text": "La candidatura arriva al server del sito ospitato su Bothost, viene verificata e inviata tramite Telegram Bot API alla chat privata dell'organizzatore con il bot. Il fornitore di hosting tratta i dati tecnici della richiesta e Telegram il contenuto del messaggio. Le loro informative disciplinano anche trattamento e conservazione. I trasferimenti possono coinvolgere altri paesi; restano applicabili i requisiti relativi ai responsabili e ai trasferimenti internazionali."
         },
         "term": {
           "title": "Durata e conservazione",
@@ -775,7 +775,7 @@
         },
         "processing": {
           "title": "Responsabili e trasferimenti",
-          "text": "Il browser invia la candidatura via HTTPS al server del sito ospitato su Timeweb Cloud. Il server verifica i campi e il consenso, poi invia le informazioni tramite Telegram Bot API alla chat privata dell'organizzatore con il bot. Il server non mantiene un database separato delle candidature; i messaggi sono conservati in Telegram. I dati tecnici servono alla consegna, ai limiti di frequenza e alla prevenzione dei duplicati. Si applicano anche le informative di hosting e Telegram."
+          "text": "Il browser invia la candidatura via HTTPS al server del sito ospitato su Bothost. Il server verifica i campi e il consenso, poi invia le informazioni tramite Telegram Bot API alla chat privata dell'organizzatore con il bot. Il server non mantiene un database separato delle candidature; i messaggi sono conservati in Telegram. I dati tecnici servono alla consegna, ai limiti di frequenza e alla prevenzione dei duplicati. Si applicano anche le informative di hosting e Telegram."
         },
         "retention": {
           "title": "Conservazione e cancellazione",
@@ -808,7 +808,7 @@
       "address": "[Inserire l’indirizzo postale del titolare]",
       "email": "[Inserire un’email di contatto]"
     },
-    "hostingPrivacy": "Informativa privacy di Timeweb Cloud"
+    "hostingPrivacy": "Informativa privacy di Bothost"
   },
   "ui": {
     "consentRequired": "Acconsenti al trattamento dei dati personali per inviare la candidatura.",

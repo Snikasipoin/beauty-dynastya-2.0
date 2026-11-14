@@ -9,10 +9,11 @@ if (parsedOrigin && (!['http:', 'https:'].includes(parsedOrigin.protocol) || par
 const origin = parsedOrigin?.origin
 
 const server = createApplicationServer({
-  botToken: process.env.TELEGRAM_BOT_TOKEN?.trim(),
+  botToken: (process.env.TELEGRAM_BOT_TOKEN || process.env.BOT_TOKEN)?.trim(),
   adminIds: [...new Set((process.env.TELEGRAM_ADMIN_IDS ?? '').split(/[,\s]+/).filter(Boolean))],
   origin,
   dist: resolve('dist'),
+  apiOnly: process.env.API_ONLY === '1',
   trustProxy: process.env.TRUST_PROXY === '1',
 })
 server.listen(port, '0.0.0.0', () => console.log('Beauty Dynastya server listening on port ' + port))

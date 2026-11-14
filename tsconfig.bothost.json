@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.node.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "rewriteRelativeImportExtensions": true,
+    "target": "es2022",
+    "outDir": "./deploy/bothost",
+    "rootDir": "."
+  },
+  "include": [
+    "server/**/*.ts",
+    "src/data/legal.ts"
+  ]
+}

@@ -741,7 +741,7 @@
         },
         "processors": {
           "title": "Empfänger und Dienstleister",
-          "text": "Die Bewerbung erreicht den bei Timeweb Cloud gehosteten Website-Server, wird geprüft und über die Telegram Bot API an den privaten Chat des Veranstalters mit dem Bot gesendet. Der Hostinganbieter verarbeitet technische Anfragedaten und Telegram den Nachrichteninhalt. Für Verarbeitung und Speicherung gelten auch deren Datenschutzbestimmungen. Übermittlungen können andere Länder betreffen; geltende Anforderungen an Dienstleister und internationale Übermittlungen bleiben bestehen."
+          "text": "Die Bewerbung erreicht den bei Bothost gehosteten Website-Server, wird geprüft und über die Telegram Bot API an den privaten Chat des Veranstalters mit dem Bot gesendet. Der Hostinganbieter verarbeitet technische Anfragedaten und Telegram den Nachrichteninhalt. Für Verarbeitung und Speicherung gelten auch deren Datenschutzbestimmungen. Übermittlungen können andere Länder betreffen; geltende Anforderungen an Dienstleister und internationale Übermittlungen bleiben bestehen."
         },
         "term": {
           "title": "Geltungsdauer und Speicherung",
@@ -775,7 +775,7 @@
         },
         "processing": {
           "title": "Auftragsverarbeiter und Übermittlungen",
-          "text": "Der Browser sendet die Bewerbung per HTTPS an den bei Timeweb Cloud gehosteten Website-Server. Dieser prüft die Felder und die Einwilligung und sendet die Angaben über die Telegram Bot API an den privaten Chat des Veranstalters mit dem Bot. Der Server führt keine separate Bewerbungsdatenbank; Nachrichten werden in Telegram gespeichert. Technische Informationen dienen der Zustellung, der Begrenzung von Anfragen und der Vermeidung von Duplikaten. Die Datenschutzbestimmungen von Hostinganbieter und Telegram gelten zusätzlich."
+          "text": "Der Browser sendet die Bewerbung per HTTPS an den bei Bothost gehosteten Website-Server. Dieser prüft die Felder und die Einwilligung und sendet die Angaben über die Telegram Bot API an den privaten Chat des Veranstalters mit dem Bot. Der Server führt keine separate Bewerbungsdatenbank; Nachrichten werden in Telegram gespeichert. Technische Informationen dienen der Zustellung, der Begrenzung von Anfragen und der Vermeidung von Duplikaten. Die Datenschutzbestimmungen von Hostinganbieter und Telegram gelten zusätzlich."
         },
         "retention": {
           "title": "Speicherdauer und Löschung",
@@ -808,7 +808,7 @@
       "address": "[Postanschrift des Verantwortlichen eintragen]",
       "email": "[Kontakt-E-Mail eintragen]"
     },
-    "hostingPrivacy": "Datenschutzerklärung von Timeweb Cloud"
+    "hostingPrivacy": "Datenschutzerklärung von Bothost"
   },
   "ui": {
     "consentRequired": "Bitte willigen Sie vor dem Absenden in die Verarbeitung Ihrer personenbezogenen Daten ein.",

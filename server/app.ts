@@ -13,6 +13,7 @@ export interface ServerConfig {
   origin?: string
   dist: string
   trustProxy?: boolean
+  apiOnly?: boolean
 }
 
 interface Dependencies {
@@ -57,7 +58,7 @@ async function readJson(request: IncomingMessage): Promise<unknown> {
 }
 
 function clientIp(request: IncomingMessage, trustProxy: boolean): string {
-  // Доверяем последнему адресу только за управляемым reverse proxy Timeweb.
+  // Доверяем последнему адресу только за управляемым reverse proxy хостинга.
   const forwarded = request.headers['x-forwarded-for']
   if (trustProxy && typeof forwarded === 'string') {
     const ip = forwarded.split(',').at(-1)?.trim()
@@ -89,17 +90,34 @@ export function createApplicationServer(config: ServerConfig, dependencies: Depe
     response.setHeader('X-Content-Type-Options', 'nosniff')
     response.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
     const path = new URL(request.url ?? '/', 'http://localhost').pathname
-    if (path === '/api/health' && request.method === 'GET') {
+    if ((path === '/api/health' || path === '/health' || (config.apiOnly && path === '/')) && request.method === 'GET') {
       json(response, 200, { status: 'ok' })
       return
     }
     if (path === '/api/applications') {
-      if (request.method !== 'POST') {
-        response.setHeader('Allow', 'POST')
+      if (request.method !== 'POST' && request.method !== 'OPTIONS') {
+        response.setHeader('Allow', 'POST, OPTIONS')
         throw new HttpError(405, 'method_not_allowed')
       }
-      if (!config.botToken || !config.adminIds.length || config.adminIds.length > 10 || config.adminIds.some(id => !/^[1-9]\d*$/.test(id)) || !config.origin) throw new HttpError(503, 'unavailable')
+      response.setHeader('Vary', 'Origin')
+      if (!config.origin) throw new HttpError(503, 'unavailable')
       if (request.headers.origin !== config.origin) throw new HttpError(403, 'origin_not_allowed')
+      // Браузер может обращаться к Bothost только с разрешённого сайта.
+      response.setHeader('Access-Control-Allow-Origin', config.origin)
+      if (request.method === 'OPTIONS') {
+        const method = request.headers['access-control-request-method']
+        const headers = request.headers['access-control-request-headers'] ?? ''
+        if (method !== 'POST' || typeof headers !== 'string' ||
+          headers.split(',').some(header => header.trim() && header.trim().toLowerCase() !== 'content-type')) throw new HttpError(403, 'preflight_not_allowed')
+        response.writeHead(204, {
+          'Access-Control-Allow-Methods': 'POST',
+          'Access-Control-Allow-Headers': 'Content-Type',
+          'Access-Control-Max-Age': '600',
+        })
+        response.end()
+        return
+      }
+      if (!config.botToken || !config.adminIds.length || config.adminIds.length > 10 || config.adminIds.some(id => !/^[1-9]\d*$/.test(id))) throw new HttpError(503, 'unavailable')
       limit(clientIp(request, Boolean(config.trustProxy)))
       const application = parseApplication(await readJson(request))
       if (!application) throw new HttpError(422, 'invalid_application')
@@ -143,7 +161,7 @@ export function createApplicationServer(config: ServerConfig, dependencies: Depe
       json(response, 200, { success: true })
       return
     }
-    if (path.startsWith('/api/')) throw new HttpError(404, 'not_found')
+    if (config.apiOnly || path.startsWith('/api/')) throw new HttpError(404, 'not_found')
     if (request.method !== 'GET' && request.method !== 'HEAD') throw new HttpError(405, 'method_not_allowed')
     let decoded: string
     try { decoded = decodeURIComponent(path) }

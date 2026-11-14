@@ -7,13 +7,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "oxlint src server scripts/telegram-chat.ts tests/server vite.config.ts",
+    "lint": "oxlint src server scripts/telegram-chat.ts tests/server scripts/build-bothost.mjs vite.config.ts",
     "preview": "vite preview",
     "test:e2e": "playwright test",
     "start": "node --env-file-if-exists=.env.local server/index.ts",
     "dev:server": "node --env-file-if-exists=.env.local --watch server/index.ts",
     "test:server": "node --test tests/server/*.test.ts",
-    "telegram:chat": "node --env-file-if-exists=.env.local scripts/telegram-chat.ts"
+    "telegram:chat": "node --env-file-if-exists=.env.local scripts/telegram-chat.ts",
+    "build:bothost": "node scripts/build-bothost.mjs"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.3.0",

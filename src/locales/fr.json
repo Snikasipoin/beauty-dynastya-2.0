@@ -741,7 +741,7 @@
         },
         "processors": {
           "title": "Destinataires et prestataires",
-          "text": "La candidature arrive sur le serveur du site hébergé par Timeweb Cloud, est vérifiée puis transmise via Telegram Bot API à la conversation privée de l'organisateur avec le bot. L'hébergeur traite les informations techniques de la requête et Telegram le contenu du message. Leurs politiques régissent aussi le traitement et la conservation. Les transferts peuvent concerner d'autres pays ; les obligations applicables aux prestataires et aux transferts internationaux demeurent."
+          "text": "La candidature arrive sur le serveur du site hébergé par Bothost, est vérifiée puis transmise via Telegram Bot API à la conversation privée de l'organisateur avec le bot. L'hébergeur traite les informations techniques de la requête et Telegram le contenu du message. Leurs politiques régissent aussi le traitement et la conservation. Les transferts peuvent concerner d'autres pays ; les obligations applicables aux prestataires et aux transferts internationaux demeurent."
         },
         "term": {
           "title": "Durée et conservation",
@@ -775,7 +775,7 @@
         },
         "processing": {
           "title": "Sous-traitants et transferts",
-          "text": "Le navigateur envoie la candidature en HTTPS au serveur du site hébergé par Timeweb Cloud. Le serveur vérifie les champs et le consentement, puis transmet les informations via Telegram Bot API à la conversation privée de l'organisateur avec le bot. Le serveur ne tient pas de base distincte de candidatures ; les messages sont conservés dans Telegram. Les informations techniques servent à la livraison, à la limitation des requêtes et à la prévention des doublons. Les politiques de l'hébergeur et de Telegram s'appliquent également."
+          "text": "Le navigateur envoie la candidature en HTTPS au serveur du site hébergé par Bothost. Le serveur vérifie les champs et le consentement, puis transmet les informations via Telegram Bot API à la conversation privée de l'organisateur avec le bot. Le serveur ne tient pas de base distincte de candidatures ; les messages sont conservés dans Telegram. Les informations techniques servent à la livraison, à la limitation des requêtes et à la prévention des doublons. Les politiques de l'hébergeur et de Telegram s'appliquent également."
         },
         "retention": {
           "title": "Conservation et effacement",
@@ -808,7 +808,7 @@
       "address": "[Indiquer l’adresse postale du responsable]",
       "email": "[Indiquer un email de contact]"
     },
-    "hostingPrivacy": "Politique de confidentialité de Timeweb Cloud"
+    "hostingPrivacy": "Politique de confidentialité de Bothost"
   },
   "ui": {
     "consentRequired": "Veuillez consentir au traitement des données personnelles avant l'envoi de votre candidature.",

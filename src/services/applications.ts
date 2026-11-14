@@ -26,7 +26,9 @@ export async function submitApplication(
   consentGivenAt = new Date().toISOString(),
 ): Promise<void> {
   if (Object.keys(validateApplication(values)).length || values.botcheck) throw new Error('Invalid application')
-  const response = await fetch('/api/applications', {
+  // URL отдельного API публичный; токен Telegram остаётся на сервере.
+  const endpoint = import.meta.env.VITE_APPLICATION_API_URL?.trim() || '/api/applications'
+  const response = await fetch(endpoint, {
     method: 'POST',
     signal,
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },

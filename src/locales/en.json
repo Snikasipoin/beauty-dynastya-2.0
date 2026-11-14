@@ -741,7 +741,7 @@
         },
         "processors": {
           "title": "Recipients and service providers",
-          "text": "The application reaches the website server hosted on Timeweb Cloud, is validated and is sent through the Telegram Bot API to the organiser's private chat with the bot. The hosting provider processes technical request information, and Telegram processes the message content. Their policies also govern processing and storage. Transfers may involve other countries; applicable processor and international transfer requirements still apply."
+          "text": "The application reaches the website server hosted on Bothost, is validated and is sent through the Telegram Bot API to the organiser's private chat with the bot. The hosting provider processes technical request information, and Telegram processes the message content. Their policies also govern processing and storage. Transfers may involve other countries; applicable processor and international transfer requirements still apply."
         },
         "term": {
           "title": "Duration and retention",
@@ -775,7 +775,7 @@
         },
         "processing": {
           "title": "Processors and transfers",
-          "text": "The browser sends the application over HTTPS to the website server hosted on Timeweb Cloud. The server validates the fields and consent, then sends the information through the Telegram Bot API to the organiser's private chat with the bot. There is no separate application database on the server; messages are stored in Telegram. Technical information supports delivery, rate limits and duplicate prevention. Hosting and Telegram policies also apply."
+          "text": "The browser sends the application over HTTPS to the website server hosted on Bothost. The server validates the fields and consent, then sends the information through the Telegram Bot API to the organiser's private chat with the bot. There is no separate application database on the server; messages are stored in Telegram. Technical information supports delivery, rate limits and duplicate prevention. Hosting and Telegram policies also apply."
         },
         "retention": {
           "title": "Retention and deletion",
@@ -808,7 +808,7 @@
       "address": "[Enter the controller’s postal address]",
       "email": "[Enter a contact email]"
     },
-    "hostingPrivacy": "Timeweb Cloud privacy policy"
+    "hostingPrivacy": "Bothost privacy policy"
   },
   "ui": {
     "consentRequired": "Please consent to personal data processing before submitting your application.",

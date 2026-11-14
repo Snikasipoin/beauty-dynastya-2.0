@@ -193,3 +193,49 @@ test('notifies every allowed recipient and never repeats a confirmed delivery af
   assert.equal((await f.post(body)).status, 200)
   assert.deepEqual(f.calls.map(call => call.body.chat_id), ['111111', '222222', '222222'])
 })
+
+test('cross-origin preflight permits only the configured site, POST and Content-Type', async (t) => {
+  const f = await fixture(t)
+  const headers = { Origin: origin, 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'content-type' }
+  const allowed = await fetch(f.base + '/api/applications', { method: 'OPTIONS', headers })
+  assert.equal(allowed.status, 204)
+  assert.equal(allowed.headers.get('access-control-allow-origin'), origin)
+  assert.equal(allowed.headers.get('access-control-allow-methods'), 'POST')
+  assert.equal(allowed.headers.get('access-control-allow-headers'), 'Content-Type')
+  assert.equal(allowed.headers.get('vary'), 'Origin')
+  assert.equal(await allowed.text(), '')
+  assert.equal(f.calls.length, 0)
+  const foreign = await fetch(f.base + '/api/applications', { method: 'OPTIONS', headers: { ...headers, Origin: 'https://foreign.test' } })
+  assert.equal(foreign.status, 403)
+  assert.equal(foreign.headers.get('access-control-allow-origin'), null)
+  for (const change of [{ 'Access-Control-Request-Method': 'PUT' }, { 'Access-Control-Request-Headers': 'authorization' }]) {
+    const response = await fetch(f.base + '/api/applications', { method: 'OPTIONS', headers: { ...headers, ...change } })
+    assert.equal(response.status, 403)
+  }
+  assert.equal(f.calls.length, 0)
+})
+
+test('browser can read both successful deliveries and server errors from the allowed site', async (t) => {
+  const f = await fixture(t)
+  const response = await f.post()
+  assert.equal(response.status, 200)
+  assert.equal(response.headers.get('access-control-allow-origin'), origin)
+  const unavailable = await fixture(t, { botToken: '' })
+  const failure = await unavailable.post()
+  assert.equal(failure.status, 503)
+  assert.equal(failure.headers.get('access-control-allow-origin'), origin)
+})
+
+test('preflight works before bot configuration without sending a notification', async (t) => {
+  const f = await fixture(t, { botToken: '' })
+  const response = await fetch(f.base + '/api/applications', { method: 'OPTIONS', headers: { Origin: origin, 'Access-Control-Request-Method': 'POST' } })
+  assert.equal(response.status, 204)
+  assert.equal(f.calls.length, 0)
+})
+
+test('standalone Bothost service provides health checks and never publishes site assets', async (t) => {
+  const f = await fixture(t, { apiOnly: true })
+  for (const path of ['/', '/health', '/api/health']) assert.deepEqual(await (await fetch(f.base + path)).json(), { status: 'ok' })
+  assert.equal((await fetch(f.base + '/assets/app-hash.js')).status, 404)
+  assert.equal((await f.post()).status, 200)
+})
