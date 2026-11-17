@@ -19,7 +19,9 @@
     "dates": "01.09 — 01.02",
     "nominations": "Nails, Lash, PMU, SMP, Brows, Hair",
     "register": "Register now",
-    "judges": "Meet the judges"
+    "judges": "Meet the judges",
+    "logoPause": "Pause logo rotation",
+    "logoResume": "Resume logo rotation"
   },
   "about": {
     "title": "About the championship",

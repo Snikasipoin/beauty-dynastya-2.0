@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { logo } from '../lib/assets'
+import { HeroLogo } from './HeroLogo'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -16,9 +16,7 @@ export function Hero() {
             <a href="#judges" className="btn-secondary">{t('hero.judges')}</a>
           </div>
         </div>
-        <div className="relative mx-auto w-full max-w-lg lg:max-w-[900px]">
-          <img src={logo} alt="Beauty Dynastya" width="900" height="623" fetchPriority="high" className="relative h-auto w-full" />
-        </div>
+        <HeroLogo />
       </div>
       <div className="container-shell hero-frame flex flex-wrap items-center justify-between gap-4 border-t border-line py-6">
         <p className="font-display text-xl font-bold text-gold tabular-nums">{t('hero.dates')}</p>

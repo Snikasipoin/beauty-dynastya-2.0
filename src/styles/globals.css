@@ -51,6 +51,23 @@
   .hero-copy { container-type: inline-size; min-width: 0; }
   .hero-title { font-size: clamp(3.5rem, 22cqi, 32rem); line-height: 0.94; letter-spacing: -0.025em; }
   .hero-title > span { display: block; white-space: nowrap; }
+  .hero-logo-scene { aspect-ratio: 900 / 623; perspective: 1200px; }
+  .hero-logo-rotor { position: absolute; inset: 8%; transform-style: preserve-3d; transform: rotateX(-8deg) rotateY(-18deg); }
+  .hero-logo-face { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; backface-visibility: hidden; }
+  .hero-logo-front { transform: translateZ(10px); }
+  /* Обратная сторона сохраняет тот же контур, как у настоящего объёмного знака. */
+  .hero-logo-back { transform: translateZ(-10px); backface-visibility: visible; }
+  .hero-logo-edge { position: absolute; inset: 0; background: linear-gradient(145deg, #f5dfd5, #981723 28%, #43070e 50%, #b9a9a8 74%, #62101a); -webkit-mask: var(--logo-image) center / contain no-repeat; mask: var(--logo-image) center / contain no-repeat; }
+  .hero-logo-control { @apply absolute right-2 bottom-0 z-10 flex size-11 items-center justify-center rounded-full border border-line bg-canvas/80 text-muted transition-colors hover:border-gold hover:text-cream; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-logo-rotor { animation: hero-logo-turn 24s linear infinite; animation-play-state: paused; }
+    .hero-logo-scene[data-running='true'] .hero-logo-rotor { animation-play-state: running; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-logo-rotor { inset: 0; transform: none; }
+    .hero-logo-front { transform: none; }
+    .hero-logo-edge, .hero-logo-back, .hero-logo-control { display: none; }
+  }
   .about-stat-card { container-type: inline-size; }
   .about-stat-number { font-size: clamp(6rem, 65cqi, 8rem); line-height: 1; font-weight: 700; }
   .nomination-list { @apply border-b border-line; }
@@ -125,4 +142,9 @@
   .conference-teaser-seats { @apply mb-5 text-sm font-bold text-gold; }
   .conference-teaser-media { @apply relative z-0 overflow-hidden rounded-lg bg-canvas lg:col-start-6 lg:col-end-13 lg:row-start-1; height: clamp(22rem, 32vw, 30rem); }
   .conference-teaser-media img { @apply h-full w-full object-cover; object-position: 75% center; }
+}
+
+@keyframes hero-logo-turn {
+  from { transform: rotateX(-8deg) rotateY(-18deg); }
+  to { transform: rotateX(-8deg) rotateY(342deg); }
 }

@@ -19,7 +19,9 @@
     "dates": "01.09 — 01.02",
     "nominations": "Nails, Lash, PMU, SMP, Brows, Hair",
     "register": "Je m'inscris",
-    "judges": "Découvrir le jury"
+    "judges": "Découvrir le jury",
+    "logoPause": "Mettre la rotation du logo en pause",
+    "logoResume": "Reprendre la rotation du logo"
   },
   "about": {
     "title": "Le Championnat",
